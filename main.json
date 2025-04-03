@@ -1,0 +1,13 @@
+{
+	"id": "Roffle",
+	"author": ["AlrexX, Maxx"],
+	"description": "A Vanilla Friendly mod based on the streamer Roffle (Lite)",
+	"prefix": "roff",
+	"main_file": "main.lua",
+	"priority": 0,
+	"badge_colour": "44a2e2",
+	"badge_text_colour": "ffedab",
+	"display_name": "Rofflatro",
+	"version": "0.0.1",
+	"name":"Rofflatro"
+}

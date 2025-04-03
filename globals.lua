@@ -241,6 +241,19 @@ ROFF = {
                     return true
                 end,
             }))
+        end,
+
+        roff_debug = function (key)
+            attention_text({
+                text = key,
+                scale = 1.3, 
+                hold = 1.4,
+                major = aura_card,
+                backdrop_colour = G.C.RARITY[4],
+                align = (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK) and 'tm' or 'cm',
+                offset = {x = 0, y = (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK) and -0.2 or 0},
+                silent = true
+            })
         end
     }
 }
