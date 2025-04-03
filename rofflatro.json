@@ -1,0 +1,16 @@
+{
+	"id": "Rofflatro",
+	"name": "Rofflatro",
+	"display_name": "Rofflatro",
+	"author": ["Lucky6", "Maxx", "anyone else who contributes here"],
+	"description": "The Roffle Balatro Mod!",
+	"prefix": "roff",
+	"main_file": "main.lua",
+	"priority": 0,
+	"badge_colour": "4D85FF",
+	"badge_text_colour": "FFEA9E",
+	"version": "0.1.0~alpha1",
+	"dependencies": [
+		"Steamodded (>=1.0.0~BETA-0305c)",
+	],
+}
