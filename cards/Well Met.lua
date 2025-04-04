@@ -10,6 +10,7 @@ SMODS.Joker{
       extra = { xmult = 2, check = 0, flavortext = "Well met! Well met! Well met! ", marqueetimer = 0 }
    },
    loc_vars = function(self, info_queue, card)
+      info_queue[#info_queue+1] = {key = 'roff_favorite', set = 'Other'}
       return {
          vars = { card.ability.extra.xmult },
          main_end = { 
