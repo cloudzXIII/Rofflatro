@@ -45,11 +45,13 @@ function SMODS.current_mod.reset_game_globals(run_start)
                 G.GAME.current_round.most_played_card_amount = c.base.times_played
             end
         end
-        for _, c in pairs(G.playing_cards) do
-            if c.base.times_played == G.GAME.current_round.most_played_card_amount then
-                c:add_sticker('roff_favorite', true)
-            elseif c.ability.roff_favorite then
-                c.ability.roff_favorite = false
+        if G.GAME.current_round.most_played_card_amount > 0 then
+            for _, c in pairs(G.playing_cards) do
+                if c.base.times_played == G.GAME.current_round.most_played_card_amount then
+                    c:add_sticker('roff_favorite', true)
+                elseif c.ability.roff_favorite then
+                    c.ability.roff_favorite = false
+                end
             end
         end
     end

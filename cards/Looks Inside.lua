@@ -29,17 +29,12 @@ SMODS.Joker{
 				}
 			end
 		elseif context.selling_self and card.ability.extra.timer >= card.ability.extra.rounds and not context.blueprint then
-			if #G.jokers.cards < G.jokers.config.card_limit then
+			if #G.jokers.cards <= G.jokers.config.card_limit then
 				G.E_MANAGER:add_event(Event({
 					func = function()
 						SMODS.add_card({set = 'Joker', area = G.jokers, key = 'j_photograph'})
 						if #G.jokers.cards < G.jokers.config.card_limit then
-							G.E_MANAGER:add_event(Event({
-								func = function()
-									SMODS.add_card({set = 'Joker', area = G.jokers, key = 'j_hanging_chad'})
-									return true
-								end
-							}))
+							SMODS.add_card({set = 'Joker', area = G.jokers, key = 'j_hanging_chad'})
 						else
 							SMODS.calculate_effect({ message = localize('k_no_room_ex') }, card)
 						end
