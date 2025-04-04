@@ -27,7 +27,7 @@ SMODS.Joker{
 				end
 			end
             
-        elseif context.main then
+        elseif context.joker_main then
             card.ability.extra.score_buffer = 1
         end
 	end
