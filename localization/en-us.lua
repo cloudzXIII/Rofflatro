@@ -30,6 +30,16 @@ return {
                     "{C:inactive}(Must have room)",
                     "{s:0.8,C:inactive,E:1}Hoooooolyyyyyy..."
                 }
+            },
+            j_roff_benus = {
+                name = 'Benus',
+                text = {
+                    "Earn {C:money}$#1#{} if played hand",
+                    "contains {C:attention}Three of a Kind{}",
+                    "{C:money}-$#2#{} for every hand that",
+                    "doesn't contain {C:attention}Three of a Kind{}",
+                    "{C:inactive,s:0.8}What did he just say?!"
+                }
             }
         }
     }
