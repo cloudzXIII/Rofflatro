@@ -260,7 +260,6 @@ ROFF = {
         ---@param text string
         marquee = function (text)
             local marqueedtext = text:sub(2, #text)..text:sub(1,1)
-            print(marqueedtext)
             return marqueedtext
         end
     }

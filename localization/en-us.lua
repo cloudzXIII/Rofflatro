@@ -81,7 +81,7 @@ return {
     },
     misc = {
         dictionary = {
-            k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met!'
+            k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met! '
         }
     }
 }

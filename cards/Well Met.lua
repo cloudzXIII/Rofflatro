@@ -7,7 +7,7 @@ SMODS.Joker{
    rarity = 2,
    cost = 6,
    config = {
-      extra = { xmult = 2, hold = 0, flavortext = "Well met! Well met! Well met!", marqueetimer = 0 }
+      extra = { xmult = 2, hold = 0, flavortext = "Well met! Well met! Well met! ", marqueetimer = 0 }
    },
    loc_vars = function(self, info_queue, card)
       return {
@@ -18,12 +18,15 @@ SMODS.Joker{
                config = {align = "bm", minh = 0.3},
                nodes = {
                   {
-                     n = G.UIT.T,
+                     n = G.UIT.O,
                      config = {
-                        ref_table = card.ability.extra,
-                        ref_value = "flavortext",
-                        colour = G.C.UI.TEXT_INACTIVE,
-                        scale = 0.25
+                        object = DynaText({
+                           string = {{ref_table = card.ability.extra, ref_value = "flavortext"}},
+                           colours = {G.C.UI.TEXT_INACTIVE},
+                           silent = true,
+                           bump = true,
+                           scale = 0.256 -- default 0.32 -> mult by 0.8
+                        })
                      }
                   }
                }
@@ -62,8 +65,7 @@ SMODS.Joker{
    end,
    update = function(self, card, dt)
        card.ability.extra.marqueetimer = card.ability.extra.marqueetimer + G.real_dt
-       if card.ability.extra.marqueetimer > 0.25 then
-           print('well met')
+       if card.ability.extra.marqueetimer > 0.2 then
            card.ability.extra.marqueetimer = 0
            card.ability.extra.flavortext = ROFF.funcs.marquee(card.ability.extra.flavortext)
        end
