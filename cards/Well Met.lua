@@ -7,7 +7,7 @@ SMODS.Joker{
    rarity = 2,
    cost = 6,
    config = {
-      extra = { xmult = 2, hold = 0, flavortext = "Well met! Well met! Well met! ", marqueetimer = 0 }
+      extra = { xmult = 2, hold = 0, check = 0, flavortext = "Well met! Well met! Well met! ", marqueetimer = 0 }
    },
    loc_vars = function(self, info_queue, card)
       return {
@@ -54,13 +54,19 @@ SMODS.Joker{
                   colour = G.C.RED,
                   card = context.other_card,
                } else
-               return {
-                  x_mult = card.ability.extra.xmult,
-                  card = context.other_card,
-                  message = 'Well Met!'
-               }
+	       if card.ability.extra.check == 0 then
+	          card.ability.extra.check = 1
+                  return {
+                     x_mult = card.ability.extra.xmult,
+                     card = context.other_card,
+                     message = 'Well Met!'
+                  }
+	       end
             end
          end
+      end
+      if context.after then
+      	 card.ability.extra.check = 0
       end
    end,
    update = function(self, card, dt)
