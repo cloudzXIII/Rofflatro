@@ -73,9 +73,9 @@ return {
             j_roff_wellmet = {
                 name = 'Well Met',
                 text = {
-                    "Your most played card gives",
-                    "{X:mult,C:white}X#1#{} Mult if held in hand",
-                    "{C:inactive}Only triggers once per hand",
+                    "First card held in hand",
+                    "with {C:attention}Favorite{} sticker",
+                    "gives {X:mult,C:white}X#1#{} Mult" -- flavor text is done via gui dynatext shenanigans
                 }
             }
         }
