@@ -1,6 +1,6 @@
 {
 	"id": "Roffle",
-	"author": ["AlrexX", "Maxx", "canicao"],
+	"author": ["AlrexX", "Maxx", "canicao", "garb"],
 	"description": "A Vanilla Friendly mod based on the streamer Roffle (Lite)",
 	"prefix": "roff",
 	"main_file": "main.lua",
