@@ -254,6 +254,14 @@ ROFF = {
                 offset = {x = 0, y = (G.STATE == G.STATES.TAROT_PACK or G.STATE == G.STATES.SPECTRAL_PACK) and -0.2 or 0},
                 silent = true
             })
+        end,
+
+        ---Shifts all characters in `text` to the left once, the first character becoming the last.
+        ---@param text string
+        marquee = function (text)
+            local marqueedtext = text:sub(2, #text)..text:sub(1,1)
+            print(marqueedtext)
+            return marqueedtext
         end
     }
 }

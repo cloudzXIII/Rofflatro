@@ -1,25 +1,34 @@
 SMODS.Joker{
    key = 'wellmet',
    atlas = 'roffers',
-	 blueprint_compat = true,
-	 eternal_compat = true,
-	 pos = { x = 1, y = 1 }, --change if needed
-   loc_txt = {
-      name = 'Well Met',
-      text = {
-      '{C:attention}Most{} played card gives',
-      '{X:mult,C:white}x2{} Mult when held in hand',
-      '{C:inactive}Well met! Well met! Well met!{}'
-      }
-   },
+	blueprint_compat = true,
+	eternal_compat = true,
+	pos = { x = 2, y = 1 }, --change if needed
    rarity = 2,
    cost = 6,
    config = {
-      extra = { hold = 0 }
+      extra = { xmult = 2, hold = 0, flavortext = "Well met! Well met! Well met!", marqueetimer = 0 }
    },
    loc_vars = function(self, info_queue, card)
       return {
-         vars = { card.ability.extra.hold }
+         vars = { card.ability.extra.xmult, card.ability.extra.hold },
+         main_end = { 
+            {
+               n = G.UIT.C,
+               config = {align = "bm", minh = 0.3},
+               nodes = {
+                  {
+                     n = G.UIT.T,
+                     config = {
+                        ref_table = card.ability.extra,
+                        ref_value = "flavortext",
+                        colour = G.C.UI.TEXT_INACTIVE,
+                        scale = 0.25
+                     }
+                  }
+               }
+            }
+         }
       }
    end,
    calculate = function(self, card, context)
@@ -43,12 +52,20 @@ SMODS.Joker{
                   card = context.other_card,
                } else
                return {
-                  x_mult = 2,
+                  x_mult = card.ability.extra.xmult,
                   card = context.other_card,
                   message = 'Well Met!'
                }
             end
          end
       end
+   end,
+   update = function(self, card, dt)
+       card.ability.extra.marqueetimer = card.ability.extra.marqueetimer + G.real_dt
+       if card.ability.extra.marqueetimer > 0.25 then
+           print('well met')
+           card.ability.extra.marqueetimer = 0
+           card.ability.extra.flavortext = ROFF.funcs.marquee(card.ability.extra.flavortext)
+       end
    end
 }

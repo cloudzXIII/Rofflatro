@@ -5,11 +5,11 @@ return {
                 name = 'Type A Joker',
                 text = {
                     'Gains {X:mult,C:white}X#1#{} Mult if played',
-                    'hand is a {C:attention}#3#{}.',
-                    'Resets when playing a {C:attention}High Card{}.',
-                    'Hand changes at end of round.',
+                    'hand is a {C:attention}#3#{}',
+                    'Resets when playing a {C:attention}Flush{} or lesser',
+                    '{s:0.8}Hand changes every round',
                     '{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}',
-                    '{s:0.8,C:inactive}Streamer! Play the #3#! {}{s:0.8,C:inactive,E:1}STREAMER!!!{}'
+                    '{s:0.8,C:inactive,E:2}Streamer! Play the #3#! {}{s:0.8,C:inactive,E:1}STREAMER!!!{}'
                 }
             },
             j_roff_jackin_it = {
@@ -18,7 +18,7 @@ return {
                     'This Joker gains {C:mult}+#1#{} Mult',
                     'for every scored {C:attention}Jack{}',
                     '{C:inactive}(Currently {}{C:mult}+#2#{} {C:inactive}Mult){}',
-                    '{s:0.8,C:inactive}On stream? How inappropiate!'
+                    '{s:0.8,C:inactive,E:2}On stream? How inappropiate!'
                 }
             },
             j_roff_money_shots = {
@@ -38,7 +38,7 @@ return {
                     "contains {C:attention}Three of a Kind{}",
                     "{C:money}-$#2#{} for every hand that",
                     "doesn't contain {C:attention}Three of a Kind{}",
-                    "{C:inactive,s:0.8}What did he just say?!"
+                    "{C:inactive,s:0.8,E:2}What did he just say?!"
                 }
             },
             j_roff_primes = {
@@ -48,7 +48,7 @@ return {
                     "if hand contains {C:attention}#3#{} or more",
                     "scoring {C:attention}2s{}, {C:attention}3s{}, {C:attention}5s{} and/or {C:attention}7s{}",
                     "{C:inactive}(Currently{} {C:chips}+#2#{} {C:inactive}Chips){}",
-                    "{C:inactive,s:0.8}Shoutouts to {}{C:inactive,s:0.8,E:1}bajabussyblaster!"
+                    "{C:inactive,s:0.8,E:2}Shoutouts to {}{C:inactive,s:0.8,E:1}bajabussyblaster!"
                 }
             },
             j_roff_4k = {
@@ -57,9 +57,31 @@ return {
                     "{C:chips}+#1#{} Chips for each",
                     "{C:attention}retrigger{} on first",
                     "scored {C:attention}face{} card.",
-                    "{C:inactive,s:0.8}Every video is the same."
+                    "{C:inactive,s:0.8,E:2}Every video is the same."
+                }
+            },
+            j_roff_looksinside = {
+                name = 'Looks Inside',
+                text = {
+                    "After {C:attention}#1#{} rounds {C:inactive}[#2#/#1#]{},",
+                    "sell this Joker to create",
+                    "{C:attention}Photograph{} and {C:attention}Hanging Chad{}",
+                    "{C:inactive}(Must have room)",
+                    "{C:inactive,s:0.8,E:2}He can't keep getting away with this!"
+                }
+            },
+            j_roff_wellmet = {
+                name = 'Well Met',
+                text = {
+                    "Your most played card gives",
+                    "{X:mult,C:white}X#1#{} Mult if held in hand",
                 }
             }
+        }
+    },
+    misc = {
+        dictionary = {
+            k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met!'
         }
     }
 }
