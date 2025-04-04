@@ -75,6 +75,7 @@ return {
                 text = {
                     "Your most played card gives",
                     "{X:mult,C:white}X#1#{} Mult if held in hand",
+                    "{C:inactive}Only triggers once per hand",
                 }
             }
         }
