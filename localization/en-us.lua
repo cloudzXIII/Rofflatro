@@ -78,8 +78,19 @@ return {
                     "gives {X:mult,C:white}X#1#{} Mult" -- flavor text is done via gui dynatext shenanigans
                 }
             }
-        }
+        },
+    Back = 
+    {
+        b_roff_streamerluck = {
+            name = "Streamer Deck",
+            text = {
+                "{C:attention}Non-common{} Jokers appear",
+                "{C:attention}4x{} more often",
+                "{E:1,C:inactive}(Is this run seeded?)",
+            },
+        },
     },
+},
     misc = {
         dictionary = {
             k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met! '
