@@ -90,6 +90,26 @@ return {
             },
         },
     },
+    Mod = 
+    {
+        Roffle = {
+            name = "Rofflatro",
+            text = {
+                "A vanilla-friendly mod made for {C:chips,E:1}Roffle!{}",
+                " ",
+                "{s:1.5,C:attention,E:2}Credits:",
+                "{C:dark_edition,E:2}Lucky6(AlrexX){} - Lead, Art, Code",
+                "{C:dark_edition,E:2}Maxx{} - Design, Code",
+                "{C:dark_edition,E:2}canicao{} - Design, Code",
+                "{C:dark_edition,E:2}garb{} - Code",
+                " ",
+                "{s:1.5,C:attention,E:2}Also Try:",
+                "{C:dark_edition,E:1}GARBSHIT{}, {C:dark_edition,E:1}Lucky Jimbos/Legends{}",
+                " ",
+                "{s:0.9}Special thanks to the {C:attention,s:0.9}Balatro Discord!{}"
+            }
+        }
+    }
 },
     misc = {
         dictionary = {
