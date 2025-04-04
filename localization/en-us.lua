@@ -9,7 +9,7 @@ return {
                     'Resets when playing a {C:attention}High Card{}.',
                     'Hand changes at end of round.',
                     '{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}',
-                    '{s:0.8,C:inactive}Streamer! Play the #3#!{} {s:0.8,C:inactive,E:1}STREAMER!!!{}'
+                    '{s:0.8,C:inactive}Streamer! Play the #3#! {}{s:0.8,C:inactive,E:1}STREAMER!!!{}'
                 }
             },
             j_roff_jackin_it = {
@@ -24,7 +24,7 @@ return {
             j_roff_money_shots = {
                 name = 'Money Shots',
                 text = {
-                    "Creates a {C:attention}Hermit{} when",
+                    "Creates {C:attention}The Hermit{} when",
                     "earning money from a",
                     "{C:attention}Lucky Card{}",
                     "{C:inactive}(Must have room)",
@@ -39,6 +39,16 @@ return {
                     "{C:money}-$#2#{} for every hand that",
                     "doesn't contain {C:attention}Three of a Kind{}",
                     "{C:inactive,s:0.8}What did he just say?!"
+                }
+            },
+            j_roff_primes = {
+                name = 'Thanks For The Primes',
+                text = {
+                    "This Joker gains {C:chips}+#1#{} Chips",
+                    "if hand contains {C:attention}#3#{} or more",
+                    "scoring {C:attention}2s{}, {C:attention}3s{}, {C:attention}5s{} and/or {C:attention}7s{}",
+                    "{C:inactive}(Currently{} {C:chips}+#2#{} {C:inactive}Chips){}",
+                    "{C:inactive,s:0.8}Shoutouts to {}{C:inactive,s:0.8,E:1}bajabussyblaster!"
                 }
             }
         }

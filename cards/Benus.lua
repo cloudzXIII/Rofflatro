@@ -11,7 +11,7 @@ SMODS.Joker{
 	end,
 	calculate = function(self,card,context)
 		if context.before then
-            if context.poker_hands['Three of a Kind'] then
+            if next(context.poker_hands['Three of a Kind']) then
                 return {dollars = card.ability.extra.dollars}
             else
                 return {dollars = -card.ability.extra.dollars_decrease}
