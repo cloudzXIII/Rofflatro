@@ -50,6 +50,15 @@ return {
                     "{C:inactive}(Currently{} {C:chips}+#2#{} {C:inactive}Chips){}",
                     "{C:inactive,s:0.8}Shoutouts to {}{C:inactive,s:0.8,E:1}bajabussyblaster!"
                 }
+            },
+            j_roff_4k = {
+                name = 'Caught In 4K',
+                text = {
+                    "{C:chips}+#1#{} Chips for each",
+                    "{C:attention}retrigger{} on first",
+                    "scored {C:attention}face{} card.",
+                    "{C:inactive,s:0.8}Every video is the same."
+                }
             }
         }
     }
