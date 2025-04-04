@@ -13,12 +13,22 @@ return {
                 }
             },
             j_roff_jackin_it = {
-                name = 'Jackin\' it',
+                name = 'Jackin\' It',
                 text = {
                     'This Joker gains {C:mult}+#1#{} Mult',
                     'for every scored {C:attention}Jack{}',
                     '{C:inactive}(Currently {}{C:mult}+#2#{} {C:inactive}Mult){}',
                     '{s:0.8,C:inactive}On stream? How inappropiate!'
+                }
+            },
+            j_roff_money_shots = {
+                name = 'Money Shots',
+                text = {
+                    "Creates a {C:attention}Hermit{} when",
+                    "earning money from a",
+                    "{C:attention}Lucky Card{}",
+                    "{C:inactive}(Must have room)",
+                    "{s:0.8,C:inactive,E:1}Hoooooolyyyyyy..."
                 }
             }
         }

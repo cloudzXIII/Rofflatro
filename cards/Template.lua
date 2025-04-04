@@ -1,9 +1,9 @@
 SMODS.Joker{
 	key = '',
 	loc_txt = {
-		name = '',
+		name = 'Template',
 		text = {
-			''
+			'You\'re not supposed to see this!'
 		}
 	},
 	atlas = 'roffers',
