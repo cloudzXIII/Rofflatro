@@ -7,11 +7,11 @@ SMODS.Joker{
    rarity = 2,
    cost = 6,
    config = {
-      extra = { xmult = 2, hold = 0, check = 0, flavortext = "Well met! Well met! Well met! ", marqueetimer = 0 }
+      extra = { xmult = 2, check = 0, flavortext = "Well met! Well met! Well met! ", marqueetimer = 0 }
    },
    loc_vars = function(self, info_queue, card)
       return {
-         vars = { card.ability.extra.xmult, card.ability.extra.hold },
+         vars = { card.ability.extra.xmult },
          main_end = { 
             {
                n = G.UIT.C,
@@ -35,33 +35,23 @@ SMODS.Joker{
       }
    end,
    calculate = function(self, card, context)
-      if context.individual and context.cardarea == G.play and not context.blueprint then
-         for k, v in pairs(G.playing_cards) do
-            if v.base.times_played > card.ability.extra.hold then
-               card.ability.extra.hold = v.base.times_played
-            end
-         end
-         return {
-            message = tostring(context.other_card.base.times_played),
-            colour = G.C.RED,
-         }
-      end
       if context.individual and not context.end_of_round and context.cardarea == G.hand then
-         if context.other_card.base.times_played == card.ability.extra.hold then
+         if context.other_card.ability.roff_favorite then
             if context.other_card.debuff then
                return {
                   message = localize('k_debuffed'),
                   colour = G.C.RED,
                   card = context.other_card,
-               } else
-	       if card.ability.extra.check == 0 then
-	          card.ability.extra.check = 1
+               } 
+            else
+               if card.ability.extra.check == 0 then
+                  card.ability.extra.check = 1
                   return {
                      x_mult = card.ability.extra.xmult,
                      card = context.other_card,
                      message = 'Well Met!'
                   }
-	       end
+               end
             end
          end
       end
