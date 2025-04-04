@@ -7,7 +7,7 @@ SMODS.Joker{
    rarity = 2,
    cost = 6,
    config = {
-      extra = { xmult = 2, check = 0, flavortext = "Well met! Well met! Well met! ", marqueetimer = 0 }
+      extra = { xmult = 2, check = nil, flavortext = "Well met! Well met! Well met! ", marqueetimer = 0 }
    },
    loc_vars = function(self, info_queue, card)
       info_queue[#info_queue+1] = {key = 'roff_favorite', set = 'Other'}
@@ -45,8 +45,8 @@ SMODS.Joker{
                   card = context.other_card,
                } 
             else
-               if card.ability.extra.check == 0 then
-                  card.ability.extra.check = 1
+               if card.ability.extra.check == nil or card.ability.extra.check == context.other_card then -- reference the first scored favorite card so retrigger effects are possible
+                  card.ability.extra.check = context.other_card
                   return {
                      x_mult = card.ability.extra.xmult,
                      card = context.other_card,
@@ -57,7 +57,7 @@ SMODS.Joker{
          end
       end
       if context.after then
-      	 card.ability.extra.check = 0
+      	 card.ability.extra.check = nil
       end
    end,
    update = function(self, card, dt)
