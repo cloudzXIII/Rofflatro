@@ -86,7 +86,7 @@ return {
             text = {
                 "{C:attention}Non-common{} Jokers appear",
                 "{C:attention}4x{} more often",
-                "{E:1,C:inactive}(Is this run seeded?)",
+                "{E:1,C:inactive,s:0.8}(Is this run seeded?)",
             },
         },
     },

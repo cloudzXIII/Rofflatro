@@ -13,18 +13,12 @@ SMODS.Atlas {
     py = 95,
 }
 
-SMODS.Back({
-    key = 'streamerluck',
-    config = {},
-    atlas = 'roffers',
-    pos = { x = 0, y = 0 },    
-    unlocked = true,
-    discovered = true,
-    config = {},
-    loc_vars = function(self, info_queue, card)
-    end,
-    unlock_condition = {type = 'win_deck', deck = 'b_red'}
-})
+SMODS.Atlas {
+    key = "reffs",
+    path = "Decks.png",
+    px = 71,
+    py = 95,
+}
 
 -- load common util funcs
 assert(SMODS.load_file("globals.lua"))()
