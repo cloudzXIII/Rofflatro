@@ -43,11 +43,11 @@ SMODS.Joker:take_ownership('gros_michel', -- object key (class prefix not requir
 				-- Sets the pool flag to true, meaning Gros Michel doesn't spawn, and Cavendish does.
 				G.GAME.pool_flags.gros_michel_extinct = true
 				return {
-					message = 'Extinct!'
+					message = localize('k_extinct_ex')
 				}
 			else
 				return {
-					message = 'Safe!'
+					message = localize('k_safe_ex')
 				}
 			end
 	end
@@ -124,7 +124,7 @@ SMODS.Joker{
 				roff_dead_michel = false
 			})
 			return {
-				message = 'Good Riddance!'
+				message = localize('k_roff_gross_dead')
 			}
 		end
 
