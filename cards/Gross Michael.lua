@@ -70,13 +70,15 @@ SMODS.Joker{
 	eternal_compat = true,
 	perishable_compat = true,
 	pos = { x = 3, y = 1 },
-	config = { extra = { Xmult = 1, Xmult_mod = 0.1 } },
+	config = { extra = { Xmult = 1, Xmult_mod = 0.1, do_gross_calc = true} },
 	loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = G.P_CENTERS.j_gros_michel
 		return {vars = {card.ability.extra.Xmult_mod, card.ability.extra.Xmult}}
 	end,
 	calculate = function (self,card,context)
+
 		if context.ending_shop then
+			card.ability.extra.do_gross_calc = true
 			if #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then
 				G.GAME.joker_buffer = G.GAME.joker_buffer + 1
 				G.E_MANAGER:add_event(Event({
@@ -92,10 +94,11 @@ SMODS.Joker{
 				}
 			end
 		end
-		if context.end_of_round and context.cardarea then
+
+		if context.end_of_round and context.cardarea and card.ability.extra.do_gross_calc  and not context.blueprint then
 			local Michaels = SMODS.find_card('j_gros_michel',true)
-			-- card.ability.extra.Xmult = 1
 			card.ability.extra.Xmult = card.ability.extra.Xmult + (card.ability.extra.Xmult_mod * #Michaels)
+			card.ability.extra.do_gross_calc = false
 		end
 		if context.joker_main then
 			return {
