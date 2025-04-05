@@ -51,6 +51,7 @@ SMODS.Joker:take_ownership('gros_michel', -- object key (class prefix not requir
 					message = localize('k_extinct_ex')
 				}
 			else
+				SMODS.calculate_context({roff_probability_missed = true}, effects)
 				return {
 					message = localize('k_safe_ex')
 				}
