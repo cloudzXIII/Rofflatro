@@ -88,6 +88,16 @@ return {
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
                     "{C:inactive,s:0.8,E:2}Ew! Why won't you {C:inactive,s:0.8,E:1}DIE?!"
                 }
+            },
+            j_roff_dvd = {
+                name = 'DVD',
+                text = {
+                    "Gains {C:chips}+#1#{} Chips when",
+                    "any {C:green}probability{} effect",
+                    "{C:attention}fails{} to trigger",
+                    "{C:inactive}(Currently {C:chips}+#2# {C:inactive}Chips)",
+                    "{C:inactive,s:0.8,E:2}It hit the corner! I saw it!"
+                }
             }
         },
     Back = 
