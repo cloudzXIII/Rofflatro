@@ -2,6 +2,7 @@ SMODS.Joker{
 	key = 'money_shots',
 	atlas = 'roffers',
 	rarity = 1,
+	cost = 2,
 	blueprint_compat = true,
 	pos = { x = 2, y = 0 },
 	loc_vars = function(self,info_queue,card)

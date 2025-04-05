@@ -1,7 +1,8 @@
 SMODS.Joker{
 	key = 'primes',
 	atlas = 'roffers',
-	rarity = 1,
+	rarity = 2,
+	cost = 5,
 	blueprint_compat = true,
 	eternal_compat = true,
 	pos = { x = 4, y = 0 },

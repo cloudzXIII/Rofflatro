@@ -2,6 +2,7 @@ SMODS.Joker{
 	key = 'grossmichael',
 	atlas = 'roffers',
 	rarity = 2,
+	cost = 5,
 	blueprint_compat = true,
 	pos = { x = 3, y = 1 },
 	config = { extra = { xmult = 1, xmult_mod = 0.2 } },
