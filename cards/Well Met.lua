@@ -66,5 +66,9 @@ SMODS.Joker{
            card.ability.extra.marqueetimer = 0
            card.ability.extra.flavortext = ROFF.funcs.marquee(card.ability.extra.flavortext)
        end
-   end
+   end,
+	set_badges = function (self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_code'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+	end
 }

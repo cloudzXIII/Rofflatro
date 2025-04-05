@@ -24,9 +24,9 @@ return {
             j_roff_money_shots = {
                 name = 'Money Shots',
                 text = {
-                    "Creates {C:attention}The Hermit{} when",
-                    "earning money from a",
-                    "{C:attention}Lucky Card{}",
+                    "Creates {C:attention}The Hermit{}",
+                    "when earning money",
+                    "from a {C:attention}Lucky Card{}",
                     "{C:inactive}(Must have room)",
                     "{s:0.8,C:inactive,E:1}Hoooooolyyyyyy..."
                 }
@@ -113,6 +113,7 @@ return {
                 "{C:dark_edition,E:2}Maxx{} - Design, Code",
                 "{C:dark_edition,E:2}canicao{} - Design, Code",
                 "{C:dark_edition,E:2}garb{} - Code",
+                "{C:dark_edition,E:2}uhadmeatfood{} - Code",
                 " ",
                 "{s:1.5,C:attention,E:2}Also Try:",
                 "{C:dark_edition,E:1}GARBSHIT{}, {C:dark_edition,E:1}Lucky Jimbos/Legends{},  {C:dark_edition,E:1}Bountiful Update{}",
@@ -124,7 +125,14 @@ return {
 },
     misc = {
         dictionary = {
-            k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met! '
+            k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met! ',
+
+            k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
+            k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',
+            k_roff_credit_maxx_code = 'Code: Maxx',
+            k_roff_credit_canicao_code = 'Code: canicao',
+            k_roff_credit_garb_code = 'Code: garb',
+            k_roff_credit_uhadme_code = 'Code: uhadmeatfood'
         }
     }
 }

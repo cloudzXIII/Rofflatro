@@ -2,7 +2,10 @@
 ROFF = {
     C = {
         main =  HEX('6E3AA6'),
-        secondary = HEX('a36be8')
+        secondary = HEX('a36be8'),
+        credits = {
+            Lucky6 = HEX('fa5eff'),
+        }
     },
 
     funcs = {
