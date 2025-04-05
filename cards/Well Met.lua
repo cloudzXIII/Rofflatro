@@ -13,7 +13,7 @@ SMODS.Joker{
       info_queue[#info_queue+1] = {key = 'roff_favorite', set = 'Other'}
       return {
          vars = { card.ability.extra.xmult },
-         main_end = { 
+         main_end = { -- epic ui hax (thanks nh for the help)
             {
                n = G.UIT.C,
                config = {align = "bm", minh = 0.3},
