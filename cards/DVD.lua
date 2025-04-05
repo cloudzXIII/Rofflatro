@@ -12,12 +12,7 @@ SMODS.Joker{
 	calculate = function(self,card,context)
 		if context.roff_probability_missed and not context.blueprint then
 			card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
-			G.E_MANAGER:add_event(Event({
-				func = function ()
-					SMODS.calculate_effect({message = localize('k_upgrade_ex')}, card)
-					return true
-				end
-			}))
+			SMODS.calculate_effect({message = localize('k_upgrade_ex')}, card)
 		elseif context.joker_main then
 			return {
 				chips = card.ability.extra.chips
