@@ -77,6 +77,17 @@ return {
                     "with {C:attention}Favorite{} sticker",
                     "gives {X:mult,C:white}X#1#{} Mult" -- flavor text is done via gui dynatext shenanigans
                 }
+            },
+            j_roff_grossmichael = {
+                name = 'Gross Michael',
+                text = {
+                    "Creates {C:attention}Gros Michel{} at end of shop",
+                    "Gains {X:mult,C:white}X#1#{} Mult per {C:attention}Gros Michel{}",
+                    "owned at end of round",
+                    "{C:attention}Destroyed{} with {C:attention}Gros Michel{}",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+                    "{C:inactive,s:0.8,E:2}Ew! Why won't you {C:inactive,s:0.8,E:1}DIE?!"
+                }
             }
         },
     Back = 
