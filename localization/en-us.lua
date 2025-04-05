@@ -98,6 +98,16 @@ return {
                     "{C:inactive}(Currently {C:chips}+#2# {C:inactive}Chips)",
                     "{C:inactive,s:0.8,E:2}It hit the corner! I saw it!"
                 }
+            },
+            j_roff_a7x = {
+                name = 'Avenged Sevenfold',
+                text = {
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "if played hand contains",
+                    "an {C:attention}Ace{} and a {C:attention}7{}",
+                    "{C:inactive}(Currently {C:mult}+#2# {C:inactive}Mult)",
+                    "{C:inactive,s:0.8,E:2}It's not funny guys."
+                }
             }
         },
     Back = 
