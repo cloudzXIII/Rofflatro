@@ -1,3 +1,8 @@
+--Gross Michael (Uncommon) - Creates Gros Michel at end of shop (must have room). 
+--Gains x0.25 Mult for each Gros Michel held at end of round. 
+--Destroyed with Gros Michel. (Ew! Just DIE already!)
+
+--kidnaps gros michel, credit https://github.com/Steamodded/examples/blob/master/Mods/ExampleJokersMod/ModdedVanilla.lua for the code
 SMODS.Joker:take_ownership('gros_michel', -- object key (class prefix not required)
 	{ -- table of properties to change from the existing object
 	calculate = function(self, card, context)
@@ -62,6 +67,8 @@ SMODS.Joker{
 	rarity = 2,
 	cost = 5,
 	blueprint_compat = true,
+	eternal_compat = true,
+	perishable_compat = true,
 	pos = { x = 3, y = 1 },
 	config = { extra = { Xmult = 1, Xmult_mod = 0.1 } },
 	loc_vars = function(self,info_queue,card)
@@ -95,7 +102,7 @@ SMODS.Joker{
 				Xmult = card.ability.extra.Xmult
 			}
 		end
-		if context.roff_dead_michel then
+		if context.roff_dead_michel and not context.blueprint then
 			G.E_MANAGER:add_event(Event({
 				func = function()
 					play_sound('tarot1')
@@ -133,11 +140,4 @@ SMODS.Joker{
 		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
 	end
 }
-
-
---Gross Michael (Uncommon) - Creates Gros Michel at end of shop (must have room). 
---Gains x0.25 Mult for each Gros Michel held at end of round. 
---Destroyed with Gros Michel. (Ew! Just DIE already!)
-
---kidnaps gros michel, credit https://github.com/Steamodded/examples/blob/master/Mods/ExampleJokersMod/ModdedVanilla.lua for the code
 
