@@ -13,14 +13,14 @@ SMODS.Joker{
 		if context.before and not context.blueprint then
             local hasA, has7 = false, false
 
-            for _, c in pairs(G.play.cards) do
+            for _, c in pairs(context.scoring_hand) do
                 if c:get_id() == 7 then
                     has7 = true
                     break
                 end
             end
 
-            for _, c in pairs(G.play.cards) do
+            for _, c in pairs(context.scoring_hand) do
                 if c:get_id() == 14 then
                     hasA = true
                     break
