@@ -32,10 +32,13 @@ SMODS.Joker{
 SMODS.Enhancement:take_ownership('glass', 
 	{
 		calculate = function(self, card, context)
-			if context.destroy_card and context.cardarea == G.play and context.destroy_card == card and pseudorandom('glass') < G.GAME.probabilities.normal/card.ability.extra then
-				return { remove = true }
-			else
-				return { roff_probability_missed = true }
+			if context.destroy_card and context.cardarea == G.play and context.destroy_card == card then
+				if pseudorandom('glass') < G.GAME.probabilities.normal/card.ability.extra then
+					return { remove = true }
+				else
+					local effects
+					SMODS.calculate_context({roff_probability_missed = true}, effects)
+				end
 			end
 		end,
 	},
