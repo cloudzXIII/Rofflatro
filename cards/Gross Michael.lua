@@ -67,8 +67,8 @@ SMODS.Joker{
 	rarity = 2,
 	cost = 5,
 	blueprint_compat = true,
-	eternal_compat = true,
-	perishable_compat = true,
+	eternal_compat = false,
+	perishable_compat = false,
 	pos = { x = 3, y = 1 },
 	config = { extra = { Xmult = 1, Xmult_mod = 0.1, do_gross_calc = true} },
 	loc_vars = function(self,info_queue,card)

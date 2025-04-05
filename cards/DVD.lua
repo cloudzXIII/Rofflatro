@@ -3,7 +3,7 @@ SMODS.Joker{
 	atlas = 'roffers',
 	rarity = 1,
 	blueprint_compat = true,
-	eternal_compat = true,
+	perishable_compat = false,
 	pos = { x = 4, y = 1 },
 	config = { extra = { chips = 0, chip_mod = 4 } },
 	loc_vars = function(self,info_queue,card)

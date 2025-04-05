@@ -4,7 +4,7 @@ SMODS.Joker{
 	rarity = 2,
 	cost = 5,
 	blueprint_compat = true,
-	eternal_compat = true,
+	perishable_compat = false,
 	pos = { x = 4, y = 0 },
 	config = { extra = { chips = 0, chip_mod = 11, min_cards = 3 } },
 	loc_vars = function(self,info_queue,card)
