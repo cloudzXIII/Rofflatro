@@ -63,7 +63,7 @@ SMODS.Joker{
 	cost = 5,
 	blueprint_compat = true,
 	pos = { x = 3, y = 1 },
-	config = { extra = { Xmult = 1, Xmult_mod = 0.2 } },
+	config = { extra = { Xmult = 1, Xmult_mod = 0.1 } },
 	loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = G.P_CENTERS.j_gros_michel
 		return {vars = {card.ability.extra.Xmult_mod, card.ability.extra.Xmult}}
@@ -80,20 +80,19 @@ SMODS.Joker{
 					end
 				}))
 				return {
-					message = "Gross!",
+					message = localize('k_roff_gross_add_banana'),
 					colour = HEX('4d502a')
 				}
 			end
 		end
 		if context.end_of_round and context.cardarea then
 			local Michaels = SMODS.find_card('j_gros_michel',true)
-			card.ability.extra.Xmult = 1
+			-- card.ability.extra.Xmult = 1
 			card.ability.extra.Xmult = card.ability.extra.Xmult + (card.ability.extra.Xmult_mod * #Michaels)
 		end
 		if context.joker_main then
 			return {
-				message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.Xmult } },
-				Xmult_mod = card.ability.extra.Xmult
+				Xmult = card.ability.extra.Xmult
 			}
 		end
 		if context.roff_dead_michel then

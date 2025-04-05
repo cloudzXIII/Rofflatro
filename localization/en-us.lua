@@ -137,6 +137,7 @@ return {
         dictionary = {
             k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met! ',
             k_roff_gross_dead = 'Good Riddance!',
+            k_roff_gross_add_banana = 'Gross!',
 
             k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',
