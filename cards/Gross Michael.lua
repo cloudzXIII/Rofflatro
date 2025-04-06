@@ -71,7 +71,7 @@ SMODS.Joker{
 	eternal_compat = false,
 	perishable_compat = false,
 	pos = { x = 3, y = 1 },
-	config = { extra = { Xmult = 1, Xmult_mod = 0.1, do_gross_calc = true} },
+	config = { extra = { Xmult = 1, Xmult_mod = 0.2, do_gross_calc = true} },
 	loc_vars = function(self,info_queue,card)
         info_queue[#info_queue+1] = G.P_CENTERS.j_gros_michel
 		return {vars = {card.ability.extra.Xmult_mod, card.ability.extra.Xmult}}
