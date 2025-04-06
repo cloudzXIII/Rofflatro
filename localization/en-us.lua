@@ -108,6 +108,25 @@ return {
                     "{C:inactive}(Currently {C:mult}+#2# {C:inactive}Mult)",
                     "{C:inactive,s:0.8,E:2}It's not funny guys."
                 }
+            },
+            j_roff_in_n_out = {
+                name = 'In-n-Out',
+                text = {
+                    "This Joker gains {C:chips}+#1#{} Chips",
+                    "when no money is spent",
+                    "in a {C:attention}shop{}",
+                    "{C:inactive}(Currently {C:chips}+#2# {C:inactive}Chips)",
+                    "{C:inactive,s:0.8,E:2}So much better than Chick-Fil-A!"
+                }
+            },
+            j_roff_never_punished = {
+                name = 'Never Punished',
+                text = {
+                    "Sell this Joker in a {C:attention}Boss Blind",
+                    "to create a {C:attention}Glass face{} card",
+                    "and draw to hand",
+                    "{C:inactive,s:0.8,E:2}It's called skill."
+                }
             }
         },
     Back = 
@@ -133,7 +152,7 @@ return {
                 "{C:dark_edition,E:2}Maxx{} - Design, Code",
                 "{C:dark_edition,E:2}canicao{} - Design, Code",
                 "{C:dark_edition,E:2}garb{} - Code",
-                "{C:dark_edition,E:2}uhadmeatfood{} - Code",
+                "{C:dark_edition,E:2}UHadMeAtFood{} - Code",
                 " ",
                 "{s:1.5,C:attention,E:2}Also Try:",
                 "{C:dark_edition,E:1}GARBSHIT{}, {C:dark_edition,E:1}Lucky Jimbos/Legends{},  {C:dark_edition,E:1}Bountiful Update{}",
@@ -154,7 +173,8 @@ return {
             k_roff_credit_maxx_code = 'Code: Maxx',
             k_roff_credit_canicao_code = 'Code: canicao',
             k_roff_credit_garb_code = 'Code: garb',
-            k_roff_credit_uhadme_code = 'Code: uhadmeatfood'
+            k_roff_credit_uhadme_art = 'Art: UHadMeAtFood',
+            k_roff_credit_uhadme_code = 'Code: UHadMeAtFood'
         }
     }
 }

@@ -3,22 +3,13 @@
 
 SMODS.Joker{
 	key = 'never_punished',
-	loc_txt = {
-		name = 'never_punished',
-		text = {
-			'placeholder'
-		}
-	},
 	atlas = 'roffers',
 	rarity = 1,
 	blueprint_compat = true,
 	eternal_compat = false,
 	perishable_compat = false,
-	pos = { x = 0, y = 0 },
-	config = { extra = {
-			isBossBlind = false
-		}
-	},
+	pos = { x = 6, y = 1 },
+	config = { extra = { isBossBlind = false } },
 	loc_vars = function(self,info_queue,card)
 		return {vars = {}}
 	end,
@@ -31,7 +22,6 @@ SMODS.Joker{
 				center = G.P_CENTERS.m_glass
 			}, G.hand, false,false,nil)
 			_card:add_to_deck()
-			G.deck.config.card_limit = G.deck.config.card_limit + 1
 			table.insert(G.playing_cards, _card)
 			_card.states.visible = nil
 			G.E_MANAGER:add_event(Event({
@@ -41,6 +31,9 @@ SMODS.Joker{
 				end
 			})) 
 		end
-		
+	end,
+	set_badges = function (self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
 	end
 }
