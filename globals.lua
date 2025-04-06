@@ -5,6 +5,7 @@ ROFF = {
         secondary = HEX('a36be8'),
         credits = {
             Lucky6 = HEX('fa5eff'),
+            canicao = HEX('4b4687'),
         }
     },
 
