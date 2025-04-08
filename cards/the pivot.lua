@@ -30,7 +30,7 @@ SMODS.Joker{
 					card.ability.extra.joker_hand_count = 1 
 					card.ability.extra.joker_hand = context.scoring_name
 					return {
-						message = localize('k_reset_ex')
+						message = localize('k_reset')
 					}
 				else
 					card.ability.extra.joker_hand_count = card.ability.extra.joker_hand_count + 1
@@ -43,7 +43,7 @@ SMODS.Joker{
 			else 
 				card.ability.extra.joker_hand_count = 1 
 				return {
-					message = localize('k_reset_ex')
+					message = localize('k_reset')
 				}
 			end
 		end
