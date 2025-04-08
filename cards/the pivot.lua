@@ -4,7 +4,7 @@ SMODS.Joker{
 	rarity = 3,
 	blueprint_compat = true,
 	eternal_compat = true,
-	pos = { x = 0, y = 0 },
+	pos = { x = 0, y = 2 },
 	config = { extra = {
 			dollars = 10,
 			joker_hand = "High Card",
