@@ -1,15 +1,5 @@
 SMODS.Joker{
-	key = '',
-	loc_txt = {
-		name = 'The Pivot',
-		text = {
-			"Gain $10", 
-			"when playing 3 consecutive hands of the same kind",
-			"that aren't your most played hand.",
-			--"{C:inactive}(playing #1#, #2# times){}",
-			"{C:inactive}I'’s never too late!{}"
-		}
-	},
+	key = 'pivot',
 	atlas = 'roffers',
 	rarity = 3,
 	blueprint_compat = true,
@@ -19,10 +9,11 @@ SMODS.Joker{
 			dollars = 10,
 			joker_hand = "High Card",
 			joker_hand_count = 0,
+			hands_for_payout = 3,
 		}
 	},
 	loc_vars = function(self,info_queue,card)
-		return {vars = {card.ability.extra.joker_hand, card.ability.extra.joker_hand_count}}
+		return {vars = {card.ability.extra.dollars, card.ability.extra.hands_for_payout}}
 	end,
 	calculate = function(self,card,context)
 		if context.before and context.cardarea == G.jokers and not context.blueprint then
@@ -39,18 +30,20 @@ SMODS.Joker{
 					card.ability.extra.joker_hand_count = 1 
 					card.ability.extra.joker_hand = context.scoring_name
 					return {
-						message = "reset"
+						message = localize('k_reset_ex')
 					}
 				else
 					card.ability.extra.joker_hand_count = card.ability.extra.joker_hand_count + 1
-					return {
-						message = "Pivot"
-					}
+					if card.ability.extra.joker_hand_count >= 3 then
+						return {
+							message = localize('k_roff_pivot_active')
+						}
+					end
 				end
 			else 
 				card.ability.extra.joker_hand_count = 1 
 				return {
-					message = "reset"
+					message = localize('k_reset_ex')
 				}
 			end
 		end
@@ -61,6 +54,8 @@ SMODS.Joker{
 		else
 			badges[#badges+1] = create_badge('Inactive', G.C.RED, G.C.WHITE, 0.8)
 		end
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
 	end,
 	calc_dollar_bonus = function(self, card)
 		local bonus = card.ability.extra.dollars

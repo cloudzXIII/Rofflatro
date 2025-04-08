@@ -127,6 +127,15 @@ return {
                     "and draw to hand",
                     "{C:inactive,s:0.8,E:2}It's called skill."
                 }
+            },
+            j_roff_pivot = {
+                name = 'The Pivot',
+                text = {
+                    'Earn {C:money}$#1#{} at end of round',
+                    "after playing a hand that isn't your",
+                    "most played {C:attention}#2#{} times in a row",
+                    "{C:inactive,s:0.8,E:2}Never too late!"
+                }
             }
         },
     Back = 
@@ -167,6 +176,7 @@ return {
             k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met! ',
             k_roff_gross_dead = 'Good Riddance!',
             k_roff_gross_add_banana = 'Gross!',
+            k_roff_pivot_active = 'Pivot!',
 
             k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',
