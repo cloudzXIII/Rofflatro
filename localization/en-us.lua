@@ -136,6 +136,16 @@ return {
                     "most played {C:attention}#2#{} times in a row",
                     "{C:inactive,s:0.8,E:2}Never too late!"
                 }
+            },
+            j_roff_jake = {
+                name = 'Jake',
+                text = {
+                    "This Joker gains {X:mult,C:white}X#2#{} Mult",
+                    "for each {C:attention}Diet Cola{}",
+                    "sold this run",
+                    "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)",
+                    "{C:inactive,s:0.8,E:2}Always take the Cola. {C:inactive,s:0.8,E:1}ALWAYS."
+                }
             }
         },
     Back = 
@@ -180,6 +190,7 @@ return {
 
             k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',
+            k_roff_credit_maxx_art = 'Art: Maxx',
             k_roff_credit_maxx_code = 'Code: Maxx',
             k_roff_credit_canicao_code = 'Code: canicao',
             k_roff_credit_garb_code = 'Code: garb',

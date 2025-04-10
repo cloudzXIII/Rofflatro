@@ -11,13 +11,7 @@ end
 true)
 
 SMODS.Joker{
-	key = "Jake",
-	loc_txt = {
-		name = "Jake",
-		text = {"This Joker gains x1 Mult",
-		"for every Diet Cola sold this run. ",
-		"currently: #1#"}
-	},
+	key = "jake",
 	atlas = 'roffers',
 	rarity = 1,
 	blueprint_compat = true,
@@ -31,8 +25,10 @@ SMODS.Joker{
 		}
 	},
 	loc_vars = function(self,info_queue,card)
+		info_queue[#info_queue+1] = G.P_CENTERS.j_diet_cola
+
 		local m = card.ability.extra.Xmult + (ROFF.vars.colas_sold * card.ability.extra.Xmult_mod)
-		return{vars = {m}}
+		return{vars = {m, card.ability.extra.Xmult_mod}}
 	end,
 	calculate = function (self, card, context)
 		local m = card.ability.extra.Xmult + (ROFF.vars.colas_sold * card.ability.extra.Xmult_mod)

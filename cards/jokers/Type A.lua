@@ -1,24 +1,14 @@
 SMODS.Joker{
 	key = 'typeA',
-	loc_txt = {
-		name = 'Type A Joker',
-		text = {
-			'Gains {X:mult,C:white}X#1#{} Mult if played',
-			'hand is a {C:attention}#3#{}.',
-			'Resets when playing a {C:attention}High Card{}.',
-			'Hand changes at end of round.',
-			'{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive} mult){}',
-		}
-	},
 	atlas = 'roffers',
 	rarity = 3,
 	blueprint_compat = true,
 	eternal_compat = true,
 	pos = { x = 2, y = 2 },
 	config = { extra = {
-			extra = 1.5,
+			extra = 0.1,
 			x_mult = 1,
-			handsel = 'Pair'
+			handsel = 'Straight Flush'
 		}
 	},
 	loc_vars = function(self,info_queue,card)
@@ -33,7 +23,14 @@ SMODS.Joker{
 				card = card
 			}
 		end
-		if context.before and next(context.poker_hands['High Card']) and not context.blueprint then
+		if context.before and 
+			(context.scoring_name == 'High Card' or
+			context.scoring_name == 'Pair' or
+			context.scoring_name == 'Two Pair' or
+			context.scoring_name == 'Three of a Kind' or
+			context.scoring_name == 'Straight' or
+			context.scoring_name == 'Flush')
+		and not context.blueprint then
 			if card.ability.extra.x_mult > 1 then
 				card.ability.extra.x_mult = 1
 				return {
@@ -48,7 +45,12 @@ SMODS.Joker{
 			}
 		end
 		if context.end_of_round then
-			local _poker_hands = { "Flush Five", "Flush House", "Five of a Kind", "Straight Flush", "Four of a Kind", "Full House",}
+			local _poker_hands = {"Straight Flush", "Four of a Kind", "Full House",}
+
+			if G.GAME.hands['Five of a Kind'].visible then table.insert(_poker_hands, "Five of a Kind") end
+			if G.GAME.hands['Flush Five'].visible then table.insert(_poker_hands, "Flush Five") end
+			if G.GAME.hands['Flush House'].visible then table.insert(_poker_hands, "Flush House") end
+
 			card.ability.extra.handsel = pseudorandom_element(_poker_hands, pseudoseed('type_A'))
 			return {
 				message = 'Streamer!'
@@ -56,7 +58,7 @@ SMODS.Joker{
 		end
 	end,
 	set_badges = function (self, card, badges)
-		badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_maxx_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
 		badges[#badges+1] = create_badge(localize('k_roff_credit_maxx_code'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
 	end
 }
