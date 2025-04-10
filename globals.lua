@@ -266,6 +266,9 @@ ROFF = {
             local marqueedtext = text:sub(2, #text)..text:sub(1,1)
             return marqueedtext
         end
+    },
+    vars ={
+        colas_sold = 0
     }
 }
 
