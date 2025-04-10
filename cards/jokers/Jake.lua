@@ -16,7 +16,7 @@ SMODS.Joker{
 	rarity = 1,
 	blueprint_compat = true,
 	eternal_compat = true,
-	pos = { x = 0, y = 0 },
+	pos = { x = 5, y = 3 },
 	
 	config = {
 		extra = {
@@ -26,16 +26,20 @@ SMODS.Joker{
 	},
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue+1] = G.P_CENTERS.j_diet_cola
-
-		local m = card.ability.extra.Xmult + (ROFF.vars.colas_sold * card.ability.extra.Xmult_mod)
-		return{vars = {m, card.ability.extra.Xmult_mod}}
+		return{vars = {card.ability.extra.Xmult, card.ability.extra.Xmult_mod}}
 	end,
 	calculate = function (self, card, context)
-		local m = card.ability.extra.Xmult + (ROFF.vars.colas_sold * card.ability.extra.Xmult_mod)
 		if context.joker_main then
 			return {
-				Xmult = m
+				Xmult = card.ability.extra.Xmult
 			}
 		end
+	end,
+	update = function (self, card, dt)
+		card.ability.extra.Xmult = 1 + (ROFF.vars.colas_sold * card.ability.extra.Xmult_mod)
+	end,
+	set_badges = function (self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
 	end
 }
