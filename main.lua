@@ -27,7 +27,9 @@ assert(SMODS.load_file("globals.lua"))()
 local subdir = "cards"
 local cards = NFS.getDirectoryItems(SMODS.current_mod.path .. subdir)
 for _, filename in pairs(cards) do
-    assert(SMODS.load_file(subdir .. "/" .. filename))()
+    if string.sub(filename, string.len(filename) - 3) == '.lua' then
+        assert(SMODS.load_file(subdir .. "/" .. filename))()
+    end
 end
 
 --favorite card calc
