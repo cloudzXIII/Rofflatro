@@ -21,7 +21,7 @@ local joker_list = {
     --'Happy Birthday',
     'Avenged Sevenfold',
     'Money Shots',
-    --'Black Shirt',
+    'Black Shirt',
     --'Main Channel',
     'Thanks For The Primes',
     --'Never Skip',

@@ -146,6 +146,16 @@ return {
                     "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)",
                     "{C:inactive,s:0.8,E:2}Always take the Cola. {C:inactive,s:0.8,E:1}ALWAYS."
                 }
+            },
+            j_roff_black_shirt = {
+                name = 'Black Shirt',
+                text = {
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "if played hand contains",
+                    "{C:attention}Four of a Kind{}",
+                    "{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)",
+                    "{C:inactive,s:0.8,E:2}Wonder what his wardrobe looks like..."
+                }
             }
         },
     Back = 
