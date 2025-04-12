@@ -25,7 +25,7 @@ SMODS.Joker{
    if context.reroll_shop and card.ability.extra.check == true then
       card.ability.extra.check = false
       return {
-         message = localize('k_roff_inout_fail')
+         message = localize('k_roff_inout_fail'),
          colour = G.C.RED,
          sound = 'cancel'
       }
