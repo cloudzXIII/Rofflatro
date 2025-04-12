@@ -1,13 +1,10 @@
 SMODS.Joker{
    key = 'in_n_out',
-   atlas = 'roffles',
+   atlas = 'roffers',
    rarity = 1,
    blueprint_compat = true,
    eternal_compat = true,
-   pos = {
-      x = 1,
-      y = 2
-   },
+   pos = { x = 1, y = 2 },
    config = {
       extra = {
          chips = 0,
