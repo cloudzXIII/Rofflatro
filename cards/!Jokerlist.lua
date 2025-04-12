@@ -5,7 +5,7 @@ local joker_list = {
     'Type A',
     'The Pivot',
     'Jake',
-    --'Murphy',
+    'Murphy',
     --'Crashout',
     'Well Met',
     'DVD',
