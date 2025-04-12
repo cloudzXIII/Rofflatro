@@ -22,7 +22,7 @@ SMODS.Joker{
       }
    end,
    calculate = function(self, card, context)
-   if context.reroll_shop then
+   if context.reroll_shop and card.ability.extra.check == true then
       card.ability.extra.check = false
       return {
          message = localize('k_roff_inout_fail')
