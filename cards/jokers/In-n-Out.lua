@@ -19,7 +19,7 @@ SMODS.Joker{
       }
    end,
    calculate = function(self, card, context)
-   if context.reroll_shop and card.ability.extra.check == true then
+   if context.reroll_shop and card.ability.extra.check == true and not context.blueprint then
       card.ability.extra.check = false
       return {
          message = localize('k_roff_inout_fail'),
