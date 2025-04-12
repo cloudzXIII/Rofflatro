@@ -27,7 +27,7 @@ SMODS.Joker{
          sound = 'cancel'
       }
    end
-   if context.ending_shop then
+   if context.ending_shop and not context.blueprint then
       if card.ability.extra.check == true then
       card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chipgain
       return {
