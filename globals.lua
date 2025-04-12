@@ -6,7 +6,8 @@ ROFF = {
         credits = {
             Lucky6 = HEX('fa5eff'),
             canicao = HEX('4b4687'),
-            canicao_text = HEX('b9af87')
+            canicao_text = HEX('b9af87'),
+            uhadme = HEX('56a786')
         }
     },
 
@@ -17,11 +18,10 @@ ROFF = {
         --- flips `card`, performs `function` while `card` is flipped, and un-flips `card`.
         --- @param card table
         --- @param i number
-        --- @param context table
         --- @param amount number
         --- @param t number
         --- @param func function
-        flip_unflip = function (card, i, context, amount, t, func)
+        flip_unflip = function (card, i, amount, t, func)
             G.E_MANAGER:add_event(Event({ -- first flip
                 trigger = "after",
                 delay = (i - 1) * t, -- this is meant to be a delay for when you flip/unflip a whole hand for instance, so each flipped card does it sequentially. t is the delay between card flips
@@ -45,7 +45,6 @@ ROFF = {
                 delay = ((i - 1) * t) + (amount * t), -- after all the cards are done flipping, start flipping again from the start
                 blockable = false,
                 func = function()
-                    if context and (not context.individual and not context.cardarea == G.play and not context.other_card == card) then return false end
                     G.E_MANAGER:add_event(Event({
                         blockable = false,
                         trigger = 'after',
