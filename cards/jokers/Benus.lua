@@ -6,7 +6,7 @@ SMODS.Joker{
 	blueprint_compat = true,
 	eternal_compat = true,
 	pos = { x = 3, y = 1 },
-	config = { extra = { dollars = 3, dollars_decrease = 1 }},
+	config = { extra = { dollars = 3, dollars_decrease = 2 }},
 	loc_vars = function(self,info_queue,card)
 		return {vars = {card.ability.extra.dollars, card.ability.extra.dollars_decrease}}
 	end,
