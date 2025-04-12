@@ -6,6 +6,7 @@ ROFF = {
         credits = {
             Lucky6 = HEX('fa5eff'),
             canicao = HEX('4b4687'),
+            canicao_text = HEX('b9af87')
         }
     },
 
@@ -87,7 +88,7 @@ ROFF = {
         ---@param hand_name string
         ---@return string
         get_planet_from_hand = function (hand_name)
-            for k, v in pairs(G.P_CENTER_POOLS.Planet) do
+            for _, v in pairs(G.P_CENTER_POOLS.Planet) do
                 if v.config.hand_type == hand_name then
                     return v.key
                 end
@@ -113,8 +114,8 @@ ROFF = {
         --- * `multiply`
         --- * `keywords`: list of specific values to change in `table_in`. If nil, change every value in `table_in`.
         --- * `unkeywords`: list of specific values to *not* change in `table_in`.
-        --- * `x_protect`: if true (or not set), any Xmult effects whose value is currently 1 are not modified. If false, this check is bypassed - which may result in some unlisted values being 
-        --- applied.
+        --- * `x_protect`: if true (or not set), any X effects (Xmult, Xchips, etc.) whose value is currently 1 are not modified. If false, this check is bypassed - which may result in some unlisted values being 
+        --- modified.
         --- * `reference`: initial values for the provided table. If nil, defaults to `table_in`.
         --- 
         --- This function scans all sub-tables for numeric values, so it's recommended to pass the card's ability table rather than the entire card object.
@@ -272,7 +273,7 @@ ROFF = {
     }
 }
 
--- couple util funcs nabbed from https://github.com/RenSnek/Balatro-Rendoms :33 (nested into L6W to avoid compatibility issues)
+-- couple util funcs nabbed from https://github.com/RenSnek/Balatro-Rendoms :33 (nested into ROFF to avoid compatibility issues)
 ROFF.REND = {}
 
 --- Credit to RenSnek. Given a string `str` and a shorter string `start`, checks if the string's first `#start` characters are the same as `start`.

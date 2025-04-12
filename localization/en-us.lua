@@ -156,6 +156,14 @@ return {
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
                     "{C:inactive,s:0.8,E:2}Wonder what his wardrobe looks like..."
                 }
+            },
+            j_roff_murphy = {
+                name = 'Murphy',
+                text = {
+                    "Gain {C:money}$#1#{} at end of round",
+                    "if deck has no {C:attention}9s",
+                    "{C:inactive,s:0.8,E:2}Don't look! {C:inactive,s:0.8,E:1}Don't look!!!"
+                }
             }
         },
     Back = 

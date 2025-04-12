@@ -1,16 +1,9 @@
 --Murphy (Uncommon) - Gain 6$ at end of round if deck has no 9s. (Don’t look! Don’t look!!!)
 
 SMODS.Joker{
-	key = 'Murphy',
-	loc_txt = {
-		name = 'Murphy',
-		text = {
-			'gain 6$ at end of round',
-			'if deck has no 9s.'
-		}
-	},
+	key = 'murphy',
 	atlas = 'roffers',
-	rarity = 1,
+	rarity = 2,
 	blueprint_compat = true,
 	eternal_compat = true,
 	pos = { x = 0, y = 0 },
@@ -20,7 +13,7 @@ SMODS.Joker{
 		}
 	},
 	loc_vars = function(self,info_queue,card)
-		return {vars = {}}
+		return {vars = { card.ability.extra.dollars }}
 	end,
 	calc_dollar_bonus = function(self, card)
 		local bonus = card.ability.extra.dollars
@@ -32,5 +25,9 @@ SMODS.Joker{
 		if card.ability.extra.nines == 0 and bonus > 0 then 
 			return bonus 				
 		end
+	end,
+	set_badges = function (self, card, badges)
+		  badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+		 badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.canicao, G.C.WHITE, 0.8)
 	end
 }
