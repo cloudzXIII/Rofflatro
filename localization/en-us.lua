@@ -56,7 +56,7 @@ return {
                 text = {
                     "{C:chips}+#1#{} Chips for each",
                     "{C:attention}retrigger{} on first",
-                    "scored {C:attention}face{} card.",
+                    "scored {C:attention}face{} card",
                     "{C:inactive,s:0.8,E:2}Every video is the same."
                 }
             },
@@ -164,6 +164,14 @@ return {
                     "if deck has no {C:attention}9s",
                     "{C:inactive,s:0.8,E:2}Don't look! {C:inactive,s:0.8,E:1}Don't look!!!"
                 }
+            },
+            j_roff_hearthstone = {
+                name = 'Hearthstone?',
+                text = {
+                    "Scored {C:attention}Wild Cards{} get",
+                    "a random {C:attention}Seal",
+                    "{C:inactive,s:0.8,E:2}What's that? Never heard of it."
+                }
             }
         },
     Back = 
@@ -214,7 +222,8 @@ return {
             k_roff_credit_canicao_code = 'Code: canicao',
             k_roff_credit_garb_code = 'Code: garb',
             k_roff_credit_uhadme_art = 'Art: UHadMeAtFood',
-            k_roff_credit_uhadme_code = 'Code: UHadMeAtFood'
+            k_roff_credit_uhadme_code = 'Code: UHadMeAtFood',
+            k_roff_credit_splatter_art = 'Art: splatter'
         }
     }
 }

@@ -11,7 +11,7 @@ local joker_list = {
     'DVD',
     --'Kalis Banhammer',
     'In-n-Out',
-    --'Hearthstone',
+    'Hearthstone',
     'Jackin It',
     --'Just Get Chips',
     'Benus',
