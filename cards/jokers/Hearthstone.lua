@@ -5,6 +5,9 @@ SMODS.Joker{
 	blueprint_compat = true,
 	eternal_compat = true,
 	pos = { x = 3, y = 4 },
+	loc_vars = function(self,info_queue,card)
+		info_queue[#info_queue+1] = G.P_CENTERS.m_wild
+	end,
 	calculate = function(self,card,context)
 		if context.before and not context.blueprint then
             for _, c in pairs(context.scoring_hand) do

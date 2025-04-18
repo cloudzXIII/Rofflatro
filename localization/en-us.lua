@@ -172,6 +172,16 @@ return {
                     "a random {C:attention}Seal",
                     "{C:inactive,s:0.8,E:2}What's that? Never heard of it."
                 }
+            },
+            j_roff_sevens = {
+                name = "Sevens Suck",
+                text = {
+                    "Scored {C:attention}7s{} have",
+                    "a {C:green}#1# in #2#{} chance to",
+                    "give {X:mult,C:white}X#3#{} Mult",
+                    "{C:inactive,s:0.8,E:2}ZERO synergies. Horrible.",
+                    "{C:inactive,s:0.6,E:2}Wait, have I seen this one before?"
+                }
             }
         },
     Back = 

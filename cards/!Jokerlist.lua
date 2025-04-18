@@ -25,13 +25,13 @@ local joker_list = {
     --'Main Channel',
     'Thanks For The Primes',
     --'Never Skip',
-    'Caught In 4K'
+    'Caught In 4K',
     --'o7',
     --'It Aint My Grave',
     --'Nice',
     --'Voucher Clear',
     --'The Thumbnail',
-    --'Sevens Suck',
+    'Sevens Suck',
     --'Nancy'
 }
 
