@@ -26,7 +26,7 @@ local joker_list = {
     'Thanks For The Primes',
     --'Never Skip',
     'Caught In 4K',
-    --'o7',
+    'o7',
     --'It Aint My Grave',
     --'Nice',
     --'Voucher Clear',
