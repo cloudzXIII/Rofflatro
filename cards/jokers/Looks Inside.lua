@@ -33,7 +33,7 @@ SMODS.Joker{
 				G.E_MANAGER:add_event(Event({
 					func = function()
 						SMODS.add_card({set = 'Joker', area = G.jokers, key = 'j_photograph'})
-						if #G.jokers.cards < G.jokers.config.card_limit then
+						if #G.jokers.cards <= G.jokers.config.card_limit then
 							SMODS.add_card({set = 'Joker', area = G.jokers, key = 'j_hanging_chad'})
 						else
 							SMODS.calculate_effect({ message = localize('k_no_room_ex') }, card)
