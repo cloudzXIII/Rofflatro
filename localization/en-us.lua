@@ -176,14 +176,23 @@ return {
             j_roff_o7 = {
                 name = 'o7',
                 text = {
-                    "Prevents Death", 
-                    "and gives {C:money}$#1#{}",
-                    "if chips scored",
-                    "are at least {C:attention}50%",
-                    "of required chips",
-                    "{S:1.1,C:red,E:2}self destructs{}",
+                    "If scored chips are at least",
+                    "{C:attention}50%{} of required chips,",
+                    "prevents {C:attention}death{} and gives {C:money}$#1#{}",
+                    "{S:1.1,C:red,E:2}Self destructs{}",
+                    "{C:inactive,s:0.8,E:2}False alarm guys!"
                 }
-            }
+            },
+            j_roff_sevens = {
+                name = "Sevens Suck",
+                text = {
+                    "Scored {C:attention}7s{} have",
+                    "a {C:green}#1# in #2#{} chance to",
+                    "give {X:mult,C:white}X#3#{} Mult",
+                    "{C:inactive,s:0.8,E:2}ZERO synergies. Horrible.",
+                    "{C:inactive,s:0.6,E:2}Wait, have I seen this one before?"
+                }
+            },
         },
     Back = 
     {

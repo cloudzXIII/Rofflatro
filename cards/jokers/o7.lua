@@ -6,7 +6,7 @@ SMODS.Joker{
 	rarity = 3,
 	blueprint_compat = true,
 	eternal_compat = true,
-	pos = { x = 4, y = 5 },
+	pos = { x = 5, y = 4 },
 	config = { extra = {
 		dollars = 20,
 		}
@@ -34,4 +34,8 @@ SMODS.Joker{
 
 		end
 	end,
+	set_badges = function (self, card, badges)
+		  badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_art'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)
+		 badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)
+	end
 }
