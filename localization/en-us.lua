@@ -234,6 +234,7 @@ return {
             k_roff_gross_add_banana = 'Gross!',
             k_roff_pivot_active = 'Pivot!',
             k_roff_inout_fail = 'Bad taste!',
+            k_roff_o7_saved = 'Close one chat',
 
             k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',

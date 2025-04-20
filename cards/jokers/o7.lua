@@ -27,7 +27,7 @@ SMODS.Joker{
 			})) 
 			return {
 				message = 'Put that away!',
-				saved = true,
+				saved = "k_roff_o7_saved",
 				colour = G.C.RED,
 				dollars = card.ability.extra.dollars
 			}
