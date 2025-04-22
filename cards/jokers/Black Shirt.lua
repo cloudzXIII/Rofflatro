@@ -5,12 +5,12 @@ SMODS.Joker{
 	blueprint_compat = true,
 	perishable_compat = false,
 	pos = { x = 1, y = 4 },
-	config = { extra = { Xmult = 1, Xmult_mod = 0.2 } },
+	config = { extra = { Xmult = 1, Xmult_mod = 0.1 } },
 	loc_vars = function(self,info_queue,card)
 		return {vars = { card.ability.extra.Xmult_mod, card.ability.extra.Xmult }}
 	end,
 	calculate = function(self,card,context)
-		if context.before and not context.blueprint and next(context.poker_hands['Four of a Kind']) then
+		if context.before and not context.blueprint and next(context.poker_hands['Three of a Kind']) then
             card.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_mod
             return {
                 message = localize{type = 'variable', key = 'a_xmult', vars = {card.ability.extra.Xmult}}
