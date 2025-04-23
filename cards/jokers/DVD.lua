@@ -2,6 +2,7 @@ SMODS.Joker{
 	key = 'dvd',
 	atlas = 'roffers',
 	rarity = 1,
+	cost = 5,
 	blueprint_compat = true,
 	perishable_compat = false,
 	pos = { x = 1, y = 3 },
