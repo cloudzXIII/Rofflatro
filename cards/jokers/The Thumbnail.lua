@@ -19,7 +19,7 @@ SMODS.Joker{
             return {
             x_mult = card.ability.extra.Xmult
             }
-		 end
+	 end
       end
    end,
    set_badges = function (self, card, badges)
