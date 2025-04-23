@@ -18,7 +18,7 @@ local joker_list = {
     --'Grimbo',
     --'What Would Doc Do',
     'Looks Inside',
-    --'Happy Birthday',
+    'Happy Birthday',
     'Avenged Sevenfold',
     'Money Shots',
     'Black Shirt',
@@ -29,10 +29,12 @@ local joker_list = {
     'o7',
     --'It Aint My Grave',
     --'Nice',
-    --'Voucher Clear',
+    'Voucher Clear',
     --'The Thumbnail',
     'Sevens Suck',
-    --'Nancy'
+    --'Nancy',
+    --'Rock Hard',
+    --'Draw the Diamonds'
 }
 
 -- load all individual jokers

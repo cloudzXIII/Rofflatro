@@ -193,6 +193,23 @@ return {
                     "{C:inactive,s:0.6,E:2}Wait, have I seen this one before?"
                 }
             },
+            j_roff_birthday = {
+                name = "Happy Birthday!",
+                text = {
+                    "{C:attention}Booster Packs{} have {C:attention}#1#{} more",
+                    "card to choose from",
+                    "{C:inactive,s:0.8,E:2}Thanks I guess?"
+                }
+            },
+            j_roff_voucherclear = {
+                name = "Voucher Clear",
+                text = {
+                    "Sell this Joker to {C:attention}remove{}",
+                    "the current {C:attention}Voucher{} in",
+                    "the shop {C:attention}permanently{}",
+                    "{C:inactive,s:0.8,E:2}I hate you, Magic Trick!!!"
+                }
+            }
         },
     Back = 
     {
