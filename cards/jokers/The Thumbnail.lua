@@ -7,7 +7,7 @@ SMODS.Joker{
    eternal_compat = true,
    pos = { x = 1, y = 5 },
    config = { extra = {
-      Xmult = 6,
+      Xmult = 3,
       requirement = 3
       }
    },
