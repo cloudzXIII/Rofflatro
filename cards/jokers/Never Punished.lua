@@ -5,6 +5,7 @@ SMODS.Joker{
 	key = 'never_punished',
 	atlas = 'roffers',
 	rarity = 1,
+	cost = 2,
 	blueprint_compat = true,
 	eternal_compat = false,
 	perishable_compat = false,

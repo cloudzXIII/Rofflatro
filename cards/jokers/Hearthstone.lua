@@ -2,6 +2,7 @@ SMODS.Joker{
 	key = 'hearthstone',
 	atlas = 'roffers',
 	rarity = 2,
+	cost = 5,
 	blueprint_compat = true,
 	eternal_compat = true,
 	pos = { x = 3, y = 4 },

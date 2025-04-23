@@ -210,6 +210,15 @@ return {
                     "{C:inactive,s:0.8,E:2}I hate you, Magic Trick!!!"
                 }
             }
+            j_roff_thumbnail = {
+                name = "The Thumbnail",
+				text = {
+				'{X:mult,C:white}X#1#{} Mult if exactly',
+						'{C:attention}#2#{} Jokers are owned',
+						'{C:inactive}(The Thumbnail included){}',
+						"{C:inactive,s:0.8,E:2}It's always clickbait!{}"
+				}
+            },
         },
     Back = 
     {
