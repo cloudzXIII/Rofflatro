@@ -2,6 +2,7 @@ SMODS.Joker{
 	key = 'typeA',
 	atlas = 'roffers',
 	rarity = 3,
+	cost = 7,
 	blueprint_compat = true,
 	eternal_compat = true,
 	pos = { x = 2, y = 2 },
