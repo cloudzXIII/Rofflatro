@@ -30,7 +30,7 @@ local joker_list = {
     --'It Aint My Grave',
     --'Nice',
     --'Voucher Clear',
-    --'The Thumbnail',
+    'The Thumbnail',
     'Sevens Suck',
     --'Nancy'
 }
