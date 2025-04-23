@@ -132,8 +132,9 @@ return {
                 name = 'The Pivot',
                 text = {
                     'Earn {C:money}$#1#{} at end of round',
-                    "after playing a hand that isn't your",
-                    "most played {C:attention}#2#{} times in a row",
+                    "after playing a hand that",
+                    "isn't your {C:attention}most played",
+                    "{C:attention}#2#{} times in a row",
                     "{C:inactive,s:0.8,E:2}Never too late!"
                 }
             },
@@ -209,7 +210,7 @@ return {
                     "the shop {C:attention}permanently{}",
                     "{C:inactive,s:0.8,E:2}I hate you, Magic Trick!!!"
                 }
-            }
+            },
             j_roff_thumbnail = {
                 name = "The Thumbnail",
 				text = {
