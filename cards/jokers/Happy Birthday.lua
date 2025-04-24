@@ -10,7 +10,7 @@ SMODS.Joker{
 		return {vars = {card.ability.extra.options}}
 	end,
 	calculate = function(self,card,context)
-		if context.open_booster and (context.card.config.center.key == "p_buffoon_normal_1" or context.card.config.center.key == "p_buffoon_mega_1" or context.card.config.center.key == "p_buffoon_jumbo_1" or context.card.config.center.key == "p_buffoon_normal_2" or context.card.config.center.key == "p_buffoon_normal_1") then
+		if context.open_booster then
 			context.card.ability.extra = context.card.ability.extra + 1 
 		end
 	end,
