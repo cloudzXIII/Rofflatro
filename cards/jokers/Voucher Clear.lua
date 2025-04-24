@@ -23,9 +23,11 @@ SMODS.Joker{
 		end
 
 		if context.selling_self and card.ability.extra.in_Shop then
-			print( G.GAME.current_round.voucher )
+			print( G.shop_vouchers.cards[1])
 			G.E_MANAGER:add_event(Event({
 				func = function()
+					table.insert(G.GAME.used_vouchers, G.GAME.current_round.voucher)
+					G.GAME.used_vouchers[G.GAME.current_round.voucher[1]] = true
 					local _v = G.shop_vouchers.cards[1]
 					play_sound('tarot1')
 					_v.T.r = -0.2
@@ -44,10 +46,11 @@ SMODS.Joker{
 							return true;
 						end
 					}))
+					G.GAME.current_round.voucher.spawn[G.shop_vouchers.cards[1].config.center_key] = false
+					G.shop_vouchers.cards[1] = nil
 					return true
 				end
 			}))
-			G.GAME.used_jokers[G.GAME.current_round.voucher] = true
 		end 
 	end,
 	set_badges = function (self, card, badges)
