@@ -197,8 +197,9 @@ return {
             j_roff_birthday = {
                 name = "Happy Birthday!",
                 text = {
-                    "{C:attention}Booster Packs{} have {C:attention}#1#{} more",
-                    "card to choose from",
+                    "{C:attention}Booster Packs{} have",
+                    "{C:attention}#1#{} more card",
+                    "to choose from",
                     "{C:inactive,s:0.8,E:2}Thanks I guess?"
                 }
             },
