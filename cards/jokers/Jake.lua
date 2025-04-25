@@ -1,9 +1,11 @@
---Jake (Uncommon) - This Joker gains x1 Mult for every Diet Cola sold this run. (Always take the Cola. ALWAYS.)
-
 SMODS.Joker:take_ownership('diet_cola',{
 calculate = function (self, card, context)
 	if context.selling_self then
-		ROFF.vars.colas_sold = ROFF.vars.colas_sold + 1
+		if not G.GAME.colas_sold then
+			G.GAME.colas_sold = 0
+		end
+
+		G.GAME.colas_sold = G.GAME.colas_sold + 1
 	end
 end
 
@@ -37,7 +39,10 @@ SMODS.Joker{
 		end
 	end,
 	update = function (self, card, dt)
-		card.ability.extra.Xmult = 1 + (ROFF.vars.colas_sold * card.ability.extra.Xmult_mod)
+		if not G.GAME.colas_sold then
+			G.GAME.colas_sold = 0
+		end
+		card.ability.extra.Xmult = 1 + (G.GAME.colas_sold * card.ability.extra.Xmult_mod)
 	end,
 	set_badges = function (self, card, badges)
 		badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)

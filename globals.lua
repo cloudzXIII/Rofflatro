@@ -267,9 +267,6 @@ ROFF = {
             return marqueedtext
         end
     },
-    vars ={
-        colas_sold = 0
-    }
 }
 
 -- couple util funcs nabbed from https://github.com/RenSnek/Balatro-Rendoms :33 (nested into ROFF to avoid compatibility issues)
