@@ -6,7 +6,7 @@ local joker_list = {
     'The Pivot',
     'Jake',
     'Murphy',
-    --'Crashout',
+    'Crashout',
     'Well Met',
     'DVD',
     --'Kalis Banhammer',
