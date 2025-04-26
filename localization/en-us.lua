@@ -231,6 +231,16 @@ return {
                     "{C:inactive}(Currently {X:mult,C:white}X#1#{} {C:inactive}Mult)",
 					"{C:inactive,s:0.8,E:2}Why is streamer mad?{}"
                 }
+            },
+            j_roff_neverskip = {
+                name = "Never Skip",
+                text = {
+                    "When skipping a blind,",
+                    "creates an {C:attention}Investment Tag{}",
+                    "and a {C:attention}Voucher Tag",
+                    "{S:1.1,C:red,E:2}Self destructs{}",
+                    "{C:inactive,s:0.8,E:2}I didn't say{} {C:inactive,s:0.8,E:1}never...{}"
+                }
             }
         },
     Back = 
@@ -275,6 +285,7 @@ return {
             k_roff_inout_fail = 'Bad taste!',
             k_roff_o7_saved = 'Close one chat!',
             k_roff_crashout_upgrade = 'Crashout!',
+            k_roff_typea_update = "Streamer!",
 
             k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',

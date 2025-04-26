@@ -24,7 +24,7 @@ local joker_list = {
     'Black Shirt',
     --'Main Channel',
     'Thanks For The Primes',
-    --'Never Skip',
+    'Never Skip',
     'Caught In 4K',
     'o7',
     --'It Aint My Grave',

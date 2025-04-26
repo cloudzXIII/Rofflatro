@@ -2,7 +2,7 @@ SMODS.Joker{
 	key = 'black_shirt',
 	atlas = 'roffers',
 	rarity = 2,
-	cost = 5,
+	cost = 6,
 	blueprint_compat = true,
 	perishable_compat = false,
 	pos = { x = 1, y = 4 },

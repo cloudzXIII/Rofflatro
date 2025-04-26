@@ -5,9 +5,10 @@ SMODS.Joker{
 	cost = 7,
 	blueprint_compat = true,
 	eternal_compat = true,
+	perishable_compat = false,
 	pos = { x = 2, y = 2 },
 	config = { extra = {
-			extra = 0.1,
+			extra = 0.25,
 			x_mult = 1,
 			handsel = 'Straight Flush'
 		}
@@ -54,7 +55,7 @@ SMODS.Joker{
 
 			card.ability.extra.handsel = pseudorandom_element(_poker_hands, pseudoseed('type_A'))
 			return {
-				message = 'Streamer!'
+				message = localize('k_roff_typea_update')
 			}
 		end
 	end,

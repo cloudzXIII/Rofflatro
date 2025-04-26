@@ -5,7 +5,7 @@ SMODS.Joker{
    cost = 6,
    blueprint_compat = true,
    eternal_compat = true,
-   pos = { x = 3, y = 5 },
+   pos = { x = 4, y = 5 },
    config = { extra = {
       Xmult = 3,
       requirement = 3

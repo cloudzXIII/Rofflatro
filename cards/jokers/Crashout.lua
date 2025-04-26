@@ -6,9 +6,10 @@ SMODS.Joker{
 	key = 'crashout',
 	atlas = 'roffers',
 	rarity = 3,
-	cost = 1,
+	cost = 6,
 	blueprint_compat = true,
 	eternal_compat = true,
+	perishable_compat = false,
 	pos = { x = 0, y = 0 },
 	config = { extra = {
 			Xmult = 1,
