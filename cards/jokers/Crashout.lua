@@ -20,24 +20,26 @@ SMODS.Joker{
 	end,
 	calculate = function(self,card,context)
 		if context.setting_blind and not context.blueprint then
-			card.ability.extra.Xmult = card.ability.extra.Xmult + (#G.consumeables.cards* card.ability.extra.Xmult_mod)
-			for Ncard = 1, #G.consumeables.cards do 
-				local _card = G.consumeables.cards[Ncard]
-				G.E_MANAGER:add_event(Event({
-					trigger = 'after',
-					delay = 0.3,
-					blockable = false,
-					func = function()
-						_card:start_dissolve({HEX("deb1b1")}, nil, 1.6)
-						_card = nil
-						return true;
-					end
-				}))
+			if #G.consumeables.cards > 0 then
+				card.ability.extra.Xmult = card.ability.extra.Xmult + (#G.consumeables.cards * card.ability.extra.Xmult_mod)
+				for Ncard = 1, #G.consumeables.cards do 
+					local _card = G.consumeables.cards[Ncard]
+					G.E_MANAGER:add_event(Event({
+						trigger = 'after',
+						delay = 0.3,
+						blockable = false,
+						func = function()
+							_card:start_dissolve({HEX("deb1b1")}, nil, 1.6)
+							_card = nil
+							return true;
+						end
+					}))
+				end
+				return {
+					message = localize("k_roff_crashout_upgrade"),
+					colour = HEX("deb1b1")
+				}
 			end
-			return {
-				message = localize("k_roff_crashout_upgrade"),
-				colour = HEX("deb1b1")
-			}
 		end
 
 		if context.joker_main then
