@@ -4,18 +4,8 @@
 
 SMODS.Joker{
 	key = 'crashout',
-	loc_txt = {
-		name = 'crashout',
-		text = {
-			'When blind is selected', 
-			'destroys all owned consumables.',
-			' Gains {X:mult,C:white}X#2#{} Mult per card destroyed.',
-			'{C:inactive}(Currently {X:mult,C:white}X#1#{C:inactive} Mult)',
-			'{C:inactive,s:0.8,E:2} Why is streamer so mad?{C:inactive,s:0.8,E:1}'
-		}
-	},
 	atlas = 'roffers',
-	rarity = 1,
+	rarity = 3,
 	cost = 1,
 	blueprint_compat = true,
 	eternal_compat = true,
@@ -44,8 +34,8 @@ SMODS.Joker{
 					end
 				}))
 			end
-			return{
-				message = "Crashout",
+			return {
+				message = localize("k_roff_crashout_upgrade"),
 				colour = HEX("deb1b1")
 			}
 		end
@@ -55,7 +45,9 @@ SMODS.Joker{
 				Xmult = card.ability.extra.Xmult
 			}
 		end
-
-
+	end,
+	set_badges = function (self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_art'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)
 	end
 }

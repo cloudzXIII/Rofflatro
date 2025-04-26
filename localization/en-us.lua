@@ -215,12 +215,23 @@ return {
             j_roff_thumbnail = {
                 name = "The Thumbnail",
 				text = {
-				'{X:mult,C:white}X#1#{} Mult if exactly',
-						'{C:attention}#2#{} Jokers are owned',
-						'{C:inactive}(The Thumbnail included){}',
-						"{C:inactive,s:0.8,E:2}It's always clickbait!{}"
+				    '{X:mult,C:white}X#1#{} Mult if exactly',
+					'{C:attention}#2#{} Jokers are owned',
+					'{C:inactive}(The Thumbnail included){}',
+					"{C:inactive,s:0.8,E:2}It's always clickbait!{}"
 				}
             },
+            j_roff_crashout = {
+                name = "Crashout",
+                text = {
+                    "When blind is selected,",
+                    "{C:attention}Destroys{} all owned {C:attention}consumables",
+                    "This Joker gains {X:mult,C:white}X#2#{} Mult",
+                    "per consumable destroyed",
+                    "{C:inactive}(Currently {X:mult,C:white}X#1#{} {C:inactive}Mult)",
+					"{C:inactive,s:0.8,E:2}Why is streamer mad?{}"
+                }
+            }
         },
     Back = 
     {
@@ -262,7 +273,8 @@ return {
             k_roff_gross_add_banana = 'Gross!',
             k_roff_pivot_active = 'Pivot!',
             k_roff_inout_fail = 'Bad taste!',
-            k_roff_o7_saved = 'Close one chat',
+            k_roff_o7_saved = 'Close one chat!',
+            k_roff_crashout_upgrade = 'Crashout!',
 
             k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',
