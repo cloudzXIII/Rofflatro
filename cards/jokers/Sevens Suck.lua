@@ -17,6 +17,9 @@ SMODS.Joker{
                 return {
                     Xmult = card.ability.extra.Xmult
                 }
+			elseif context.other_card:get_id() == 7 and not (pseudorandom('roff_sevens') <= G.GAME.probabilities.normal / card.ability.extra.odds)  then
+				local effects
+    			SMODS.calculate_context({roff_probability_missed = true}, effects)
             end
         end
 	end,
