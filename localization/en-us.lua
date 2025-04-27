@@ -36,7 +36,7 @@ return {
                 text = {
                     "Earn {C:money}$#1#{} if played hand",
                     "contains {C:attention}Three of a Kind{}",
-                    "{C:money}-$#2#{} if hand doesn't",
+                    "Lose {C:money}$#2#{} if hand doesn't",
                     "contain {C:attention}Three of a Kind{}",
                     "{C:inactive,s:0.8,E:2}What did he just say?!"
                 }
@@ -225,7 +225,7 @@ return {
                 name = "Crashout",
                 text = {
                     "When blind is selected,",
-                    "{C:attention}Destroys{} all owned {C:attention}consumables",
+                    "{C:attention}destroys{} all owned {C:attention}consumables",
                     "This Joker gains {X:mult,C:white}X#2#{} Mult",
                     "per consumable destroyed",
                     "{C:inactive}(Currently {X:mult,C:white}X#1#{} {C:inactive}Mult)",
@@ -242,14 +242,14 @@ return {
                     "{C:inactive,s:0.8,E:2}I didn't say{} {C:inactive,s:0.8,E:1}never...{}"
                 }
             },
-	    j_roff_spec_oops = {
-            name = "Speculative Oops",
-            text = {
-                    "{C:green}#1# in #2# in #2# in #2# in #2# chance{}",
-                    "to earn {C:money}$#3#{} at end of round",
-                    "{C:inactive,s:0.8,E:2}Always take the Oops. ALWAYS.",
-                    "{C:inactive,s:0.6,E:2}Oh, the 1 in 16 becomes a 1 in 1..."
-                }
+            j_roff_spec_oops = {
+                name = "Speculative Oops",
+                text = {
+                        "{C:green}#1# in #2# in #2# in #2# in #2#{} chance",
+                        "to earn {C:money}$#3#{} at end of round",
+                        "{C:inactive,s:0.8,E:2}Always take the Oops. ALWAYS.",
+                        "{C:inactive,s:0.6,E:2}Oh, the 1 in 16 becomes a 1 in 1..."
+                    }
             },
         },
     Back = 
