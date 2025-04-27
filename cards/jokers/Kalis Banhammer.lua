@@ -1,28 +1,13 @@
 --Kali’s Banhammer (Uncommon) - Sell this Joker to destroy adjacent Jokers and create a Spectral card for each Joker destroyed (must have room). (Fastest ban in the west!)
 
-
-
 SMODS.Joker{
-	key = 'Kalis',
-	loc_txt = {
-		name = 'Kalis Banhammer',
-		text = {
-			'Sell this Joker to {C:attention}destroy{} adjacent {C:attention}Jokers{}', 
-			'create a {C:spectral}Spectral{} card for each Joker destroyed.',
-			'{C:inactive}(must have room){}', 
-			'{C:inactive,s:0.8,E:2}Fastest ban in the west!{}'
-		}
-	},
+	key = 'kali',
 	atlas = 'roffers',
 	rarity = 2,
-	cost = 1,
+	cost = 6,
 	blueprint_compat = true,
 	eternal_compat = false,
 	pos = { x = 2, y = 6 },
-	config = { extra = {
-			
-		}
-	},
 	loc_vars = function(self,info_queue,card)
 		return {vars = {}}
 	end,
@@ -64,5 +49,9 @@ SMODS.Joker{
 				
 			end
 		end
+	end,
+	set_badges = function (self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_art'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)
 	end
 }
