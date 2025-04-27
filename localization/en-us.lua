@@ -251,6 +251,15 @@ return {
                         "{C:inactive,s:0.6,E:2}Oh, the 1 in 16 becomes a 1 in 1..."
                     }
             },
+	   j_roff_Kalis = {
+		name = 'Kalis Banhammer',
+		text = {
+		    'Sell this Joker to {C:attention}destroy{} adjacent {C:attention}Jokers{}', 
+		    'create a {C:spectral}Spectral{} card for each Joker destroyed.',
+		    '{C:inactive}(must have room){}', 
+		    '{C:inactive,s:0.8,E:2}Fastest ban in the west!{}'
+		}
+	    },
         },
     Back = 
     {
