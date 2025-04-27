@@ -10,7 +10,7 @@ SMODS.Joker{
 	blueprint_compat = true,
 	eternal_compat = true,
 	perishable_compat = false,
-	pos = { x = 0, y = 0 },
+	pos = { x = 4, y = 5 },
 	config = { extra = {
 			Xmult = 1,
 			Xmult_mod = .25
