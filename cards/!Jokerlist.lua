@@ -9,7 +9,7 @@ local joker_list = {
     'Crashout',
     'Well Met',
     'DVD',
-    --'Kalis Banhammer',
+    'Kalis Banhammer',
     'In-n-Out',
     'Hearthstone',
     'Jackin It',
