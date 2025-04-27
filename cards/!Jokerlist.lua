@@ -34,7 +34,8 @@ local joker_list = {
     'Sevens Suck',
     --'Nancy',
     --'Rock Hard',
-    --'Draw the Diamonds'
+    --'Draw the Diamonds',
+    'Speculative Oops',
 }
 
 -- load all individual jokers
