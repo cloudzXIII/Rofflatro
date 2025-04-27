@@ -241,7 +241,16 @@ return {
                     "{S:1.1,C:red,E:2}Self destructs{}",
                     "{C:inactive,s:0.8,E:2}I didn't say{} {C:inactive,s:0.8,E:1}never...{}"
                 }
-            }
+            },
+	    j_roff_spec_oops = {
+            name = "Speculative Oops",
+            text = {
+                    "{C:green}#1# in #2# in #2# in #2# in #2# chance{}",
+                    "to earn {C:money}$#3#{} at end of round",
+                    "{C:inactive,s:0.8,E:2}Always take the Oops. ALWAYS.",
+                    "{C:inactive,s:0.6,E:2}Oh, the 1 in 16 becomes a 1 in 1..."
+                }
+            },
         },
     Back = 
     {
