@@ -35,7 +35,7 @@ end
 local challenges = NFS.getDirectoryItems(SMODS.current_mod.path .. "challenges")
 for _, chal in pairs(challenges) do
     if string.sub(chal, string.len(chal) - 3) == '.lua' then
-        assert(SMODS.load_file("challenges/" .. filename))()
+        assert(SMODS.load_file("challenges/" .. chal))()
     end
 end
 
