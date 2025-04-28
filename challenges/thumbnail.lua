@@ -1,5 +1,4 @@
 SMODS.Challenge{
-    loc_txt = "Thumbnail",
     key = 'thumbnail',
     rules = {
         custom = {
