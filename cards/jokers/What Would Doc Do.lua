@@ -1,0 +1,47 @@
+--What Would Doc Do? (Rare) - Gains x0.1 Mult if interest is maxed out at end of round. Resets when failing to reach an interest threshold. (Money is strength. Stop rerolling.)
+
+SMODS.Joker{
+	key = 'Doc',
+	atlas = 'roffers',
+	rarity = 3,
+	blueprint_compat = true,
+	eternal_compat = true,
+	pos = { x = 0, y = 0 },
+	config = { extra = {
+			Xmult = 1,
+			Xmult_mod = .1
+		}
+	},
+	loc_vars = function(self,info_queue,card)
+		return {vars = {card.ability.extra.Xmult_mod, card.ability.extra.Xmult}}
+	end,
+	calculate = function(self,card,context)
+
+		if context.joker_main then
+			return {
+				x_mult = card.ability.extra.Xmult
+			}
+		end
+		
+		if context.end_of_round and context.cardarea == G.jokers then
+			if not G.GAME.dollar_buffer then
+				G.GAME.dollar_buffer = 0
+			end
+
+			if G.GAME.dollars + G.GAME.dollar_buffer >= G.GAME.interest_cap then
+				card.ability.extra.Xmult = card.ability.extra.Xmult + (card.ability.extra.Xmult_mod)
+				return {
+					message = "muhhhhnee",
+					colour = G.C.MONEY
+				}
+			else
+				card.ability.extra.Xmult = 1
+				return {
+					message = "bummer",
+					colour = G.C.PALE_GREEN
+				}
+			end
+		end
+
+	end
+}
