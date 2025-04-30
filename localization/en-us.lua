@@ -297,6 +297,9 @@ return {
     }
 },
     misc = {
+        challenge_names = {
+            roff_nofaves = 'No Favorites',
+        },
         dictionary = {
             k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met! ',
             k_roff_gross_dead = 'Good Riddance!',
