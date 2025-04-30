@@ -262,6 +262,16 @@ return {
                     '{C:inactive,s:0.8,E:2}Fastest ban in the west!{}'
                 }
             },
+	    j_roff_Doc = {
+		name = 'What Would Doc Do?',
+		text = {
+			'At the end of the round',
+			'gain {X:mult,C:white}X#1#{} if earning max {C:attention}interest{}.',
+			'resets if you are below max {C:attention}interest{}',
+			'{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}',
+			'{s:0.8,C:inactive,E:2}(Money is strength. Stop rerolling.)'
+		}
+            },
         },
     Back = 
     {
