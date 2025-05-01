@@ -6,7 +6,7 @@ SMODS.Joker{
 	rarity = 3,
 	blueprint_compat = true,
 	eternal_compat = true,
-	pos = { x = 0, y = 0 },
+	pos = { x = 4, y = 6 },
 	config = { extra = {
 			Xmult = 1,
 			Xmult_mod = .1
@@ -31,17 +31,21 @@ SMODS.Joker{
 			if G.GAME.dollars + G.GAME.dollar_buffer >= G.GAME.interest_cap then
 				card.ability.extra.Xmult = card.ability.extra.Xmult + (card.ability.extra.Xmult_mod)
 				return {
-					message = "muhhhhnee",
+					message = "Muhhhhnee!",
 					colour = G.C.MONEY
 				}
 			else
 				card.ability.extra.Xmult = 1
 				return {
-					message = "bummer",
+					message = "Bummer...",
 					colour = G.C.PALE_GREEN
 				}
 			end
 		end
 
+	end,
+	set_badges = function (self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)
 	end
 }

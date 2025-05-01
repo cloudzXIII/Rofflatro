@@ -262,23 +262,25 @@ return {
                     '{C:inactive,s:0.8,E:2}Fastest ban in the west!{}'
                 }
             },
-	    j_roff_Doc = {
-		name = 'What Would Doc Do?',
-		text = {
-			'At the end of the round',
-			'gain {X:mult,C:white}X#1#{} if earning max {C:attention}interest{}.',
-			'resets if you are below max {C:attention}interest{}',
-			'{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}',
-			'{s:0.8,C:inactive,E:2}(Money is strength. Stop rerolling.)'
-		}
-            },
-	    j_roff_Grimbo = {
-                name = 'Grimbo',
+            j_roff_Doc = {
+                name = 'What Would Doc Do?',
                 text = {
-                    "{C:money}+#1#${} per hand played",
-                    "- {C:money}-#1#${} per discard"
+                    'Gains {X:mult,C:white}X#1#{} at end of round',
+                    'if {C:attention}interest{} is maxed out',
+                    'Resets if you are below an',
+                    '{C:attention}interest{} threshold',
+                    '{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}',
+                    '{s:0.8,C:inactive,E:2}Money is strength. Stop rerolling.'
+                }
+            },
+            j_roff_Grimbo = {
+                    name = 'Grimbo',
+                    text = {
+                        "Gain {C:money}+#1#${} per hand played",
+                        "Lose {C:money}#1#${} per discard",
+                        '{s:0.8,C:inactive,E:2}Slander will NOT be tolerated.'
+                }
             }
-        }
         },
     Back = 
     {
