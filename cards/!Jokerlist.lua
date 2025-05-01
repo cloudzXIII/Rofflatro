@@ -15,7 +15,7 @@ local joker_list = {
     'Jackin It',
     --'Just Get Chips',
     'Benus',
-    --'Grimbo',
+    'Grimbo',
     'What Would Doc Do',
     'Looks Inside',
     'Happy Birthday',
