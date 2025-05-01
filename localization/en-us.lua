@@ -272,6 +272,13 @@ return {
 			'{s:0.8,C:inactive,E:2}(Money is strength. Stop rerolling.)'
 		}
             },
+	    j_roff_Grimbo = {
+                name = 'Grimbo',
+                text = {
+                    "{C:money}+#1#${} per hand played",
+                    "- {C:money}-#1#${} per discard"
+            }
+        }
         },
     Back = 
     {
