@@ -208,7 +208,7 @@ return {
                 name = "Voucher Clear",
                 text = {
                     "Sell this Joker to {C:attention}remove{}",
-                    "the current {C:attention}Voucher{} in",
+                    "all {C:attention}Vouchers{} in",
                     "the shop {C:attention}permanently{}",
                     "{C:inactive,s:0.8,E:2}I hate you, Magic Trick!!!"
                 }
