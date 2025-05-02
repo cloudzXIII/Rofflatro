@@ -22,7 +22,7 @@ SMODS.Atlas {
 
 -- load common util funcs
 assert(SMODS.load_file("globals.lua"))()
-assert(SMODS.load_file("No Favorites.lua"))()
+--assert(SMODS.load_file("No Favorites.lua"))()
 
 -- load all individual cards
 local subdir = "cards"
