@@ -5,54 +5,35 @@ SMODS.Joker{
 	blueprint_compat = true,
 	eternal_compat = true,
 	pos = { x = 1, y = 5 },
-	config = { extra = { } },
 	config = { extra = {
-			in_Shop = true
 		}
 	},
 	loc_vars = function(self,info_queue,card)
 		return {vars = {}}
 	end,
 	calculate = function(self,card,context)
-		if context.starting_shop then
-			card.ability.extra.in_Shop = true
-		end
 
-		if context.ending_shop then
-			card.ability.extra.in_Shop = false
-		end
+		if context.selling_self and G.shop_vouchers.cards then
 
-		if context.selling_self and card.ability.extra.in_Shop then
-			print( G.shop_vouchers.cards[1])
-			G.E_MANAGER:add_event(Event({
-				func = function()
-					table.insert(G.GAME.used_vouchers, G.GAME.current_round.voucher)
-					G.GAME.used_vouchers[G.GAME.current_round.voucher[1]] = true
-					local _v = G.shop_vouchers.cards[1]
+			for i = 1, #G.shop_vouchers.cards do
+					-- This part destroys the G.shop_vouchers.cards[i].
 					play_sound('tarot1')
-					_v.T.r = -0.2
-					_v:juice_up(0.3, 0.4)
-					_v.states.drag.is = true
-					_v.children.center.pinch.x = true
-					-- This part destroys the _v.
+					G.shop_vouchers.cards[i]:start_dissolve({HEX("57ecab")}, nil, 1.6)
 					G.E_MANAGER:add_event(Event({
 						trigger = 'after',
 						delay = 0.3,
 						blockable = false,
 						func = function()
-							G.jokers:remove_card(_v)
-							_v:remove()
-							_v = nil
+							G.GAME.current_round.voucher.spawn[G.shop_vouchers.cards[i].config.center_key] = false
+							G.jokers:remove_card(G.shop_vouchers.cards[i])
+							--G.shop_vouchers.cards[i]:remove()
+							G.shop_vouchers.cards[i] = nil
 							return true;
 						end
 					}))
-					G.GAME.current_round.voucher.spawn[G.shop_vouchers.cards[1].config.center_key] = false
-					G.shop_vouchers.cards[1] = nil
-					return true
 				end
-			}))
-		end 
-	end,
+			end
+		end,
 	set_badges = function (self, card, badges)
 		badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
 		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)

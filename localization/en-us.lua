@@ -6,10 +6,11 @@ return {
                 text = {
                     'Gains {X:mult,C:white}X#1#{} Mult if played',
                     'hand is a {C:attention}#3#{}',
-                    'Resets when playing a {C:attention}Flush{} or lesser',
+                    'Resets when playing a',
+                    '{C:attention}Three of a Kind{} or lesser',
                     '{s:0.8}Hand changes every round',
                     '{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}',
-                    '{s:0.8,C:inactive,E:2}Streamer! Play the #3#! {}{s:0.8,C:inactive,E:1}STREAMER!!!{}'
+                    '{s:0.8,C:inactive,E:2}Play the #3#! {}{s:0.8,C:inactive,E:1}STREAMER!!!{}'
                 }
             },
             j_roff_jackin_it = {
@@ -207,7 +208,7 @@ return {
                 name = "Voucher Clear",
                 text = {
                     "Sell this Joker to {C:attention}remove{}",
-                    "the current {C:attention}Voucher{} in",
+                    "all {C:attention}Vouchers{} in",
                     "the shop {C:attention}permanently{}",
                     "{C:inactive,s:0.8,E:2}I hate you, Magic Trick!!!"
                 }
@@ -262,6 +263,25 @@ return {
                     '{C:inactive,s:0.8,E:2}Fastest ban in the west!{}'
                 }
             },
+            j_roff_Doc = {
+                name = 'What Would Doc Do?',
+                text = {
+                    'Gains {X:mult,C:white}X#1#{} at end of round',
+                    'if {C:attention}interest{} is maxed out',
+                    'Resets if you are below an',
+                    '{C:attention}interest{} threshold',
+                    '{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}',
+                    '{s:0.8,C:inactive,E:2}Money is strength. Stop rerolling.'
+                }
+            },
+            j_roff_Grimbo = {
+                    name = 'Grimbo',
+                    text = {
+                        "Gain {C:money}+#1#${} per hand played",
+                        "Lose {C:money}#1#${} per discard",
+                        '{s:0.8,C:inactive,E:2}Slander will NOT be tolerated.'
+                }
+            }
         },
     Back = 
     {
@@ -297,8 +317,9 @@ return {
     }
 },
     misc = {
-	challenge_names = {
+        challenge_names = {
             c_roff_thumbnail = 'Three Card Monte',
+            c_roff_nofaves = 'No Favorites',
         },
         dictionary = {
             k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met! ',

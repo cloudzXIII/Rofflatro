@@ -29,9 +29,7 @@ SMODS.Joker{
 			(context.scoring_name == 'High Card' or
 			context.scoring_name == 'Pair' or
 			context.scoring_name == 'Two Pair' or
-			context.scoring_name == 'Three of a Kind' or
-			context.scoring_name == 'Straight' or
-			context.scoring_name == 'Flush')
+			context.scoring_name == 'Three of a Kind')
 		and not context.blueprint then
 			if card.ability.extra.x_mult > 1 then
 				card.ability.extra.x_mult = 1
