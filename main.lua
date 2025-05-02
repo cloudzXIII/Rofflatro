@@ -33,6 +33,13 @@ for _, filename in pairs(cards) do
     end
 end
 
+local challenges = NFS.getDirectoryItems(SMODS.current_mod.path .. "challenges")
+for _, chal in pairs(challenges) do
+    if string.sub(chal, string.len(chal) - 3) == '.lua' then
+        assert(SMODS.load_file("challenges/" .. chal))()
+    end
+end
+
 --favorite card calc
 local igo = Game.init_game_object
 function Game:init_game_object()
