@@ -48,6 +48,72 @@ function Game:init_game_object()
     return ret
 end
 
+local start_run_ref = Game.start_run
+function Game:start_run(args)
+    local begin = start_run_ref(self, args)
+    if not saveTable then
+        if args.challenge then
+            local _ch = args.challenge
+            G.GAME.challenge_index = args.challenge
+            if _ch.rules then
+                local whitelistedHands = {}
+                if _ch.rules.custom then
+                    for k, v in ipairs(_ch.rules.custom) do
+                        if v.id == 'kali_spawn' then
+                            G.GAME.modifiers.kali_spawn = true
+                            G.GAME.modifiers.kali_spawn_hold = true
+                        end
+                        if v.id == 'whitelist_hand' then --hand is not allowed
+                        whitelistedHands = whitelistedHands or {}
+                        whitelistedHands[#whitelistedHands+1] = v.hand
+                        end
+                    end
+                end
+                G.GAME.modifiers.whitelist_hand = whitelistedHands
+            end
+        end
+    end
+    return begin
+end
+
+local update = Game.update
+function Game:update(dt)
+    update(self, dt)
+    if G.GAME.modifiers.kali_spawn then
+        if G.STATE == G.STATES.BLIND_SELECT and G.GAME.blind.boss and G.GAME.modifiers.kali_spawn_hold == true then 
+            SMODS.add_card({key = 'j_roff_kali', stickers = { 'perishable' }})
+            G.GAME.modifiers.kali_spawn_hold = false
+        end
+        if G.STATE == G.STATES.HAND_PLAYED and G.GAME.modifiers.kali_spawn_hold == false then
+            G.GAME.modifiers.kali_spawn_hold = true
+        end
+    end
+end
+
+local debuff_hand_ref = Blind.debuff_hand
+function Blind:debuff_hand(cards, hand, handname, check)
+    local result = debuff_hand_ref(self, cards, hand, handname, check)
+    local whitelist = true
+    if G.GAME.modifiers.whitelist_hand and #G.GAME.modifiers.whitelist_hand > 0 then
+        for k, v in ipairs(G.GAME.modifiers.whitelist_hand) do
+            if handname == v then
+                whitelist = false
+            end
+        end
+        return whitelist
+    end
+    return result
+end
+
+local debuff_text_ref = Blind.get_loc_debuff_text
+function Blind:get_loc_debuff_text()
+        if G.GAME.modifiers.whitelist_hand and #G.GAME.modifiers.whitelist_hand > 0 then
+            return ('Must play '..G.GAME.modifiers.whitelist_hand[1])
+        end
+    result = debuff_text_ref(self)
+    return result
+end
+
 function SMODS.current_mod.reset_game_globals(run_start)
     if not run_start and G.playing_cards then
         for _, c in pairs(G.playing_cards) do
