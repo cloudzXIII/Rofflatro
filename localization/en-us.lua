@@ -319,7 +319,12 @@ return {
     misc = {
         challenge_names = {
             c_roff_thumbnail = 'Three Card Monte',
-            c_roff_nofaves = 'No Favorites',
+            c_roff_kali = 'Trigger Happy',
+            c_roff_a7x = 'Where Are My Sevens?',
+        },
+        v_text = {
+            ch_c_kali_spawn = {"Creates a Perishable {C:attention}Kali's Banhammer{} when boss blind selected"},
+            ch_c_whitelist_hand = {"Must play {C:attention}#1#{}"},
         },
         dictionary = {
             k_roff_wellmet_flavor = 'Well Met! Well Met! Well Met! ',
