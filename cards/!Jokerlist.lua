@@ -22,7 +22,7 @@ local joker_list = {
     'Avenged Sevenfold',
     'Money Shots',
     'Black Shirt',
-    --'Main Channel',
+    'Main Channel',
     'Thanks For The Primes',
     'Never Skip',
     'Caught In 4K',
