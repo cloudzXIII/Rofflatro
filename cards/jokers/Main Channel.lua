@@ -24,12 +24,21 @@ SMODS.Joker{
 		return {vars = {G.GAME.probabilities.normal,card.ability.extra.odds}}
 	end,
 	calculate = function(self,card,context)
+
+		--compat to add
+		--perkeo
+		--marbel
+		--oops
+		--fist
+		--
+
+
 		if context.before then 
 			local SHRIMPSPECIAL = pseudorandom('6 DOLLAR SHRIMP SPECIAL')
 			if SHRIMPSPECIAL < G.GAME.probabilities.normal / card.ability.extra.odds then
 				
 				for i = 1, #G.jokers.cards do
-					local exclude_extra = {"Canio","Castle","Constellation","Egg","Flash Card","Glass Joker","Glass Joker","Hiker","Hologram","Lucky Cat","Obelisk","Red Card","Ride the Bus","Runner","Square Joker","Spare Trousers","Vampire","Wee Joker","Yorick"}
+					local exclude_extra = {"Canio","Castle","Constellation","Flash Card","Glass Joker","Hiker","Hologram","Lucky Cat","Obelisk","Red Card","Ride the Bus","Runner","Square Joker","Spare Trousers","Vampire","Wee Joker","Yorick","Invisible Joker","Madness","Popcorn","Rough Gem",}
 					local doExclude = false
 					for e = 1 , #exclude_extra do
 						if G.jokers.cards[i].ability.name == exclude_extra[e]then
@@ -58,6 +67,36 @@ SMODS.Joker{
 									Xmult = true
 								}
 							})
+						elseif G.jokers.cards[i].ability.name == "Loyalty Card" then
+							ROFF.funcs.mod_card_values(G.jokers.cards[i].ability,{
+								multiply = 1.5,
+								x_protect = true,
+								unkeywords = {
+									odds = true,
+									Xmult_mod = true,
+									mult_mod = true,
+									chips_mod = true,
+									hand_add = true,
+									discard_sub = true,
+									h_mod = true,
+									loyalty_remaining = true,
+									every = true
+								}
+							})
+						elseif G.jokers.cards[i].ability.name == "Campfire" or G.jokers.cards[i].ability.name == "Hit the Road" then
+							ROFF.funcs.mod_card_values(G.jokers.cards[i].ability,{
+								multiply = 1.5,
+								x_protect = true,
+								unkeywords = {
+									odds = true,
+									Xmult = true,
+									mult_mod = true,
+									chips_mod = true,
+									hand_add = true,
+									discard_sub = true,
+									h_mod = true
+								}
+							})
 						else
 							ROFF.funcs.mod_card_values(G.jokers.cards[i].ability,{
 								multiply = 1.5,
@@ -68,7 +107,12 @@ SMODS.Joker{
 									mult_mod = true,
 									chips_mod = true,
 									hand_add = true,
-									discard_sub = true
+									discard_sub = true,
+									h_mod = true,
+									size = true,
+									chip_mod = true,
+									h_size = true,
+									increase = true
 								}
 							})
 						end
