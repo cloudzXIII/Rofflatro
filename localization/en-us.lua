@@ -281,7 +281,18 @@ return {
                         "Lose {C:money}#1#${} per discard",
                         '{s:0.8,C:inactive,E:2}Slander will NOT be tolerated.'
                 }
-            }
+            },
+	   j_roff_MainChannel = {
+		    name = 'Main Channel',
+		    text = {
+		        '{C:green}#1# in #2#{} chance', 
+			'to multiply a value',
+			'in all owned Jokers by {X:mult,C:white}#3#{}',
+			'when playing a hand.',
+			'{C:inactive}(Cannot scale Main Channel){}',
+			'{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
+		}	
+	   }
         },
     Back = 
     {
