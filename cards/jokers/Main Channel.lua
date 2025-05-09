@@ -4,18 +4,12 @@
 
 SMODS.Joker{
 	key = 'MainChannel',
-	loc_txt = {
-		name = 'Main Channel',
-		text = {
-			'You\'re not supposed to see this!'
-		}
-	},
 	atlas = 'roffers',
 	rarity = 3,
 	cost = 1,
 	blueprint_compat = true,
 	eternal_compat = true,
-	pos = { x = 0, y = 0 },
+	pos = { x = 5, y = 6 },
 	config = { extra = {
 			odds = 25
 		}
