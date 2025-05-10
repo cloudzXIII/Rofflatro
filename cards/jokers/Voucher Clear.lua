@@ -8,6 +8,7 @@ SMODS.Joker{
 	config = { extra = {
 		}
 	},
+	cost = 4,
 	loc_vars = function(self,info_queue,card)
 		return {vars = {}}
 	end,
