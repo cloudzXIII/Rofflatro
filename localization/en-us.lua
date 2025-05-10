@@ -287,7 +287,7 @@ return {
 		    text = {
 		        '{C:green}#1# in #2#{} chance', 
 			'to multiply a value',
-			'in all owned Jokers by {X:mult,C:white}#3#{}',
+			'in all owned Jokers by {X:mult,C:white}X1.5{}',
 			'when playing a hand.',
 			'{C:inactive}(Cannot scale Main Channel){}',
 			'{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
