@@ -11,7 +11,7 @@ SMODS.Joker{
 	eternal_compat = true,
 	pos = { x = 5, y = 6 },
 	config = { extra = {
-			odds = 10
+			odds = 15
 		}
 	},
 	loc_vars = function(self,info_queue,card)
