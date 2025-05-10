@@ -23,7 +23,7 @@ SMODS.Joker{
 			}
 		end
 		
-		if context.end_of_round and context.cardarea == G.jokers then
+		if context.end_of_round and context.cardarea == G.jokers and not context.blueprint then
 			if not G.GAME.dollar_buffer then
 				G.GAME.dollar_buffer = 0
 			end
@@ -31,13 +31,13 @@ SMODS.Joker{
 			if G.GAME.dollars + G.GAME.dollar_buffer >= G.GAME.interest_cap then
 				card.ability.extra.Xmult = card.ability.extra.Xmult + (card.ability.extra.Xmult_mod)
 				return {
-					message = "Muhhhhnee!",
+					message = localize("k_roff_doc_upgrade"),
 					colour = G.C.MONEY
 				}
 			else
 				card.ability.extra.Xmult = 1
 				return {
-					message = "Bummer...",
+					message = localize("k_roff_doc_reset"),
 					colour = G.C.PALE_GREEN
 				}
 			end

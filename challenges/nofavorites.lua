@@ -1,8 +1,5 @@
 SMODS.Challenge {
-    key = 'roff_nofaves',
-    loc_txt = {
-        name = 'No Favorites'
-    },
+    key = 'nofaves',
     jokers = {
         {
             id = 'j_seance',

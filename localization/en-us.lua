@@ -282,17 +282,17 @@ return {
                         '{s:0.8,C:inactive,E:2}Slander will NOT be tolerated.'
                 }
             },
-	   j_roff_MainChannel = {
-		    name = 'Main Channel',
-		    text = {
-		        '{C:green}#1# in #2#{} chance', 
-			'to multiply a value',
-			'in all owned Jokers by {X:mult,C:white}X1.5{}',
-			'when playing a hand.',
-			'{C:inactive}(Cannot scale Main Channel){}',
-			'{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
-		}	
-	   }
+            j_roff_MainChannel = {
+                name = 'Main Channel',
+                text = {
+                    '{C:green}#1# in #2#{} chance', 
+                    'to multiply a value',
+                    'in all owned Jokers by {X:mult,C:white}X1.5{}',
+                    'at end of round',
+                    '{C:inactive}(Cannot scale Main Channel){}',
+                    '{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
+                }	
+            }
         },
     Back = 
     {
@@ -316,7 +316,7 @@ return {
                 "{C:dark_edition,E:2}Lucky6(AlrexX){} - Lead, Art, Code",
                 "{C:dark_edition,E:2}Maxx{} - Design, Art, Code",
                 "{C:dark_edition,E:2}canicao{} - Design, Code",
-                "{C:dark_edition,E:2}garb{} - Code",
+                "{C:dark_edition,E:2}garb{} - Code (Streamer Deck)",
                 "{C:dark_edition,E:2}UHadMeAtFood{} - Art, Code",
                 " ",
                 "{s:1.5,C:attention,E:2}Also Try:",
@@ -332,6 +332,7 @@ return {
             c_roff_thumbnail = 'Three Card Monte',
             c_roff_kali = 'Trigger Happy',
             c_roff_a7x = 'Where Are My Sevens?',
+            c_roff_nofaves = 'No Favorites',
         },
         v_text = {
             ch_c_kali_spawn = {"Creates a Perishable {C:attention}Kali's Banhammer{} when boss blind selected"},
@@ -346,6 +347,9 @@ return {
             k_roff_o7_saved = 'Close one chat!',
             k_roff_crashout_upgrade = 'Crashout!',
             k_roff_typea_update = "Streamer!",
+            k_roff_doc_upgrade = "Muhhhhnee!",
+            k_roff_doc_reset = "Bummer...",
+            k_roff_mainchannel_upgrade = "What?!",
 
             k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',

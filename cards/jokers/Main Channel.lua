@@ -11,7 +11,7 @@ SMODS.Joker{
 	eternal_compat = true,
 	pos = { x = 5, y = 6 },
 	config = { extra = {
-			odds = 25
+			odds = 10
 		}
 	},
 	loc_vars = function(self,info_queue,card)
@@ -26,8 +26,7 @@ SMODS.Joker{
 		--fist
 		--
 
-
-		if context.before then 
+		if context.end_of_round and context.cardarea == G.jokers then 
 			local SHRIMPSPECIAL = pseudorandom('6 DOLLAR SHRIMP SPECIAL')
 			if SHRIMPSPECIAL < G.GAME.probabilities.normal / card.ability.extra.odds then
 				
@@ -113,7 +112,7 @@ SMODS.Joker{
 					end
 				end	
 			return{
-				message = "What?"
+				message = localize("k_roff_mainchannel_upgrade")
 			}
 			elseif not (SHRIMPSPECIAL < G.GAME.probabilities.normal / card.ability.extra.odds )then
 				return{
@@ -121,6 +120,10 @@ SMODS.Joker{
 				}
 			end
 		end
+	end,
+	set_badges = function (self, card, badges)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_art'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)
+		badges[#badges+1] = create_badge(localize('k_roff_credit_uhadme_code'), ROFF.C.credits.uhadme, G.C.WHITE, 0.8)
 	end
 }
 
