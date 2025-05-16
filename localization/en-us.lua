@@ -246,11 +246,11 @@ return {
             j_roff_spec_oops = {
                 name = "Speculative Oops",
                 text = {
-                        "{C:green}#1# in #2# in #2# in #2# in #2#{} chance",
-                        "to earn {C:money}$#3#{} at end of round",
-                        "{C:inactive,s:0.8,E:2}Always take the Oops. ALWAYS.",
-                        "{C:inactive,s:0.6,E:2}Oh, the 1 in 16 becomes a 1 in 1..."
-                    }
+                    "{C:green}#1# in #2# in #2# in #2# in #2#{} chance",
+                    "to earn {C:money}$#3#{} at end of round",
+                    "{C:inactive,s:0.8,E:2}Always take the Oops. ALWAYS.",
+                    "{C:inactive,s:0.6,E:2}Oh, the 1 in 16 becomes a 1 in 1..."
+                }
             },
             j_roff_kali = {
                 name = "Kali's Banhammer",
@@ -275,11 +275,11 @@ return {
                 }
             },
             j_roff_Grimbo = {
-                    name = 'Grimbo',
-                    text = {
-                        "Gain {C:money}+#1#${} per hand played",
-                        "Lose {C:money}#1#${} per discard",
-                        '{s:0.8,C:inactive,E:2}Slander will NOT be tolerated.'
+                name = 'Grimbo',
+                text = {
+                    "Gain {C:money}+#1#${} per hand played",
+                    "Lose {C:money}#1#${} per discard",
+                    '{s:0.8,C:inactive,E:2}Slander will NOT be tolerated.'
                 }
             },
             j_roff_MainChannel = {
@@ -289,6 +289,7 @@ return {
                     'to multiply a value',
                     'in all owned Jokers by {X:mult,C:white}X1.5{}',
                     'at end of round',
+                    "{S:1.1,C:red,E:2}Self destructs{} after triggering",
                     '{C:inactive}(Cannot scale Main Channel){}',
                     '{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
                 }	
