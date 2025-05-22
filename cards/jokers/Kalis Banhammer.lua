@@ -18,7 +18,7 @@ SMODS.Joker{
 				if G.jokers.cards[i] == card then my_pos = i; break end
 			end
 			
-			if my_pos and G.jokers.cards[my_pos+1] and not card.getting_sliced and not G.jokers.cards[my_pos+1].ability.eternal and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then 
+			if my_pos and G.jokers.cards[my_pos+1] and not card.getting_sliced and not G.jokers.cards[my_pos+1].ability.eternal then 
 			
 				local sliced_card = G.jokers.cards[my_pos+1]
 				sliced_card.getting_sliced = true
@@ -29,11 +29,16 @@ SMODS.Joker{
 					G.GAME.consumeable_buffer = 0
 					sliced_card:start_dissolve({HEX("57ecab")}, nil, 1.6)
 					play_sound('slice1', 0.96+math.random()*0.08)
-					SMODS.add_card({set= 'Spectral'})
+					if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+						SMODS.add_card({set= 'Spectral'})
+					else
+						SMODS.calculate_effect({message = localize('k_no_room_ex')}, card)
+					end
+					
 				return true end }))
 				
 			end
-			if my_pos and G.jokers.cards[my_pos-1] and not card.getting_sliced and not G.jokers.cards[my_pos-1].ability.eternal and not G.jokers.cards[my_pos-1].getting_sliced and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then 
+			if my_pos and G.jokers.cards[my_pos-1] and not card.getting_sliced and not G.jokers.cards[my_pos-1].ability.eternal and not G.jokers.cards[my_pos-1].getting_sliced then 
 				
 				local sliced_card = G.jokers.cards[my_pos-1]
 				sliced_card.getting_sliced = true
@@ -44,7 +49,11 @@ SMODS.Joker{
 					G.GAME.consumeable_buffer = 0
 					sliced_card:start_dissolve({HEX("57ecab")}, nil, 1.6)
 					play_sound('slice1', 0.96+math.random()*0.08)
-					SMODS.add_card({set= 'Spectral'})
+					if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
+						SMODS.add_card({set= 'Spectral'})
+					else
+						SMODS.calculate_effect({message = localize('k_no_room_ex')}, card)
+					end
 				return true end }))
 				
 			end

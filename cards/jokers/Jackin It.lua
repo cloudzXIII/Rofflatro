@@ -15,8 +15,7 @@ SMODS.Joker{
             if context.other_card:get_id() == 11 then
                 card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_mod
                 return {
-                    message = localize('k_upgrade_ex'),
-                    card = card
+                    message = localize('k_upgrade_ex')
                 }
             end
         elseif context.joker_main then
