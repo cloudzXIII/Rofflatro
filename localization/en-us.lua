@@ -293,6 +293,15 @@ return {
                     '{C:inactive}(Cannot scale Main Channel){}',
                     '{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
                 }	
+            },
+            j_roff_getchips = {
+                name = 'Just Get Chips',
+                text = {
+                    'This Joker copies',
+                    'all {C:chips}chip{} effects',
+                    'of all owned {C:attention}Jokers',
+                    "{C:inactive,s:0.8,E:2}We're on Plasma Deck, right?..."
+                }
             }
         },
     Back = 
