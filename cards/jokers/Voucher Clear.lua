@@ -25,6 +25,7 @@ SMODS.Joker{
 						delay = 0.3,
 						blockable = false,
 						func = function()
+							G.GAME.used_vouchers[G.shop_vouchers.cards[i].config.center_key] = true
 							G.GAME.current_round.voucher.spawn[G.shop_vouchers.cards[i].config.center_key] = false
 							G.jokers:remove_card(G.shop_vouchers.cards[i])
 							--G.shop_vouchers.cards[i]:remove()
