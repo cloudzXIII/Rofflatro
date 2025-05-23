@@ -302,6 +302,13 @@ return {
                     'of all owned {C:attention}Jokers',
                     "{C:inactive,s:0.8,E:2}We're on Plasma Deck, right?..."
                 }
+            },
+            j_roff_moralsupport = {
+                name = 'Moral Support',
+                text = {
+                    '{C:dark_edition}+#1#{} Joker slot',
+                    "{C:inactive,s:0.8,E:2}Just here for the vibes."
+                }
             }
         },
     Back = 
@@ -360,6 +367,12 @@ return {
             k_roff_doc_upgrade = "Muhhhhnee!",
             k_roff_doc_reset = "Bummer...",
             k_roff_mainchannel_upgrade = "What?!",
+
+            k_roff_buddy_msg1 = "You got this!",
+            k_roff_buddy_msg2 = "I believe!",
+            k_roff_buddy_msg3 = "Go gettem!",
+            k_roff_buddy_msg4 = "To the moon!",
+            k_roff_buddy_msg5 = "You're the best!",
 
             k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',
