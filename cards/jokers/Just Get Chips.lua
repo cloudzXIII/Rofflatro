@@ -13,13 +13,16 @@ SMODS.Joker{
 	end,
 	calculate = function(self,card,context)
 		for _, j in ipairs(G.jokers.cards) do
-			local ret = SMODS.blueprint_effect(card, j, context)
-			if ret then
-				local chip_effect = ret.chips or ret.chip_mod
-				if chip_effect then
-					return {
-						chips = chip_effect
-					}
+			if j.ability.name ~= 'Blueprint' and j.ability.name ~= 'Brainstorm' then -- bp effects create infinite feedback loops if we try copy them...
+				local ret = SMODS.blueprint_effect(card, j, context)
+				if ret then
+					-- print(inspect(ret))
+					local chip_effect = ret.chips or ret.chip_mod
+					if chip_effect then
+						return {
+							chips = chip_effect
+						}
+					end
 				end
 			end
 		end
