@@ -7,9 +7,6 @@ SMODS.Joker{
    perishable_compat = false,
    pos = { x = 0, y = 0 },
    config = { extra = { chips = 0, chip_mod = 13 } },
-   loc_text = {
-      '#1# #2#'
-   },
    loc_vars = function(self, info_queue, card)
       return {vars = { card.ability.extra.chip_mod, card.ability.extra.chips }}
    end,
