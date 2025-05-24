@@ -6,7 +6,7 @@ SMODS.Joker{
 	blueprint_compat = true,
 	eternal_compat = true,
 	pos = { x = 4, y = 7 },
-	config = { extra = { repeated = 0} },
+	config = { extra = { } },
 	loc_vars = function(self,info_queue,card)
 		info_queue[#info_queue+1] = G.P_CENTERS.m_lucky
 		return {vars = {}}
