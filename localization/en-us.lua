@@ -309,6 +309,15 @@ return {
                     '{C:dark_edition}+#1#{} Joker slot',
                     "{C:inactive,s:0.8,E:2}Just here for the vibes."
                 }
+            },
+            j_roff_catfood = {
+                name = 'Cat Food',
+                text = {
+                    "Retriggers {C:attention}Lucky{} cards",
+                    "{C:attention}once{} if both effects",
+                    "{C:mult}fail{} to trigger",
+                    "{C:inactive,s:0.8,E:2}My cat's starving, please feed it!"
+                }
             }
         },
     Back = 
