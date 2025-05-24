@@ -293,7 +293,18 @@ return {
                     '{C:inactive}(Cannot scale Main Channel){}',
                     '{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
                 }	
-            }
+            },
+	    j_roff_black_shirt = {
+                name = 'Black Shirt',
+                text = {
+                    "This Joker gains {C:chips}+#1#{} Chips if",
+                    "played hand contains at least",
+                    "{C:attention}2{} unique scoring cards",
+		    "{C:ianctive}(different rank or suit){}",
+                    "{C:inactive}(Currently +{C:chips}#2#{}{C:inactive} Chips){}",
+                    "{C:inactive,s:0.8,E:2}Do it, streamer. Put them on."
+                }
+            },
         },
     Back = 
     {
