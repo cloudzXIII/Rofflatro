@@ -36,6 +36,7 @@ local joker_list = {
     --'Rock Hard',
     --'Draw the Diamonds',
     'Speculative Oops',
+    'Cat Ears',
 }
 
 -- load all individual jokers
