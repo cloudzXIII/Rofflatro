@@ -1,3 +1,6 @@
+-- Avenged Sevenfold ($6 Uncommon)
+-- This Joker gains +4 Mult if played hand contains an Ace and a 7 (Currently +0 Mult)
+
 SMODS.Joker{
     key = 'a7x',
     atlas = 'roffers',
