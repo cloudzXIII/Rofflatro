@@ -294,8 +294,8 @@ return {
                     '{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
                 }	
             },
-	    j_roff_black_shirt = {
-                name = 'Black Shirt',
+	    j_roff_cat_ears = {
+                name = 'Cat Ears',
                 text = {
                     "This Joker gains {C:chips}+#1#{} Chips if",
                     "played hand contains at least",
