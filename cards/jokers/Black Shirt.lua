@@ -2,7 +2,7 @@ SMODS.Joker{
 	key = 'black_shirt',
 	atlas = 'roffers',
 	rarity = 2,
-	cost = 6,
+	cost = 7,
 	blueprint_compat = true,
 	perishable_compat = false,
 	pos = { x = 1, y = 4 },
@@ -14,7 +14,8 @@ SMODS.Joker{
 		if context.before and not context.blueprint and next(context.poker_hands['Three of a Kind']) then
             card.ability.extra.Xmult = card.ability.extra.Xmult + card.ability.extra.Xmult_mod
             return {
-                message = localize{type = 'variable', key = 'a_xmult', vars = {card.ability.extra.Xmult}}
+                message = message = localize('k_upgrade_ex'),
+		colour = G.C.MULT
             }
         elseif context.joker_main then
             return {
