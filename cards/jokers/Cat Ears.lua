@@ -30,7 +30,7 @@ SMODS.Joker{
             card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
             if pseudorandom('catears') > 0.5 then
                return {
-               message = localize{type = 'variable', key = 'a_chips', vars = {card.ability.extra.chip_mod}},
+               message = message = localize('k_upgrade_ex'),
                colour = G.C.CHIPS
                }
             else
