@@ -1,3 +1,6 @@
+-- Caught In 4K ($4 Common)
+-- +100 Chips for each retrigger on first scored face card 
+
 SMODS.Joker{
     key = '4k',
     atlas = 'roffers',
