@@ -304,9 +304,9 @@ return {
                 }
             },
             j_roff_moralsupport = {
-                name = 'Moral Support',
+                name = 'Buddy',
                 text = {
-                    '{C:dark_edition}+#1#{} Joker slot',
+                    '{C:dark_edition}+1{} Joker slot',
                     "{C:inactive,s:0.8,E:2}Just here for the vibes."
                 }
             },
