@@ -3,8 +3,7 @@ SMODS.Joker{
 	atlas = 'roffers',
 	rarity = 1,
 	cost = 1,
-	blueprint_compat = true,
-	eternal_compat = true,
+	blueprint_compat = false,
 	pos = { x = 2, y = 7 },
 	config = { extra = {} },
 	loc_vars = function(self,info_queue,card)

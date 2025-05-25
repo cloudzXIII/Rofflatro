@@ -7,25 +7,37 @@ SMODS.Joker{
 	eternal_compat = true,
 	pos = { x = 1, y = 7 },
 	soul_pos = { x = 0, y = 7 },
-	config = { extra = { }},
+	config = { extra = { active = false }},
 	loc_vars = function(self,info_queue,card)
 		return {vars = {}}
 	end,
 	calculate = function(self,card,context)
-		for _, j in ipairs(G.jokers.cards) do
-			if j.ability.name ~= 'Blueprint' and j.ability.name ~= 'Brainstorm' then -- bp effects create infinite feedback loops if we try copy them...
-				local ret = SMODS.blueprint_effect(card, j, context)
-				if ret then
-					-- print(inspect(ret))
-					local chip_effect = ret.chips or ret.chip_mod
-					if chip_effect then
-						return {
-							chips = chip_effect
-						}
+
+		if context.setting_blind then
+			card.ability.extra.active = true
+		end
+		if context.end_of_round then
+			card.ability.extra.active = false -- make sure we're only checking for scoring jokers
+		end
+	
+		if card.ability.extra.active then
+			for _, j in ipairs(G.jokers.cards) do
+				if j.ability.name ~= 'Blueprint' and j.ability.name ~= 'Brainstorm' and j.ability.chips or j.ability.extra.chips then -- bp effects create infinite feedback loops if we try copy them...
+					context.blueprint = nil
+					local ret = SMODS.blueprint_effect(card, j, context)
+					if ret then
+						-- print(inspect(ret))
+						local chip_effect = ret.chips or ret.chip_mod
+						if chip_effect then
+							return {
+								chips = chip_effect
+							}
+						end
 					end
 				end
 			end
 		end
+		
 	end,
 	set_badges = function (self, card, badges)
 		badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
