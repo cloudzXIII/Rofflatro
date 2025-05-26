@@ -370,6 +370,7 @@ return {
             c_roff_kali = 'Trigger Happy',
             c_roff_a7x = 'Where Are My Sevens?',
             c_roff_nofaves = 'No Favorites',
+            c_roff_fashion = 'Fashion Disaster',
         },
         v_text = {
             ch_c_kali_spawn = {"Creates a Perishable {C:attention}Kali's Banhammer{} when boss blind selected"},
