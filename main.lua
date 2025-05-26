@@ -20,6 +20,11 @@ SMODS.Atlas {
     py = 95,
 }
 
+--talisman compat dummy func
+to_big = to_big or function (value)
+    return value
+end
+
 -- load common util funcs
 assert(SMODS.load_file("globals.lua"))()
 --assert(SMODS.load_file("No Favorites.lua"))()

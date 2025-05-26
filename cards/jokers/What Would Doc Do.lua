@@ -28,7 +28,7 @@ SMODS.Joker{
 				G.GAME.dollar_buffer = 0
 			end
 
-			if G.GAME.dollars + G.GAME.dollar_buffer >= G.GAME.interest_cap then
+			if to_big(G.GAME.dollars + G.GAME.dollar_buffer) >= G.GAME.interest_cap then
 				card.ability.extra.Xmult = card.ability.extra.Xmult + (card.ability.extra.Xmult_mod)
 				return {
 					message = localize("k_roff_doc_upgrade"),
