@@ -16,7 +16,6 @@ SMODS.Joker{
             G.E_MANAGER:add_event(Event({
                 func = (function()
                     add_tag(Tag('tag_investment'))
-                    play_sound('generic1', 0.9 + math.random()*0.1, 0.8)
                     play_sound('holo1', 1.2 + math.random()*0.1, 0.4)
                     return true
                 end)
@@ -26,7 +25,6 @@ SMODS.Joker{
                 delay = 0.25,
                 func = (function()
                     add_tag(Tag('tag_voucher'))
-                    play_sound('generic1', 0.9 + math.random()*0.1, 0.8)
                     play_sound('holo1', 1.2 + math.random()*0.1, 0.4)
                     return true
                 end)

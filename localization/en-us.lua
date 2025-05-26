@@ -319,7 +319,7 @@ return {
                     "{C:inactive,s:0.8,E:2}My cat's starving, please feed it!"
                 }
             },
-	          j_roff_cat_ears = {
+	        j_roff_cat_ears = {
                 name = 'Cat Ears',
                 text = {
                     "This Joker gains {C:chips}+#1#{} Chips if",
@@ -328,6 +328,15 @@ return {
                     "{C:inactive}(Different rank or suit){}",
                     "{C:inactive}(Currently +{C:chips}#2#{}{C:inactive} Chips){}",
                     "{C:inactive,s:0.8,E:2}Do it, streamer. Put them on."
+                }
+            },
+            j_roff_free_negatives = {
+                name = 'Free Negatives',
+                text = {
+                    "For the next {C:attention}#1#{} round(s),",
+                    "gain a {C:dark_edition}Negative Tag{}",
+                    "at end of shop",
+                    "{C:inactive,s:0.8,E:2}More Jokers, more score!"
                 }
             },
         },
@@ -388,6 +397,7 @@ return {
             k_roff_doc_upgrade = "Muhhhhnee!",
             k_roff_doc_reset = "Bummer...",
             k_roff_mainchannel_upgrade = "What?!",
+            k_roff_negatives_trigger = "Yippee!",
 
             k_roff_buddy_msg1 = "You got this!",
             k_roff_buddy_msg2 = "I believe!",

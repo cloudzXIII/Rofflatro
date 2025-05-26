@@ -37,7 +37,7 @@ local joker_list = {
     -- 'Rock Hard',
     -- 'Draw the Diamonds',
     -- 'Where Faces',
-    -- 'Free Negatives',
+    'Free Negatives',
     -- 'Spaceman',
     'Cat Ears',
     'Moral Support',
