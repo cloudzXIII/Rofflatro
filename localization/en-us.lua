@@ -318,8 +318,7 @@ return {
                     "{C:mult}fail{} to trigger",
                     "{C:inactive,s:0.8,E:2}My cat's starving, please feed it!"
                 }
-            }
-      
+            },
 	          j_roff_cat_ears = {
                 name = 'Cat Ears',
                 text = {

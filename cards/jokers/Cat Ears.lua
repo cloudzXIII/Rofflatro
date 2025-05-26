@@ -5,7 +5,7 @@ SMODS.Joker{
    cost = 6,
    blueprint_compat = true,
    perishable_compat = false,
-   pos = { x = 0, y = 0 }, -- change
+   pos = { x = 3, y = 7 }, -- change
    config = { extra = { chips = 0, chip_mod = 13 } }, -- might be better at +23
    loc_vars = function(self, info_queue, card)
       return {vars = { card.ability.extra.chip_mod, card.ability.extra.chips }}
@@ -30,7 +30,7 @@ SMODS.Joker{
             card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
             if pseudorandom('catears') > 0.5 then
                return {
-               message = message = localize('k_upgrade_ex'),
+               message = localize('k_upgrade_ex'),
                colour = G.C.CHIPS
                }
             else
