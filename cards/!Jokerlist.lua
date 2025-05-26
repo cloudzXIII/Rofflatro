@@ -37,7 +37,6 @@ local joker_list = {
     --'Draw the Diamonds',
     'Speculative Oops',
 }
-
 -- load all individual jokers
 for _, key in ipairs(joker_list) do
     SMODS.load_file('cards/jokers/'..key..'.lua')()
