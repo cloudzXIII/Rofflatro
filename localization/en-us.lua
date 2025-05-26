@@ -319,6 +319,18 @@ return {
                     "{C:inactive,s:0.8,E:2}My cat's starving, please feed it!"
                 }
             }
+      
+	          j_roff_cat_ears = {
+                name = 'Cat Ears',
+                text = {
+                    "This Joker gains {C:chips}+#1#{} Chips if",
+                    "played hand contains at least",
+                    "{C:attention}2{} unique scoring cards",
+                    "{C:inactive}(Different rank or suit){}",
+                    "{C:inactive}(Currently +{C:chips}#2#{}{C:inactive} Chips){}",
+                    "{C:inactive,s:0.8,E:2}Do it, streamer. Put them on."
+                }
+            },
         },
     Back = 
     {
