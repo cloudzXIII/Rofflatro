@@ -294,13 +294,39 @@ return {
                     '{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
                 }	
             },
-	    j_roff_cat_ears = {
+            j_roff_getchips = {
+                name = 'Just Get Chips',
+                text = {
+                    'This Joker copies',
+                    'all {C:chips}chip{} effects',
+                    'of all owned {C:attention}Jokers',
+                    "{C:inactive,s:0.8,E:2}We're on Plasma Deck, right?..."
+                }
+            },
+            j_roff_moralsupport = {
+                name = 'Buddy',
+                text = {
+                    '{C:dark_edition}+1{} Joker slot',
+                    "{C:inactive,s:0.8,E:2}Just here for the vibes."
+                }
+            },
+            j_roff_catfood = {
+                name = 'Cat Food',
+                text = {
+                    "Retriggers {C:attention}Lucky{} cards",
+                    "{C:attention}once{} if both effects",
+                    "{C:mult}fail{} to trigger",
+                    "{C:inactive,s:0.8,E:2}My cat's starving, please feed it!"
+                }
+            }
+      
+	          j_roff_cat_ears = {
                 name = 'Cat Ears',
                 text = {
                     "This Joker gains {C:chips}+#1#{} Chips if",
                     "played hand contains at least",
                     "{C:attention}2{} unique scoring cards",
-		    "{C:ianctive}(different rank or suit){}",
+                    "{C:inactive}(Different rank or suit){}",
                     "{C:inactive}(Currently +{C:chips}#2#{}{C:inactive} Chips){}",
                     "{C:inactive,s:0.8,E:2}Do it, streamer. Put them on."
                 }
@@ -362,6 +388,12 @@ return {
             k_roff_doc_upgrade = "Muhhhhnee!",
             k_roff_doc_reset = "Bummer...",
             k_roff_mainchannel_upgrade = "What?!",
+
+            k_roff_buddy_msg1 = "You got this!",
+            k_roff_buddy_msg2 = "I believe!",
+            k_roff_buddy_msg3 = "Go gettem!",
+            k_roff_buddy_msg4 = "To the moon!",
+            k_roff_buddy_msg5 = "You're the best!",
 
             k_roff_credit_l6_art = 'Art: Lucky6/AlrexX',
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',
