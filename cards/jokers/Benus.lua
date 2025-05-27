@@ -8,6 +8,7 @@ SMODS.Joker{
     rarity = 1,
     cost = 3,
     pos = { x = 3, y = 1 },
+    blueprint_compat = true,
     config = { extra = { dollars = 3, dollars_decrease = 2 } },
     loc_vars = function(self, info_queue, card)
         return { vars = {card.ability.extra.dollars, card.ability.extra.dollars_decrease}}
