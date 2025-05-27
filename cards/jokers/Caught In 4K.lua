@@ -7,6 +7,7 @@ SMODS.Joker{
     rarity = 1,
     cost = 4,
     pos = { x = 5, y = 1 },
+    blueprint_compat = true,
     config = { extra = { chips = 100, score_buffer = 1 } },
     loc_vars = function(self,info_queue,card)
         return {vars = {card.ability.extra.chips}}
