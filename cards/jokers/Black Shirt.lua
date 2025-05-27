@@ -7,6 +7,7 @@ SMODS.Joker{
     atlas = 'roffers',
     rarity = 2,
     cost = 7,
+    blueprint_compat = true,
     perishable_compat = false,
     pos = { x = 1, y = 4 },
     config = { extra = { Xmult = 1, Xmult_mod = 0.2 } },
