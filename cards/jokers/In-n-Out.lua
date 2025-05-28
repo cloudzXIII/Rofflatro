@@ -2,6 +2,7 @@ SMODS.Joker{
    key = 'in_n_out',
    atlas = 'roffers',
    rarity = 1,
+   cost = 4,
    blueprint_compat = true,
    eternal_compat = true,
 	perishable_compat = false,
@@ -13,7 +14,6 @@ SMODS.Joker{
          check = true
       }
    },
-   cost = 5,
    loc_vars = function(self, info_queue, card)
       return {
          vars = { card.ability.extra.chipgain, card.ability.extra.chips }
