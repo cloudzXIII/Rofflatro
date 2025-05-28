@@ -6,6 +6,7 @@ SMODS.Joker{
 	eternal_compat = true,
 	pos = { x = 1, y = 5 },
 	config = { extra = {
+		pool_index = 0
 		}
 	},
 	cost = 4,
@@ -19,14 +20,17 @@ SMODS.Joker{
 			for i = 1, #G.shop_vouchers.cards do
 					-- This part destroys the G.shop_vouchers.cards[i].
 					play_sound('tarot1')
-					G.shop_vouchers.cards[i]:start_dissolve({HEX("57ecab")}, nil, 1.6)
+
 					G.E_MANAGER:add_event(Event({
 						trigger = 'after',
 						delay = 0.3,
 						blockable = false,
 						func = function()
-							G.GAME.used_vouchers[G.shop_vouchers.cards[i].config.center_key] = true
-							G.GAME.current_round.voucher.spawn[G.shop_vouchers.cards[i].config.center_key] = false
+							SMODS.remove_pool(G.P_CENTER_POOLS.Voucher, G.shop_vouchers.cards[i].config.center_key)
+							G.shop_vouchers.cards[i]:start_dissolve({HEX("57ecab")}, nil, 1.6)
+							if G.GAME.current_round.voucher.spawn[G.shop_vouchers.cards[i].config.center_key] then
+								G.GAME.current_round.voucher.spawn[G.shop_vouchers.cards[i].config.center_key] = false
+							end
 							G.jokers:remove_card(G.shop_vouchers.cards[i])
 							--G.shop_vouchers.cards[i]:remove()
 							G.shop_vouchers.cards[i] = nil
