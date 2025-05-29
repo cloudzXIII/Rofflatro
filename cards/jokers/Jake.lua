@@ -38,6 +38,11 @@ SMODS.Joker{
 				Xmult = card.ability.extra.Xmult
 			}
 		end
+		if context.selling_card and context.card.ability.name == 'Diet Cola' then
+			return {
+				message = localize('k_upgrade_ex')
+			}
+		end
 	end,
 	update = function (self, card, dt)
 		if not G.GAME.colas_sold then
