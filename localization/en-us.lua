@@ -90,6 +90,16 @@ return {
                     "{C:inactive,s:0.8,E:2}Ew! Why won't you {C:inactive,s:0.8,E:1}DIE?!"
                 }
             },
+            j_roff_excommunication = {
+                name = 'Excommunication',
+      		text = {
+      		    'Held {C:spectral}Spectrals{} turn {C:dark_edition,E:1}Negative',
+   		    'This Joker gains {X:mult,C:white}X#1#{} Mult',
+	            'when a {C:spectral}Spectral{} card is {C:attention}used{}',
+   		    'and {X:mult,C:white}X#2#{} Mult if {C:attention}sold{} instead',
+  		    '{C:inactive}(Currently {X:mult,C:white}X#3#{} {C:inactive}Mult)',
+  		}
+	    },
             j_roff_dvd = {
                 name = 'DVD',
                 text = {
