@@ -352,14 +352,15 @@ return {
                 }
             },
          j_roff_engagement = {
-               name = 'Engagement',
+                name = 'Engagement',
                 text = {
-                  'Creates a {C:spectral}Spectral{}',
-                  'if no hands, discards,',
-                  'or consumables left',
-                  'at end of round',
-                  '{C:inactive,s:0.8,E:2}Make sure to like and comment!',
-                  '{C:inactive,s:0.6,E:2}(or maybe even be trans   parent)',
+                    'Creates a {C:spectral}Spectral{} card',
+                    'if no {C:chips}hands{}, {C:mult}discards{},',
+                    'or {C:attention}consumables{} left',
+                    'at end of round',
+                    "{C:inactive}(Must have room)",
+                    '{C:inactive,s:0.8,E:2}Make sure to like and comment!',
+                    '{C:inactive,s:0.6,E:2}(or maybe even be trans   parent)',
                 }
          },
         },
