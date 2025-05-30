@@ -16,7 +16,7 @@ SMODS.Joker{
 	key = "jake",
 	atlas = 'roffers',
 	rarity = 2,
-	cost = 3,
+	cost = 6,
 	blueprint_compat = true,
 	eternal_compat = true,
 	perishable_compat = false,
@@ -36,6 +36,11 @@ SMODS.Joker{
 		if context.joker_main then
 			return {
 				Xmult = card.ability.extra.Xmult
+			}
+		end
+		if context.selling_card and context.card.ability.name == 'Diet Cola' then
+			return {
+				message = localize('k_upgrade_ex')
 			}
 		end
 	end,
