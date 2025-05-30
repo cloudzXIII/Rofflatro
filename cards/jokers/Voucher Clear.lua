@@ -15,7 +15,7 @@ SMODS.Joker{
 	end,
 	calculate = function(self,card,context)
 
-		if context.selling_self and G.shop_vouchers.cards then
+		if context.selling_self and G.shop_vouchers then
 
 			for i = 1, #G.shop_vouchers.cards do
 					-- This part destroys the G.shop_vouchers.cards[i].
