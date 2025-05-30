@@ -98,6 +98,8 @@ return {
 	            'when a {C:spectral}Spectral{} card is {C:attention}used{}',
    		    'and {X:mult,C:white}X#2#{} Mult if {C:attention}sold{} instead',
   		    '{C:inactive}(Currently {X:mult,C:white}X#3#{} {C:inactive}Mult)',
+		    '{C:inactive,s:0.8,E:2}I ain’t afraid of no… Ghost Deck?',
+		    '{C:inactive,s:0.6,E:2}that\'s a lie from our vanilla balancer',
   		}
 	    },
             j_roff_dvd = {
@@ -356,8 +358,8 @@ return {
          	    'if no hands, discards,',
          	    'or consumables left',
          	    'at end of round',
-         	    '{C:inactive,s:0.8}Make sure to like and comment!',
-         	    '{C:inactive,s:0.6}(or maybe even be trans   parent)',
+         	    '{C:inactive,s:0.8,E:2}Make sure to like and comment!',
+         	    '{C:inactive,s:0.6,E:2}(or maybe even be trans   parent)',
       		}
 	    },
         },
