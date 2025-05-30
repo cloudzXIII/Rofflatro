@@ -22,7 +22,7 @@ SMODS.Joker{
 	
 		if card.ability.extra.active then
 			for _, j in ipairs(G.jokers.cards) do
-				if j.ability.name ~= 'Blueprint' and j.ability.name ~= 'Brainstorm' and j.ability.chips or j.ability.extra.chips then -- bp effects create infinite feedback loops if we try copy them...
+				if j.ability.name ~= 'Blueprint' and j.ability.name ~= 'Brainstorm' and j.ability.blueprint_compat then -- bp effects create infinite feedback loops if we try copy them...
 					context.blueprint = nil
 					local ret = SMODS.blueprint_effect(card, j, context)
 					if ret then
@@ -37,7 +37,6 @@ SMODS.Joker{
 				end
 			end
 		end
-		
 	end,
 	set_badges = function (self, card, badges)
 		badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)

@@ -337,8 +337,8 @@ return {
                     "This Joker gains {C:chips}+#1#{} Chips if",
                     "played hand contains at least",
                     "{C:attention}2{} unique scoring cards",
-                    "{C:inactive}(Different rank or suit){}",
-                    "{C:inactive}(Currently +{C:chips}#2#{}{C:inactive} Chips){}",
+                    "{C:inactive}(i.e. different rank or suit){}",
+                    "{C:inactive}(Currently {C:chips}+#2#{}{C:inactive} Chips){}",
                     "{C:inactive,s:0.8,E:2}Do it, streamer. Put them on."
                 }
             },
@@ -385,7 +385,7 @@ return {
                 "{s:1.5,C:attention,E:2}Credits:",
                 "{C:dark_edition,E:2}Lucky6(AlrexX){} - Lead, Art, Code",
                 "{C:dark_edition,E:2}Maxx{} - Design, Art, Code",
-                "{C:dark_edition,E:2}canicao{} - Design, Code",
+                "{C:dark_edition,E:2}canicao{} - Design, Art, Code",
                 "{C:dark_edition,E:2}garb{} - Code (Streamer Deck)",
                 "{C:dark_edition,E:2}UHadMeAtFood{} - Art, Code",
                 " ",
