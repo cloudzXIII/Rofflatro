@@ -45,6 +45,8 @@ local joker_list = {
     -- 'Getting Lucky',
     -- 'Check Him PC',
     'Cat Food',
+    'Excommunication',
+    'Engagement',
 }
 
 -- load all individual jokers
