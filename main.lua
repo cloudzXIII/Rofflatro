@@ -52,6 +52,7 @@ local start_run_ref = Game.start_run
 function Game:start_run(args)
     local begin = start_run_ref(self, args)
     if not saveTable then
+        G.GAME.ROFF_seance_used = false
         if args.challenge then
             local _ch = args.challenge
             G.GAME.challenge_index = args.challenge
