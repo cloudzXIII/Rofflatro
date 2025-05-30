@@ -40,17 +40,7 @@ SMODS.Joker {
    rarity = 2,
    cost = 6,
    atlas = 'roffers',
-   pos = { x = 1, y = 7 },
-   loc_txt = {
-      name = 'Excommunication',
-      text = {
-         'Held {C:spectral}Spectrals{} turn {C:dark_edition,E:1}Negative',
-         'This Joker gains {X:mult,C:white}X#1#{} Mult',
-         'when a {C:spectral}Spectral{} card is {C:attention}used{}',
-         'and {X:mult,C:white}X#2#{} Mult if {C:attention}sold{} instead',
-         '{C:inactive}(Currently {X:mult,C:white}X#3#{} {C:inactive}Mult)',
-      }
-   },
+   pos = { x = 1, y = 8 },
    config = { extra = { Xmult = 1, Xmult_mod = 0.5 } },
    loc_vars = function(self, info_queue, card)
        return { vars = { card.ability.extra.Xmult_mod, card.ability.extra.Xmult_mod/5, card.ability.extra.Xmult } }
