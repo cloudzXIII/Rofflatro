@@ -92,16 +92,16 @@ return {
             },
             j_roff_excommunication = {
                 name = 'Excommunication',
-      		text = {
-      		    'Held {C:spectral}Spectrals{} turn {C:dark_edition,E:1}Negative',
-   		    'This Joker gains {X:mult,C:white}X#1#{} Mult',
-	            'when a {C:spectral}Spectral{} card is {C:attention}used{}',
-   		    'and {X:mult,C:white}X#2#{} Mult if {C:attention}sold{} instead',
-  		    '{C:inactive}(Currently {X:mult,C:white}X#3#{} {C:inactive}Mult)',
-		    '{C:inactive,s:0.8,E:2}I ain’t afraid of no… Ghost Deck?',
-		    '{C:inactive,s:0.6,E:2}that\'s a lie from our vanilla balancer',
-  		}
-	    },
+                text = {
+                'Held {C:spectral}Spectrals{} turn {C:dark_edition,E:1}Negative',
+                'This Joker gains {X:mult,C:white}X#1#{} Mult',
+                'when a {C:spectral}Spectral{} card is {C:attention}used{}',
+                'and {X:mult,C:white}X#2#{} Mult if {C:attention}sold{} instead',
+                '{C:inactive}(Currently {X:mult,C:white}X#3#{} {C:inactive}Mult)',
+                '{C:inactive,s:0.8,E:2}I ain\'t afraid of no... Ghost Deck?',
+                '{C:inactive,s:0.6,E:2}that\'s a lie from our vanilla balancer',
+            }
+         },
             j_roff_dvd = {
                 name = 'DVD',
                 text = {
@@ -227,12 +227,12 @@ return {
             },
             j_roff_thumbnail = {
                 name = "The Thumbnail",
-				text = {
-				    '{X:mult,C:white}X#1#{} Mult if exactly',
-					'{C:attention}#2#{} Jokers are owned',
-					'{C:inactive}(The Thumbnail included){}',
-					"{C:inactive,s:0.8,E:2}It's always clickbait!{}"
-				}
+                    text = {
+                        '{X:mult,C:white}X#1#{} Mult if exactly',
+                         '{C:attention}#2#{} Jokers are owned',
+                         '{C:inactive}(The Thumbnail included){}',
+                         "{C:inactive,s:0.8,E:2}It's always clickbait!{}"
+                    }
             },
             j_roff_crashout = {
                 name = "Crashout",
@@ -242,7 +242,7 @@ return {
                     "This Joker gains {X:mult,C:white}X#2#{} Mult",
                     "per consumable destroyed",
                     "{C:inactive}(Currently {X:mult,C:white}X#1#{} {C:inactive}Mult)",
-					"{C:inactive,s:0.8,E:2}Why is streamer mad?{}"
+                         "{C:inactive,s:0.8,E:2}Why is streamer mad?{}"
                 }
             },
             j_roff_neverskip = {
@@ -304,7 +304,7 @@ return {
                     "{S:1.1,C:red,E:2}Self destructs{} after triggering",
                     '{C:inactive}(Cannot scale Main Channel){}',
                     '{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
-                }	
+                }     
             },
             j_roff_getchips = {
                 name = 'Just Get Chips',
@@ -331,7 +331,7 @@ return {
                     "{C:inactive,s:0.8,E:2}My cat's starving, please feed it!"
                 }
             },
-	        j_roff_cat_ears = {
+             j_roff_cat_ears = {
                 name = 'Cat Ears',
                 text = {
                     "This Joker gains {C:chips}+#1#{} Chips if",
@@ -351,17 +351,17 @@ return {
                     "{C:inactive,s:0.8,E:2}More Jokers, more score!"
                 }
             },
-	    j_roff_engagement = {
-     		name = 'Engagement',
-      		text = {
-         	    'Creates a {C:spectral}Spectral{}',
-         	    'if no hands, discards,',
-         	    'or consumables left',
-         	    'at end of round',
-         	    '{C:inactive,s:0.8,E:2}Make sure to like and comment!',
-         	    '{C:inactive,s:0.6,E:2}(or maybe even be trans   parent)',
-      		}
-	    },
+         j_roff_engagement = {
+               name = 'Engagement',
+                text = {
+                  'Creates a {C:spectral}Spectral{}',
+                  'if no hands, discards,',
+                  'or consumables left',
+                  'at end of round',
+                  '{C:inactive,s:0.8,E:2}Make sure to like and comment!',
+                  '{C:inactive,s:0.6,E:2}(or maybe even be trans   parent)',
+                }
+         },
         },
     Back = 
     {
@@ -432,6 +432,7 @@ return {
             k_roff_credit_l6_code = 'Code: Lucky6/AlrexX',
             k_roff_credit_maxx_art = 'Art: Maxx',
             k_roff_credit_maxx_code = 'Code: Maxx',
+            k_roff_credit_canicao_art = 'Art: canicao',
             k_roff_credit_canicao_code = 'Code: canicao',
             k_roff_credit_garb_code = 'Code: garb',
             k_roff_credit_uhadme_art = 'Art: UHadMeAtFood',
