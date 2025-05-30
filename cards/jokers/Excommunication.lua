@@ -81,4 +81,6 @@ SMODS.Joker {
    in_pool = function(self, card)
       return G.GAME.ROFF_seance_used
    end
+   badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_art'), ROFF.C.credits.canicao_text, ROFF.C.credits.canicao, 0.8)
+   badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_code'), ROFF.C.credits.canicao, ROFF.C.credits.canicao_text, 0.8)
 }
