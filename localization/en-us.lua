@@ -349,6 +349,17 @@ return {
                     "{C:inactive,s:0.8,E:2}More Jokers, more score!"
                 }
             },
+	    j_roff_engagement = {
+     		name = 'Engagement',
+      		text = {
+         	    'Creates a {C:spectral}Spectral{}',
+         	    'if no hands, discards,',
+         	    'or consumables left',
+         	    'at end of round',
+         	    '{C:inactive,s:0.8}Make sure to like and comment!',
+         	    '{C:inactive,s:0.6}(or maybe even be trans   parent)',
+      		}
+	    },
         },
     Back = 
     {
