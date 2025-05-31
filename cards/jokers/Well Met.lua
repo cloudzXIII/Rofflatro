@@ -36,19 +36,21 @@ SMODS.Joker{
       }
    end,
    calculate = function(self, card, context)
-      if context.individual and not context.end_of_round and context.cardarea == G.hand and context.other_card.ability.roff_favorite then
-         if context.other_card.debuff then
-            return {
-               message = localize('k_debuffed'),
-               colour = G.C.RED,
-               card = context.other_card,
-            }
-         else
-            return {
-               x_mult = card.ability.extra.xmult,
-               card = context.other_card,
-               message = 'Well Met!'
-            }
+      if context.individual and not context.end_of_round and context.cardarea == G.hand then
+         if context.other_card.ability.roff_favorite then
+            if context.other_card.debuff then
+               return {
+                  message = localize('k_debuffed'),
+                  colour = G.C.RED,
+                  card = context.other_card,
+               }
+            else
+               return {
+                  x_mult = card.ability.extra.xmult,
+                  card = context.other_card,
+                  message = 'Well Met!'
+               }
+            end
          end
       end
    end,
