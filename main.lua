@@ -82,9 +82,9 @@ function Game:start_run(args)
     return begin
 end
 
-local update = Game.update
+local update_ref = Game.update
 function Game:update(dt)
-    update(self, dt)
+    update_ref(self, dt)
     if G.GAME.modifiers.kali_spawn then
         if G.STATE == G.STATES.BLIND_SELECT and G.GAME.blind.boss and G.GAME.modifiers.kali_spawn_hold == true then 
             SMODS.add_card({key = 'j_roff_kali', stickers = { 'perishable' }})

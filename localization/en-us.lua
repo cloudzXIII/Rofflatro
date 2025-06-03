@@ -74,9 +74,9 @@ return {
             j_roff_wellmet = {
                 name = 'Well Met',
                 text = {
-                    "First card held in hand",
+                    "Cards held in hand",
                     "with {C:attention}Favorite{} sticker",
-                    "gives {X:mult,C:white}X#1#{} Mult" -- flavor text is done via gui dynatext shenanigans
+                    "give {X:mult,C:white}X#1#{} Mult" -- flavor text is done via gui dynatext shenanigans
                 }
             },
             j_roff_grossmichael = {
