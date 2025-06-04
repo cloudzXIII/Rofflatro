@@ -23,9 +23,8 @@ SMODS.Joker{
 		end
 
 		if context.pre_discard then
-			local dollars = card.ability.extra.dollars * -1
 			return {
-				dollars = dollars
+				dollars = -card.ability.extra.dollars
 			}
 		end
 
