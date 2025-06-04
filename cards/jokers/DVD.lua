@@ -6,7 +6,7 @@ SMODS.Joker{
 	blueprint_compat = true,
 	perishable_compat = false,
 	pos = { x = 1, y = 3 },
-	config = { extra = { chips = 0, chip_mod = 2 } },
+	config = { extra = { chips = 0, chip_mod = 4 } },
 	loc_vars = function(self,info_queue,card)
 		return {vars = { card.ability.extra.chip_mod, card.ability.extra.chips }}
 	end,
