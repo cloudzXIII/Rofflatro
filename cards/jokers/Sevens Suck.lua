@@ -13,13 +13,15 @@ SMODS.Joker{
 	end,
 	calculate = function(self,card,context)
 		if context.individual and context.cardarea == G.play then
-            if context.other_card:get_id() == 7 and pseudorandom('roff_sevens') <= G.GAME.probabilities.normal / card.ability.extra.odds then 
+            if context.other_card:get_id() == 7 then
+				if pseudorandom('roff_sevens') <= G.GAME.probabilities.normal / card.ability.extra.odds then 
                 return {
                     Xmult = card.ability.extra.Xmult
                 }
-			elseif context.other_card:get_id() == 7 and not (pseudorandom('roff_sevens') <= G.GAME.probabilities.normal / card.ability.extra.odds)  then
-				local effects
-    			SMODS.calculate_context({roff_probability_missed = true}, effects)
+				else 
+					local effects
+					SMODS.calculate_context({roff_probability_missed = true}, effects)
+				end
             end
         end
 	end,
