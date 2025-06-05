@@ -3,9 +3,9 @@ SMODS.Joker{
     atlas = 'roffers',
     pos = {x = 1, y = 1},
     rarity = 1, 
-	blueprint_compat = true,
+    cost = 3,
+    blueprint_compat = true,
     perishable_compat = false,
-    cost = 4,
     config = { extra = {mult = 0, mult_mod = 1} },
     loc_vars = function (self, info_queue, card)
         return { vars = {card.ability.extra.mult_mod, card.ability.extra.mult} }

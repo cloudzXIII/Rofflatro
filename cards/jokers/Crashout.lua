@@ -9,7 +9,7 @@ key = 'crashout',
     blueprint_compat = true,
     perishable_compat = false,
     pos = { x = 4, y = 5 },
-    config = { extra = { Xmult = 1, Xmult_mod = .25 } },
+    config = { extra = { Xmult = 1, Xmult_mod = .3 } },
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.Xmult, card.ability.extra.Xmult_mod}}
     end,
