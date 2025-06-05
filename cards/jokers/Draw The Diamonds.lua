@@ -28,41 +28,38 @@ SMODS.Joker{
          if context.other_card:is_suit('Diamonds') then
             local suits = {'Spades', 'Hearts', 'Clubs'}
             local interest_cap = G.GAME.interest_cap - (card.ability.extra.interest * 5)
-            G.E_MANAGER:add_event(Event{
-					trigger = 'after',
-					delay = 0.83,
-					func = function()
-						SMODS.change_base(context.other_card, suits[pseudorandom('diamonds', 1, 3)], nil)
-						context.other_card:juice_up()
-						return true
-					end
-				})
+            local kcard = context.other_card
             card.ability.extra.amount_scored = card.ability.extra.amount_scored + 1
-            context.other_card.roff_broke = true
             if card.ability.extra.amount_scored == 7 then
                card.ability.extra.interest = card.ability.extra.interest + card.ability.extra.interest_mod
                G.GAME.interest_cap = interest_cap + card.ability.extra.interest * 5
                card.ability.extra.amount_scored = 0
+            end
+            G.E_MANAGER:add_event(Event{
+               trigger = 'after',
+               delay = 0.8,
+               func = function()
+                  SMODS.change_base(kcard, suits[pseudorandom('diamonds', 1, 3)], nil)
+                  kcard:juice_up()
+                  return true
+               end
+            })
+            if amount_scored == 7 then
                return {
-                  message = 'Deposited!',
-                  colour = G.C.SUITS.Diamonds,
-                  card = card
+                  message = 'Deposited!'
                }
             end
             if pseudorandom('diamonds') > 0.03 then
                return {
-                  message = 'Diamonds!',
-                  colour = G.C.SUITS.Diamonds
+                  message = 'Diamonds!'
                }
             elseif pseudorandom('diamonds') > 0.5 then
                return {
-                  message = 'Lapis Lazuli!',
-                  colour = G.C.SUITS.Diamonds
+                  message = 'Lapis Lazuli!'
                }
             else
                return {
-                  message = 'Glow Lichen!',
-                  colour = G.C.SUITS.Diamonds
+                  message = 'Glow Lichen!'
                }
             end
          end
