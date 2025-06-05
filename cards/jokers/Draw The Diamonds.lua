@@ -28,7 +28,15 @@ SMODS.Joker{
          if context.other_card:is_suit('Diamonds') then
             local suits = {'Spades', 'Hearts', 'Clubs'}
             local interest_cap = G.GAME.interest_cap - (card.ability.extra.interest * 5)
-            SMODS.change_base(context.other_card, suits[pseudorandom('diamonds', 1, 3)], nil)
+            G.E_MANAGER:add_event(Event{
+					trigger = 'after',
+					delay = 0.83,
+					func = function()
+						SMODS.change_base(context.other_card, suits[pseudorandom('diamonds', 1, 3)], nil)
+						context.other_card:juice_up()
+						return true
+					end
+				})
             card.ability.extra.amount_scored = card.ability.extra.amount_scored + 1
             context.other_card.roff_broke = true
             if card.ability.extra.amount_scored == 7 then
