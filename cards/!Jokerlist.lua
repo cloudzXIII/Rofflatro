@@ -32,7 +32,7 @@ local joker_list = {
     'Speculative Oops',
     'Just Get Chips',
     -- 'It Aint My Grave',
-    -- 'Nice',
+    'Nice',
     -- 'Nancy',
     -- 'Rock Hard',
     'Draw the Diamonds',
@@ -41,12 +41,13 @@ local joker_list = {
     -- 'Spaceman',
     'Cat Ears',
     'Moral Support',
-    -- 'Always Clam',
+    'Always Clam',
     -- 'Getting Lucky',
     -- 'Check Him PC',
     'Cat Food',
     'Excommunication',
     'Engagement',
+    'VOD Watchers',
 }
 -- load all individual jokers
 for _, key in ipairs(joker_list) do
