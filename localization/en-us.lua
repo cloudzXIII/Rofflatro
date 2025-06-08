@@ -352,16 +352,16 @@ return {
                 }
             },
             j_roff_engagement = {
-                    name = 'Engagement',
-                    text = {
-                        'Creates a {C:spectral}Spectral{} card',
-                        'if no {C:chips}hands{}, {C:mult}discards{},',
-                        'or {C:attention}consumables{} left',
-                        'at end of round',
-                        "{C:inactive}(Must have room)",
-                        '{C:inactive,s:0.8,E:2}Make sure to like and comment!',
-                        '{C:inactive,s:0.6,E:2}(or maybe even be trans   parent)',
-                    }
+                name = 'Engagement',
+                text = {
+                    'Creates a {C:spectral}Spectral{} card',
+                    'if no {C:chips}hands{}, {C:mult}discards{},',
+                    'or {C:attention}consumables{} left',
+                    'at end of round',
+                    "{C:inactive}(Must have room)",
+                    '{C:inactive,s:0.8,E:2}Make sure to like and comment!',
+                    '{C:inactive,s:0.6,E:2}(or maybe even be trans   parent)',
+                }
             },
             j_roff_faces = {
                 name = 'Where Faces?',
@@ -371,6 +371,37 @@ return {
                     'to be {C:attention}destroyed{}',
                     'and give {C:money}#3#${}',
                     "{C:inactive,s:0.8,E:2}Who killed my face cards?!"
+                }
+            },
+            j_roff_nice = {
+                name = 'Nice',
+                text = {
+                    'Scoring {C:attention}6s{} give {V:1}#1#{} #3#',
+                    'Held in hand {C:attention}9s{} give {V:2}#2#{} #4#',
+                    'Switches when hand played',
+                    '{C:inactive,s:0.8,E:2}Nice.'
+                }
+            },
+            j_roff_clam = {
+                name = 'Always Clam!',
+                text = {
+                    'Gains {C:chips}+#1#{} Chips if hand',
+                    'scores less than {C:attention}25% of',
+                    'score requirement, resets',
+                    'when {C:attention}Boss Blind{} is defeated',
+                    '{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)',
+                    '{C:inactive,s:0.8,E:2}Never been mad in my life!'
+                }
+            },
+            j_roff_vod_watchers = {
+                name = 'VOD Watchers',
+                text = {
+                    'Gains {X:mult,C:white}X#1#{} Mult',
+                    'per {C:attention}hand played',
+                    'Resets when beating',
+                    'a Blind in {C:attention}one hand',
+                    '{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Chips)',
+                    '{C:inactive,s:0.8,E:2}Don\'t wake them up!'
                 }
             },
         },
