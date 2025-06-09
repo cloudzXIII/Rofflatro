@@ -6,7 +6,7 @@ SMODS.Joker{
    blueprint_compat = true,
    eternal_compat = true,
    pos = { x = 2, y = 9 },
-   config = { extra = { Xmult = 1, Xmult_mod = 0.2 } },
+   config = { extra = { Xmult = 1, Xmult_mod = 0.18 } },
    loc_vars = function(self,info_queue,card)
       return {vars = {card.ability.extra.Xmult_mod, card.ability.extra.Xmult}}
    end,
