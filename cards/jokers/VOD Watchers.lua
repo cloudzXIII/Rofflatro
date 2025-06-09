@@ -2,7 +2,7 @@ SMODS.Joker{
    key = 'vod_watchers',
    atlas = 'roffers',
    rarity = 3,
-   cost = 8,
+   cost = 9,
    blueprint_compat = true,
    eternal_compat = true,
    pos = { x = 2, y = 9 },
