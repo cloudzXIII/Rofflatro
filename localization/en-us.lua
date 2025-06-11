@@ -304,7 +304,7 @@ return {
                     "{S:1.1,C:red,E:2}Self destructs{} after triggering",
                     '{C:inactive}(Cannot scale Main Channel){}',
                     '{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
-                }     
+                }
             },
             j_roff_getchips = {
                 name = 'Just Get Chips',
@@ -404,8 +404,26 @@ return {
                     '{C:inactive,s:0.8,E:2}Don\'t wake them up!'
                 }
             },
+            j_roff_magic8 = {
+                name = 'Magic 8 Ball',
+                text = {
+                    'Scored {C:attention}Favorite 8s{} have a',
+                    '{C:green}1 in 4{} chance to be',
+                    '{C:attention}copied{} and drawn to hand',
+                    '{C:inactive,s:0.8,E:2}DNA, but... really bad.',
+                    '{C:inactive,s:0.6,E:2}How did we even get here?'
+                }
+            },
+            j_roff_whydontyou = {
+                name = 'Why Don\'t You Play Them?',
+                text = {
+                    'Scoring {C:attention}non-Favourite{} cards',
+                    'permanently gain {C:mult}+#1#{} Mult',
+                    '{C:inactive,s:0.8,E:2}It\'s not Plantain, Neato, or Paperback...',
+                }
+            },
         },
-    Back = 
+    Back =
     {
         b_roff_streamerluck = {
             name = "Streamer Deck",
@@ -463,6 +481,17 @@ return {
             k_roff_doc_reset = "Bummer...",
             k_roff_mainchannel_upgrade = "What?!",
             k_roff_negatives_trigger = "Yippee!",
+
+            k_roff_magic8_1 = "Certain",
+            k_roff_magic8_2 = "Yup",
+            k_roff_magic8_3 = "Decidedly",
+            k_roff_magic8_4 = "Perchance",
+            k_roff_magic8_5 = "Likely",
+            k_roff_magic8_fail_1 = "Nope",
+            k_roff_magic8_fail_2 = "Doubtful",
+            k_roff_magic8_fail_3 = "Unknown",
+            k_roff_magic8_fail_4 = "Not Now",
+            k_roff_magic8_fail_5 = "Try Again",
 
             k_roff_buddy_msg1 = "You got this!",
             k_roff_buddy_msg2 = "I believe!",
