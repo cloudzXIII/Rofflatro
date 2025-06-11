@@ -48,6 +48,8 @@ local joker_list = {
     'Excommunication',
     'Engagement',
     'VOD Watchers',
+    'Magic 8 Ball',
+    'Why Don\'t You Play Them',
 }
 -- load all individual jokers
 for _, key in ipairs(joker_list) do
