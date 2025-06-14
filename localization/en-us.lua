@@ -219,9 +219,9 @@ return {
             j_roff_voucherclear = {
                 name = "Voucher Clear",
                 text = {
-                    "Sell this Joker to {C:attention}remove{}",
-                    "all {C:attention}Vouchers{} in",
-                    "the shop {C:attention}permanently{}",
+                    "{C:attention}Remove{} all {C:attention}Vouchers{}",
+                    "in the shop {C:attention}permanently",
+                    "at end of a {C:attention}Boss Blind",
                     "{C:inactive,s:0.8,E:2}I hate you, Magic Trick!!!"
                 }
             },
