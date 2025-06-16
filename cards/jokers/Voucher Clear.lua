@@ -5,10 +5,9 @@ SMODS.Joker{
     blueprint_compat = true,
     eternal_compat = true,
     pos = { x = 1, y = 5 },
-    config = { extra = { last_blind = 'Small'} },
     cost = 4,
     calculate = function(self,card,context)
-        if  G.GAME.round_resets.blind_states.Big == 'Defeated' and G.GAME.round_resets.blind_states.Boss  == 'Upcoming' and context.ending_shop and card.ability.extra.last_blind == "Big" and G.shop_vouchers then
+        if  G.GAME.round_resets.blind_states.Big == 'Defeated' and G.GAME.round_resets.blind_states.Boss  == 'Upcoming' and context.ending_shop and G.shop_vouchers then
             for i = 1, #G.shop_vouchers.cards do
                 -- This part destroys the G.shop_vouchers.cards[i].
                 play_sound('slice1')
