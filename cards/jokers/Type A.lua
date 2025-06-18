@@ -41,10 +41,10 @@ SMODS.Joker{
 		end
 		if context.joker_main then
 			return {
-				Xmult_mod = card.ability.extra.Xmult
+				Xmult = card.ability.extra.Xmult
 			}
 		end
-		if context.end_of_round then
+		if context.end_of_round and context.cardarea == G.jokers then
 			local _poker_hands = {"Straight Flush", "Four of a Kind", "Full House",}
 
 			if G.GAME.hands['Five of a Kind'].visible then table.insert(_poker_hands, "Five of a Kind") end
