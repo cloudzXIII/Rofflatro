@@ -7,6 +7,7 @@ SMODS.Joker{
    blueprint_compat = true,
    config = { extra = { odds = 4 } },
    loc_vars = function(self, info_queue, card)
+      info_queue[#info_queue+1] = {key = 'roff_favorite', set = 'Other'}
       return { vars = { (G.GAME and G.GAME.probabilities.normal or 1), card.ability.extra.odds } }
    end,
    calculate = function(self, card, context)

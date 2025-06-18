@@ -19,10 +19,8 @@ SMODS.Joker{
             for _, c in pairs(context.scoring_hand) do
                 if c:get_id() == 7 then
                     has7 = true
-                    break
                 elseif c:get_id() == 14 then
                     hasA = true
-                    break
                 end
             end
             if has7 and hasA then

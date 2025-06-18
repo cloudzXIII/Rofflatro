@@ -417,11 +417,20 @@ return {
             j_roff_whydontyou = {
                 name = 'Why Don\'t You Play Them?',
                 text = {
-                    'Scoring {C:attention}non-Favourite{} cards',
+                    'Scoring {C:attention}non-Favorite{} cards',
                     'permanently gain {C:mult}+#1#{} Mult',
                     '{C:inactive,s:0.8,E:2}It\'s not Plantain, Neato, or Paperback...',
                 }
             },
+            j_roff_watergun = {
+                name = "Water Gun",
+                text = {
+                    "Retriggers the next",
+                    "{C:attention}#1#{} scored card(s)",
+                    "with {C:attention}Favorite{} sticker",
+                    '{C:inactive,s:0.8,E:2}Watch out, they\'re coming!',
+                }
+            }
         },
     Back =
     {
