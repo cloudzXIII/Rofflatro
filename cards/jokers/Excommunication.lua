@@ -43,7 +43,8 @@ SMODS.Joker {
    pos = { x = 1, y = 8 },
    config = { extra = { Xmult = 1, Xmult_mod = 0.5 } },
    loc_vars = function(self, info_queue, card)
-       return { vars = { card.ability.extra.Xmult_mod, card.ability.extra.Xmult_mod/5, card.ability.extra.Xmult } }
+      info_queue[#info_queue+1] = {key = 'e_negative_consumable', set = 'Edition', config = {extra = 1}}
+      return { vars = { card.ability.extra.Xmult_mod, card.ability.extra.Xmult_mod/5, card.ability.extra.Xmult } }
    end,
    calculate = function(self, card, context)
       if G.consumeables and G.consumeables.cards then
