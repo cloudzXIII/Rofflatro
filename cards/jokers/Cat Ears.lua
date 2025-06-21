@@ -5,8 +5,8 @@ SMODS.Joker{
    cost = 6,
    blueprint_compat = true,
    perishable_compat = false,
-   pos = { x = 3, y = 7 }, -- change
-   config = { extra = { chips = 0, chip_mod = 13 } }, -- might be better at +23
+   pos = { x = 3, y = 8 }, -- change
+   config = { extra = { chips = 0, chip_mod = 8 } },
    loc_vars = function(self, info_queue, card)
       return {vars = { card.ability.extra.chip_mod, card.ability.extra.chips }}
    end,
@@ -28,9 +28,9 @@ SMODS.Joker{
          end
          if #result > 1 then
             card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
-            if pseudorandom('catears') > 0.5 then
+            if pseudorandom('catears') > 0.3 then
                return {
-               message = localize('k_upgrade_ex'),
+               message = '+'..card.ability.extra.chip_mod,
                colour = G.C.CHIPS
                }
             else
@@ -51,3 +51,4 @@ SMODS.Joker{
       badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_code'), ROFF.C.credits.canicao, ROFF.C.credits.canicao_text, 0.8)
    end
 }
+
