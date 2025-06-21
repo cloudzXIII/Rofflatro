@@ -20,6 +20,13 @@ SMODS.Atlas {
     py = 95,
 }
 
+SMODS.Atlas {
+    key = "rauchers",
+    path = "Vouchers.png",
+    px = 71,
+    py = 95,
+}
+
 --talisman compat dummy func
 to_big = to_big or function (value)
     return value
