@@ -1,16 +1,4 @@
 SMODS.Joker{
-   key = 'draw_diamonds',
-   loc_txt = {
-      name = 'Draw the Diamonds',
-      text = {
-         '{C:attention}Scored{} cards with {C:diamonds}Diamond{} suit',
-         'are converted to {C:attention}different{} suits',
-         'Raises the interest cap by {C:money}$#1#',
-         'for every {C:attention}5 {C:diamonds}Diamonds{} scored',
-         '{C:inactive}(Currently +{C:money}$#2#{C:inactive}, #3#/7)',
-         '{C:inactive,s:0.8}It\'s always the Diamonds...{}'
-      },
-   },
    atlas = 'roffers',
    pos = {x = 3, y = 8},
    blueprint_compat = false,
