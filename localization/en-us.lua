@@ -383,7 +383,7 @@ return {
                     '{C:inactive,s:0.8,E:2}Nice.'
                 }
             },
-            j_roff_draw_diamonds {
+            j_roff_draw_diamonds = {
                 name = 'Draw the Diamonds',
                 text = {
                     '{C:attention}Scored{} cards with {C:diamonds}Diamond{} suit',
