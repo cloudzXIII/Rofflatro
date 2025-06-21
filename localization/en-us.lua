@@ -433,6 +433,41 @@ return {
                 }
             }
         },
+        Voucher = {
+            v_roff_coupon = {
+                name = "Coupon Bonding",
+                text = {
+                    '{C:mult}+#1#{} Mult for each redeemed Voucher',
+                    '{C:inactive,s:0.8,E:2}Works with Blanks when you run out!',
+                    '{C:inactive,s:0.6,E:2}(wink, wink, second tier?)',
+                },
+            },
+            v_roff_blanket = {
+                name = "Blanket Statement",
+                text = {
+                    '{X:mult,C:white}X#1#{} XMult for each redeemed Blank',
+                    '{C:inactive,s:0.8,E:2}Hey, is this meant to say "X#1# Mult"?',
+                    '{C:inactive,s:0.6,E:2}Wait, what do you mean by "intended"!?',
+                },
+            },
+            v_roff_deckfixer = {
+                name = "Deck Fixer",
+                text = {
+                    '{C:attention}Standard Packs{} always have',
+                    'one copy of a {C:attention}Favorite{}',
+                    'playing card in your deck',
+                    '{C:inactive,s:0.8,E:2}Court-mandated Favorite sticker buff!',
+                },
+            },
+            v_roff_deckstuffer = {
+                name = "Deck Stuffer",
+                text = {
+                    'Copies of {C:attention}Favorite{}',
+                    'cards may appear in shop',
+                    '{C:inactive,s:0.8,E:2}Court-mandated Favorite sticker buff!',
+            },
+        },
+    },
     Back =
     {
         b_roff_streamerluck = {
