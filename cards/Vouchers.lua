@@ -29,6 +29,10 @@ SMODS.Voucher {
             sound = 'multhit1'
          }
       end
+   end,
+   set_badges = function (self, card, badges)
+      badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_art'), ROFF.C.credits.canicao_text, ROFF.C.credits.canicao, 0.8)
+      badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_code'), ROFF.C.credits.canicao, ROFF.C.credits.canicao_text, 0.8)
    end
 }
 
@@ -71,6 +75,10 @@ SMODS.Voucher {
          end
          return true
       end
+   end,
+   set_badges = function (self, card, badges)
+      badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_art'), ROFF.C.credits.canicao_text, ROFF.C.credits.canicao, 0.8)
+      badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_code'), ROFF.C.credits.canicao, ROFF.C.credits.canicao_text, 0.8)
    end
 }
 
@@ -79,6 +87,13 @@ SMODS.Voucher {
    atlas = 'rauchers',
    pos = { x = 1, y = 0 },
    unlocked = true,
+   loc_vars = function (self, info_queue, card)
+      info_queue[#info_queue+1] = {key = 'roff_favorite', set = 'Other'}
+   end,
+   set_badges = function (self, card, badges)
+      badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+      badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_code'), ROFF.C.credits.canicao, ROFF.C.credits.canicao_text, 0.8)
+   end
 }
 
 SMODS.Booster:take_ownership_by_kind('Standard', {
@@ -109,4 +124,11 @@ SMODS.Voucher {
    pos = { x = 1, y = 1 },
    unlocked = true,
    requires = {'v_magic_trick'},
+   loc_vars = function (self, info_queue, card)
+      info_queue[#info_queue+1] = {key = 'roff_favorite', set = 'Other'}
+   end,
+   set_badges = function (self, card, badges)
+      badges[#badges+1] = create_badge(localize('k_roff_credit_l6_art'), ROFF.C.credits.Lucky6, G.C.WHITE, 0.8)
+      badges[#badges+1] = create_badge(localize('k_roff_credit_canicao_code'), ROFF.C.credits.canicao, ROFF.C.credits.canicao_text, 0.8)
+   end
 }
