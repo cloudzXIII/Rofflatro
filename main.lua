@@ -20,6 +20,13 @@ SMODS.Atlas {
     py = 95,
 }
 
+SMODS.Atlas {
+    key = "rauchers",
+    path = "Vouchers.png",
+    px = 71,
+    py = 95,
+}
+
 --talisman compat dummy func
 to_big = to_big or function (value)
     return value
@@ -58,6 +65,8 @@ function Game:start_run(args)
     local begin = start_run_ref(self, args)
     if not saveTable then
         G.GAME.ROFF_seance_used = false
+        G.GAME.ROFF_blanks_obtained = 0
+        G.GAME.ROFF_vouchers_sliced_list = {}
         if args.challenge then
             local _ch = args.challenge
             G.GAME.challenge_index = args.challenge

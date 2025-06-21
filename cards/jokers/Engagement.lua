@@ -1,8 +1,8 @@
 SMODS.Joker {
    key = "engagement",
    blueprint_compat = true,
-   rarity = 2,
-   cost = 6,
+   rarity = 3,
+   cost = 8,
    atlas = 'roffers',
    pos = { x = 2, y = 8 },
    calculate = function(self, card, context)
