@@ -1,4 +1,5 @@
 SMODS.Joker{
+   key = 'draw_diamonds',
    atlas = 'roffers',
    pos = {x = 3, y = 8},
    blueprint_compat = false,
