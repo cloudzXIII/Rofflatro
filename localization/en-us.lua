@@ -6,9 +6,9 @@ return {
                 text = {
                     'Gains {X:mult,C:white}X#1#{} Mult if played',
                     'hand is a {C:attention}#3#{}',
+                    '{s:0.8}Hand changes every round ^',
                     'Resets when playing a',
                     '{C:attention}Three of a Kind{} or lesser',
-                    '{s:0.8}Hand changes every round',
                     '{C:inactive}(Currently {}{X:mult,C:white}X#2#{}{C:inactive} Mult){}',
                     '{s:0.8,C:inactive,E:2}Play the #3#! {}{s:0.8,C:inactive,E:1}STREAMER!!!{}'
                 }
