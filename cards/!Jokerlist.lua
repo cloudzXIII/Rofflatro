@@ -13,7 +13,6 @@ local joker_list = {
     'In-n-Out',
     'Hearthstone',
     'Jackin It',
-    --'Just Get Chips',
     'Benus',
     'Grimbo',
     'What Would Doc Do',
@@ -27,14 +26,9 @@ local joker_list = {
     'Never Skip',
     'Caught In 4K',
     'o7',
-    --'It Aint My Grave',
-    --'Nice',
     'Voucher Clear',
     'The Thumbnail',
     'Sevens Suck',
-    --'Nancy',
-    --'Rock Hard',
-    --'Draw the Diamonds',
     'Speculative Oops',
 }
 -- load all individual jokers
