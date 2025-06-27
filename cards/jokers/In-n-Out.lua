@@ -32,7 +32,7 @@ SMODS.Joker{
       if card.ability.extra.check == true then
       card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chipgain
       return {
-         message = localize('k_upgrade_ex')
+         message = localize('k_upgrade_ex'),
          colour = G.C.CHIPS,
          sound = 'chips2'
       }
