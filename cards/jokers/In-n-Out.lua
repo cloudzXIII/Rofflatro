@@ -16,7 +16,7 @@ SMODS.Joker{
    },
    loc_vars = function(self, info_queue, card)
       return {
-         vars = { card.ability.extra.chipgain, card.ability.extra.chips }
+         vars = { card.ability.extra.chip_mod, card.ability.extra.chips }
       }
    end,
    calculate = function(self, card, context)
@@ -30,7 +30,7 @@ SMODS.Joker{
    end
    if context.ending_shop and not context.blueprint then
       if card.ability.extra.check == true then
-      card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chipgain
+      card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod
       return {
          message = localize('k_upgrade_ex'),
          colour = G.C.CHIPS,
