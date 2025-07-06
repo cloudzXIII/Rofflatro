@@ -67,6 +67,50 @@ function Game:start_run(args)
         G.GAME.ROFF_seance_used = false
         G.GAME.ROFF_blanks_obtained = 0
         G.GAME.ROFF_vouchers_sliced_list = {}
+        if G.GAME.selected_back and G.GAME.selected_back.effect.center.key == "b_roff_highscoring" then
+            local jokers_to_create = math.min(1, G.jokers.config.card_limit - (#G.jokers.cards + G.GAME.joker_buffer))
+            G.GAME.joker_buffer = G.GAME.joker_buffer + jokers_to_create
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    for _ = 1, jokers_to_create do
+                        SMODS.add_card {
+                            set = 'Joker',
+                            rarity = 'Common',
+                            key_append = 'roff_highscoring'
+                        }
+                        G.GAME.joker_buffer = 0
+                    end
+                    return true
+                end
+            }))
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    for _ = 1, jokers_to_create do
+                        SMODS.add_card {
+                            set = 'Joker',
+                            rarity = 'Uncommon',
+                            key_append = 'roff_highscoring'
+                        }
+                        G.GAME.joker_buffer = 0
+                    end
+                    return true
+                end
+            }))
+            G.E_MANAGER:add_event(Event({
+                func = function()
+                    for _ = 1, jokers_to_create do
+                        SMODS.add_card {
+                            set = 'Joker',
+                            rarity = 'Rare',
+                            key_append = 'roff_highscoring'
+                        }
+                        G.GAME.joker_buffer = 0
+                    end
+                    return true
+                end
+            }))
+            G.GAME.win_ante = 12
+        end
         if args.challenge then
             local _ch = args.challenge
             G.GAME.challenge_index = args.challenge
