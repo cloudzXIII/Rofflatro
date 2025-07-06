@@ -496,6 +496,8 @@ return {
                 "{C:uncommon}Uncommon{}, and {C:rare}Rare{} Joker",
                 "{C:red}Winning ante is Ante 12",
                 "{E:1,C:inactive,s:0.8}Welcome back to another high-scoring run...",
+                "{E:1,C:inactive,s:0.7}By the way, win Ante 1 to reset the jokers.",
+                "{E:1,C:inactive,s:0.6}Some of you can't have fun..."
             },
         },
     },
