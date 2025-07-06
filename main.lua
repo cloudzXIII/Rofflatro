@@ -93,7 +93,6 @@ function Game:start_run(args)
                     SMODS.Mods.Roffle.config.highscoring.jokers = {}
                     for i=1, #G.jokers.cards do
                         table.insert(SMODS.Mods.Roffle.config.highscoring.jokers, G.jokers.cards[i].config.center.key)
-                        print(SMODS.Mods.Roffle.config.highscoring.jokers)
                     end
                     return true
                 end
