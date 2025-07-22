@@ -108,6 +108,34 @@ function Blind:get_loc_debuff_text()
     return result
 end
 
+local start_run_ref = Game.start_run
+function Game:start_run(args)
+    local begin = start_run_ref(self, args)
+    if not saveTable then
+        if args.challenge then
+            local _ch = args.challenge
+            G.GAME.challenge_index = args.challenge
+            if _ch.rules then
+                local whitelistedHands = {}
+                if _ch.rules.custom then
+                    for k, v in ipairs(_ch.rules.custom) do
+                        if v.id == 'kali_spawn' then
+                            G.GAME.modifiers.kali_spawn = true
+                            G.GAME.modifiers.kali_spawn_hold = true
+                        end
+                        if v.id == 'whitelist_hand' then --hand is not allowed
+                        whitelistedHands = whitelistedHands or {}
+                        whitelistedHands[#whitelistedHands+1] = v.hand
+                        end
+                    end
+                end
+                G.GAME.modifiers.whitelist_hand = whitelistedHands
+            end
+        end
+    end
+    return begin
+end
+
 function SMODS.current_mod.reset_game_globals(run_start)
     if not run_start and G.playing_cards then
         for _, c in pairs(G.playing_cards) do
@@ -172,26 +200,6 @@ function SMODS.current_mod.reset_game_globals(run_start)
                         return true
                     end
                 }))
-            end
-        end
-        if args.challenge then
-            local _ch = args.challenge
-            G.GAME.challenge_index = args.challenge
-            if _ch.rules then
-                local whitelistedHands = {}
-                if _ch.rules.custom then
-                    for k, v in ipairs(_ch.rules.custom) do
-                        if v.id == 'kali_spawn' then
-                            G.GAME.modifiers.kali_spawn = true
-                            G.GAME.modifiers.kali_spawn_hold = true
-                        end
-                        if v.id == 'whitelist_hand' then --hand is not allowed
-                        whitelistedHands = whitelistedHands or {}
-                        whitelistedHands[#whitelistedHands+1] = v.hand
-                        end
-                    end
-                end
-                G.GAME.modifiers.whitelist_hand = whitelistedHands
             end
         end
     end
