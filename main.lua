@@ -70,10 +70,62 @@ function SMODS.pseudorandom_probability(trigger_obj, seed, base_numerator, base_
     return ret
 end
 
-local start_run_ref = Game.start_run
-function Game:start_run(args)
-    local begin = start_run_ref(self, args)
-    if not saveTable then
+local update_ref = Game.update
+function Game:update(dt)
+    update_ref(self, dt)
+    if G.GAME.modifiers.kali_spawn then
+        if G.STATE == G.STATES.BLIND_SELECT and G.GAME.blind.boss and G.GAME.modifiers.kali_spawn_hold == true then 
+            SMODS.add_card({key = 'j_roff_kali', stickers = { 'perishable' }})
+            G.GAME.modifiers.kali_spawn_hold = false
+        end
+        if G.STATE == G.STATES.HAND_PLAYED and G.GAME.modifiers.kali_spawn_hold == false then
+            G.GAME.modifiers.kali_spawn_hold = true
+        end
+    end
+end
+
+local debuff_hand_ref = Blind.debuff_hand
+function Blind:debuff_hand(cards, hand, handname, check)
+    local result = debuff_hand_ref(self, cards, hand, handname, check)
+    local whitelist = true
+    if G.GAME.modifiers.whitelist_hand and #G.GAME.modifiers.whitelist_hand > 0 then
+        for _, v in ipairs(G.GAME.modifiers.whitelist_hand) do
+            if handname == v then
+                whitelist = false
+            end
+        end
+        return whitelist
+    end
+    return result
+end
+
+local debuff_text_ref = Blind.get_loc_debuff_text
+function Blind:get_loc_debuff_text()
+        if G.GAME.modifiers.whitelist_hand and #G.GAME.modifiers.whitelist_hand > 0 then
+            return ('Must play '..G.GAME.modifiers.whitelist_hand[1])
+        end
+    result = debuff_text_ref(self)
+    return result
+end
+
+function SMODS.current_mod.reset_game_globals(run_start)
+    if not run_start and G.playing_cards then
+        for _, c in pairs(G.playing_cards) do
+            if c.base.times_played > G.GAME.current_round.most_played_card_amount then
+                G.GAME.current_round.most_played_card_amount = c.base.times_played
+            end
+        end
+        if G.GAME.current_round.most_played_card_amount > 0 then
+            for _, c in pairs(G.playing_cards) do
+                if c.base.times_played == G.GAME.current_round.most_played_card_amount then
+                    c:add_sticker('roff_favorite', true)
+                elseif c.ability.roff_favorite then
+                    c.ability.roff_favorite = false
+                end
+            end
+        end
+    end
+    if run_start then
         G.GAME.ROFF_seance_used = false
         G.GAME.ROFF_blanks_obtained = 0
         G.GAME.ROFF_vouchers_sliced_list = {}
@@ -140,64 +192,6 @@ function Game:start_run(args)
                     end
                 end
                 G.GAME.modifiers.whitelist_hand = whitelistedHands
-            end
-        end
-    end
-    return begin
-end
-
-local update_ref = Game.update
-function Game:update(dt)
-    update_ref(self, dt)
-    if G.GAME.modifiers.kali_spawn then
-        if G.STATE == G.STATES.BLIND_SELECT and G.GAME.blind.boss and G.GAME.modifiers.kali_spawn_hold == true then 
-            SMODS.add_card({key = 'j_roff_kali', stickers = { 'perishable' }})
-            G.GAME.modifiers.kali_spawn_hold = false
-        end
-        if G.STATE == G.STATES.HAND_PLAYED and G.GAME.modifiers.kali_spawn_hold == false then
-            G.GAME.modifiers.kali_spawn_hold = true
-        end
-    end
-end
-
-local debuff_hand_ref = Blind.debuff_hand
-function Blind:debuff_hand(cards, hand, handname, check)
-    local result = debuff_hand_ref(self, cards, hand, handname, check)
-    local whitelist = true
-    if G.GAME.modifiers.whitelist_hand and #G.GAME.modifiers.whitelist_hand > 0 then
-        for k, v in ipairs(G.GAME.modifiers.whitelist_hand) do
-            if handname == v then
-                whitelist = false
-            end
-        end
-        return whitelist
-    end
-    return result
-end
-
-local debuff_text_ref = Blind.get_loc_debuff_text
-function Blind:get_loc_debuff_text()
-        if G.GAME.modifiers.whitelist_hand and #G.GAME.modifiers.whitelist_hand > 0 then
-            return ('Must play '..G.GAME.modifiers.whitelist_hand[1])
-        end
-    result = debuff_text_ref(self)
-    return result
-end
-
-function SMODS.current_mod.reset_game_globals(run_start)
-    if not run_start and G.playing_cards then
-        for _, c in pairs(G.playing_cards) do
-            if c.base.times_played > G.GAME.current_round.most_played_card_amount then
-                G.GAME.current_round.most_played_card_amount = c.base.times_played
-            end
-        end
-        if G.GAME.current_round.most_played_card_amount > 0 then
-            for _, c in pairs(G.playing_cards) do
-                if c.base.times_played == G.GAME.current_round.most_played_card_amount then
-                    c:add_sticker('roff_favorite', true)
-                elseif c.ability.roff_favorite then
-                    c.ability.roff_favorite = false
-                end
             end
         end
     end
