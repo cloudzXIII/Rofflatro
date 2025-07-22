@@ -2,12 +2,12 @@ SMODS.Joker{
     key = 'voucherclear',
     atlas = 'roffers',
     rarity = 2,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     pos = { x = 1, y = 5 },
     cost = 4,
     calculate = function(self,card,context)
-        if  G.GAME.round_resets.blind_states.Big == 'Defeated' and G.GAME.round_resets.blind_states.Boss  == 'Upcoming' and context.ending_shop and G.shop_vouchers then
+        if G.GAME.round_resets.blind_states.Big == 'Defeated' and G.GAME.round_resets.blind_states.Boss  == 'Upcoming' and context.ending_shop and G.shop_vouchers and not context.blueprint then
             for i = 1, #G.shop_vouchers.cards do
                 -- This part destroys the G.shop_vouchers.cards[i].
                 play_sound('slice1')
