@@ -305,7 +305,7 @@ return {
                     "{S:1.1,C:red,E:2}Self destructs{} after triggering",
                     '{C:inactive}(Cannot scale Main Channel){}',
                     '{C:inactive,s:0.8,E:2}Wait, he has a main channel?'
-                }     
+                }
             },
             j_roff_getchips = {
                 name = 'Just Get Chips',
@@ -383,6 +383,17 @@ return {
                     '{C:inactive,s:0.8,E:2}Nice.'
                 }
             },
+            j_roff_draw_diamonds = {
+                name = 'Draw the Diamonds',
+                text = {
+                    '{C:attention}Scored{} cards with {C:diamonds}Diamond{} suit',
+                    'are converted to {C:attention}different{} suits',
+                    'Raises the interest cap by {C:money}$#1#',
+                    'for every {C:attention}7 {C:diamonds}Diamonds{} scored',
+                    '{C:inactive}(Currently +{C:money}$#2#{C:inactive}, #3#/7)',
+                    '{C:inactive,s:0.8}It\'s always the Diamonds...{}'
+                },
+            },
             j_roff_clam = {
                 name = 'Always Clam!',
                 text = {
@@ -405,8 +416,70 @@ return {
                     '{C:inactive,s:0.8,E:2}Don\'t wake them up!'
                 }
             },
+            j_roff_magic8 = {
+                name = 'Magic 8 Ball',
+                text = {
+                    'Scored {C:attention}Favorite 8s{} have a',
+                    '{C:green}1 in 4{} chance to be',
+                    '{C:attention}copied{} and drawn to hand',
+                    '{C:inactive,s:0.8,E:2}DNA, but... really bad.',
+                    '{C:inactive,s:0.6,E:2}How did we even get here?'
+                }
+            },
+            j_roff_whydontyou = {
+                name = 'Why Don\'t You Play Them?',
+                text = {
+                    'Scoring {C:attention}non-Favorite{} cards',
+                    'permanently gain {C:mult}+#1#{} Mult',
+                    '{C:inactive,s:0.8,E:2}It\'s not Plantain, Neato, or Paperback...',
+                }
+            },
+            j_roff_watergun = {
+                name = "Water Gun",
+                text = {
+                    "Retriggers the next",
+                    "{C:attention}#1#{} scored card(s)",
+                    "with {C:attention}Favorite{} sticker",
+                    '{C:inactive,s:0.8,E:2}Watch out, they\'re coming!',
+                }
+            }
         },
-    Back = 
+        Voucher = {
+            v_roff_coupon = {
+                name = "Coupon Bonding",
+                text = {
+                    '{C:mult}+#1#{} Mult for each redeemed Voucher',
+                    '{C:inactive,s:0.8,E:2}Works with Blanks when you run out!',
+                    '{C:inactive,s:0.6,E:2}(wink, wink, second tier?)',
+                },
+            },
+            v_roff_blanket = {
+                name = "Blanket Statement",
+                text = {
+                    '{X:mult,C:white}X#1#{} XMult for each redeemed Blank',
+                    '{C:inactive,s:0.8,E:2}Hey, is this meant to say "X#1# Mult"?',
+                    '{C:inactive,s:0.6,E:2}Wait, what do you mean by "intended"!?',
+                },
+            },
+            v_roff_deckfixer = {
+                name = "Deck Fixer",
+                text = {
+                    '{C:attention}Standard Packs{} always have',
+                    'one copy of a {C:attention}Favorite{}',
+                    'playing card in your deck',
+                    '{C:inactive,s:0.8,E:2}Court-mandated Favorite sticker buff!',
+                },
+            },
+            v_roff_deckstuffer = {
+                name = "Deck Stuffer",
+                text = {
+                    'Copies of {C:attention}Favorite{}',
+                    'cards may appear in shop',
+                    '{C:inactive,s:0.8,E:2}Court-mandated Favorite sticker buff!',
+            },
+        },
+    },
+    Back =
     {
         b_roff_streamerluck = {
             name = "Streamer Deck",
@@ -414,6 +487,17 @@ return {
                 "{C:attention}Non-common{} Jokers appear",
                 "{C:attention}4x{} more often",
                 "{E:1,C:inactive,s:0.8}(Is this run seeded?)",
+            },
+        },
+        b_roff_highscoring = {
+            name = "High Scoring Deck",
+            text = {
+                "Start with a {C:common}Common{},",
+                "{C:uncommon}Uncommon{}, and {C:rare}Rare{} Joker",
+                "{C:red}Winning ante is Ante 12",
+                "{E:1,C:inactive,s:0.8}Welcome back to another high-scoring run...",
+                "{C:inactive,s:0.7}By the way, win Ante 1 to reset the jokers.",
+                "{C:inactive,s:0.6}Some of you can't have fun..."
             },
         },
     },
@@ -464,6 +548,17 @@ return {
             k_roff_doc_reset = "Bummer...",
             k_roff_mainchannel_upgrade = "What?!",
             k_roff_negatives_trigger = "Yippee!",
+
+            k_roff_magic8_1 = "Certain",
+            k_roff_magic8_2 = "Yup",
+            k_roff_magic8_3 = "Decidedly",
+            k_roff_magic8_4 = "Perchance",
+            k_roff_magic8_5 = "Likely",
+            k_roff_magic8_fail_1 = "Nope",
+            k_roff_magic8_fail_2 = "Doubtful",
+            k_roff_magic8_fail_3 = "Unknown",
+            k_roff_magic8_fail_4 = "Not Now",
+            k_roff_magic8_fail_5 = "Try Again",
 
             k_roff_buddy_msg1 = "You got this!",
             k_roff_buddy_msg2 = "I believe!",

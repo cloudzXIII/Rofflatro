@@ -2,7 +2,7 @@
 -- When blind is selected, destroys all owned consumables. Gains x0.25 Mult per card destroyed. (Why is streamer so mad?)
 
 SMODS.Joker{
-    key = 'crashout',
+key = 'crashout',
     atlas = 'roffers',
     rarity = 3,
     cost = 7,
