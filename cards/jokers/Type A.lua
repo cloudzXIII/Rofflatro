@@ -41,7 +41,7 @@ SMODS.Joker{
 		end
 		if context.joker_main then
 			return {
-				Xmult = card.ability.extra.Xmult
+				Xmult = card.ability.extra.x_mult
 			}
 		end
 		if context.end_of_round and context.cardarea == G.jokers then
