@@ -8,7 +8,7 @@
 	"badge_colour": "44a2e2",
 	"badge_text_colour": "ffedab",
 	"display_name": "Rofflatro",
-	"version": "1.1.3d",
+	"version": "1.2.0a",
 	"name":"Rofflatro",
 	"dependencies": [
                 "Steamodded (>=1.0.0~BETA-0626b)"
