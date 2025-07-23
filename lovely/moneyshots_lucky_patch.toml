@@ -11,8 +11,6 @@ position = "after"
 payload = '''self.money_shot = true
 else
     self.money_shot = false
-    local effects
-    SMODS.calculate_context({roff_probability_missed = true}, effects)
 '''
 
 match_indent = true
