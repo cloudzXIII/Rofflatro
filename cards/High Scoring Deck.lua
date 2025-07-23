@@ -5,7 +5,7 @@ SMODS.Back({
     unlocked = true,
     discovered = true,
     calculate = function(self, back, context)
-        if context.end_of_round and context.main_eval and G.GAME.round_resets.ante >= 2 then
+        if context.blind_defeated and G.GAME.blind.boss then
             SMODS.Mods.Roffle.config.highscoring.randomise = true
         end
     end,
