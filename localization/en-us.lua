@@ -420,7 +420,7 @@ return {
                 name = 'Magic 8 Ball',
                 text = {
                     'Scored {C:attention}Favorite 8s{} have a',
-                    '{C:green}1 in 4{} chance to be',
+                    '{C:green}#1# in #2#{} chance to be',
                     '{C:attention}copied{} and drawn to hand',
                     '{C:inactive,s:0.8,E:2}DNA, but... really bad.',
                     '{C:inactive,s:0.6,E:2}How did we even get here?'

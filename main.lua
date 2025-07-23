@@ -160,21 +160,21 @@ function SMODS.current_mod.reset_game_globals(run_start)
         if G.GAME.selected_back and G.GAME.selected_back.effect.center.key == "b_roff_highscoring" and SMODS.Mods.Roffle.config.highscoring.randomise then
             G.E_MANAGER:add_event(Event({
                 func = function()
-                    SMODS.add_card {
+                    SMODS.add_card({
                         set = 'Joker',
                         rarity = 'Common',
                         key_append = 'roff_highscoring'
-                    }
-                    SMODS.add_card {
+                    }) 
+                    SMODS.add_card({
                         set = 'Joker',
                         rarity = 'Uncommon',
                         key_append = 'roff_highscoring'
-                    }
-                    SMODS.add_card {
+                    }) 
+                    SMODS.add_card({
                         set = 'Joker',
                         rarity = 'Rare',
                         key_append = 'roff_highscoring'
-                    }
+                    })
                     return true
                 end
             }))
