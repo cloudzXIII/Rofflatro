@@ -17,7 +17,7 @@ SMODS.Joker{
                     blockable = false,
                     func = function()
                         SMODS.remove_pool(G.P_CENTER_POOLS.Voucher, G.shop_vouchers.cards[i].config.center_key)
-                        table.insert(G.GAME.ROFF_vouchers_sliced_list, G.shop_vouchers.cards[i].config.center_key)
+                        table.insert(G.GAME.ROFF_vouchers_sliced_list, G.shop_vouchers.cards[i])
                         G.shop_vouchers.cards[i]:start_dissolve({HEX("57ecab")}, nil, 1.6)
                         if G.GAME.current_round.voucher.spawn[G.shop_vouchers.cards[i].config.center_key] then
                             G.GAME.current_round.voucher.spawn[G.shop_vouchers.cards[i].config.center_key] = false
