@@ -53,6 +53,9 @@ local joker_list = {
     'Water Gun',
 }
 -- load all individual jokers
-for _, key in ipairs(joker_list) do
-    SMODS.load_file('cards/jokers/'..key..'.lua')()
+
+  local subdir = "cards/jokers"
+  local cards = NFS.getDirectoryItems(SMODS.current_mod.path .. subdir)
+  for _, filename in pairs(cards) do
+    assert(SMODS.load_file(subdir .. "/" .. filename))()
 end
